@@ -4,6 +4,7 @@ diet improvements. Users can compete with their friends and earn rewards.
 ## Development Branches:
 * mwilliams-dev
 * dfox-dev
+* fwiltman-dev
 ## To-do
 * My Health screen
 * My Metrics screen
