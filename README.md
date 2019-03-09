@@ -1,11 +1,9 @@
 # Axiv
 Axiv is an integrated health app that allows users to track their fitness and
 diet improvements. Users can compete with their friends and earn rewards.
-## Created branches:
+## Development Branches:
 * mwilliams-dev
 * dfox-dev
-* fwiltman-dev
-* dstevens-dev
 ## To-do
 * My Health screen
 * My Metrics screen
