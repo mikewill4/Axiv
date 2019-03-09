@@ -5,6 +5,7 @@ diet improvements. Users can compete with their friends and earn rewards.
 * mwilliams-dev
 * dfox-dev
 * fwiltman-dev
+* dstevens-dev
 ## To-do
 * My Health screen
 * My Metrics screen
