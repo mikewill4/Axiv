@@ -14,4 +14,6 @@ diet improvements. Users can compete with their friends and earn rewards.
 * Settings
 * Login
 * Registration
-* Navigation
+## Completed
+* Bottom navigation bar
+* Fragments for each screen
