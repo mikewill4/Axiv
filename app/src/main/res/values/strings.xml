@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Axiv</string>
+    <string name="my_health">My Health</string>
+    <string name="metrics">Metrics</string>
+    <string name="compete">Compete</string>
+    <string name="rewards">Rewards</string>
+    <string name="settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="compete_title">Compete</string>
+    <string name="metrics_title">Metrics</string>
+    <string name="my_health_title">My Health</string>
+    <string name="rewards_title">Rewards</string>
+    <string name="settings_title">Settings</string>
 </resources>

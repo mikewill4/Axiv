@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_my_health"
+        android:icon="@drawable/baseline_favorite_black_24dp"
+        android:title="@string/my_health" />
+    <item
+        android:id="@+id/navigation_metrics"
+        android:icon="@drawable/baseline_fitness_center_black_24dp"
+        android:title="@string/metrics" />
+    <item
+        android:id="@+id/navigation_compete"
+        android:icon="@drawable/baseline_people_black_24dp"
+        android:title="@string/compete" />
+    <item
+        android:id="@+id/navigation_rewards"
+        android:icon="@drawable/baseline_shopping_cart_black_24dp"
+        android:title="@string/rewards" />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/baseline_settings_black_24dp"
+        android:title="@string/settings" />
+</menu>
