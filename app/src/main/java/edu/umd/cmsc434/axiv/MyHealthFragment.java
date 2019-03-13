@@ -54,12 +54,13 @@ public class MyHealthFragment extends Fragment {
 
         // Configure radar chart
         chart = rootView.findViewById(R.id.health_radar_chart);
-        chart.setBackgroundColor(Color.rgb(60, 65, 82));
+        chart.setBackgroundColor(Color.WHITE);
         chart.getDescription().setEnabled(false);
         chart.setWebLineWidth(1f);
-        chart.setWebColor(Color.WHITE);
-        chart.setWebColorInner(Color.WHITE);
+        chart.setWebColor(Color.GRAY);
+        chart.setWebColorInner(Color.GRAY);
         chart.setWebAlpha(100);
+        chart.setRotationEnabled(false);
         setData();
 
         // Animate the chart
@@ -67,7 +68,7 @@ public class MyHealthFragment extends Fragment {
 
         // Define x axis
         XAxis x = chart.getXAxis();
-        x.setTextSize(9f);
+        x.setTextSize(15f);
         x.setYOffset(0);
         x.setXOffset(0);
         x.setValueFormatter(new IAxisValueFormatter() {
@@ -80,26 +81,27 @@ public class MyHealthFragment extends Fragment {
             }
         });
 
-        x.setTextColor(Color.WHITE);
+        x.setTextColor(Color.DKGRAY);
 
         // Define y axis
         YAxis y = chart.getYAxis();
         y.setLabelCount(NUM_METRICS, false);
-        y.setTextSize(9f);
+        y.setTextSize(15f);
         y.setAxisMinimum(MIN);
         y.setAxisMaximum(MAX);
         y.setDrawLabels(false);
 
-        // Configure legend
+        // Configure legend. Removed for now since it is only the user's data being displayed
         Legend legend = chart.getLegend();
-        legend.setTextSize(15f);
-        legend.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-        legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
-        legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
-        legend.setDrawInside(false);
-        legend.setXEntrySpace(7f);
-        legend.setYEntrySpace(5f);
-        legend.setTextColor(Color.WHITE);
+        legend.setEnabled(false);
+//        legend.setTextSize(15f);
+//        legend.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+//        legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
+//        legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+//        legend.setDrawInside(false);
+//        legend.setXEntrySpace(7f);
+//        legend.setYEntrySpace(5f);
+//        legend.setTextColor(Color.WHITE);
 
         return rootView;
     }
@@ -149,9 +151,9 @@ public class MyHealthFragment extends Fragment {
         ArrayList<IRadarDataSet> datasetList = new ArrayList<>();
         datasetList.add(dataset);
         RadarData data = new RadarData(datasetList);
-        data.setValueTextSize(8f);
+        data.setValueTextSize(15f);
         data.setDrawValues(false);
-        data.setValueTextColor(Color.WHITE);
+        data.setValueTextColor(Color.DKGRAY);
 
         chart.setData(data);
         chart.invalidate();
