@@ -17,3 +17,4 @@ diet improvements. Users can compete with their friends and earn rewards.
 ## Completed
 * Bottom navigation bar
 * Fragments for each screen
+* Radar chart for my health screen (needs tweaking)
