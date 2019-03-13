@@ -6,15 +6,20 @@ diet improvements. Users can compete with their friends and earn rewards.
 * dfox-dev
 * fwiltman-dev
 * dstevens-dev
-## To-do
+## To-do:
 * My Health screen
+    * Tweak radar chart colors
+    * Change title
+    * Nest radar chart in listview
+    * Add daily targets button
+    * Add suggestions button 
 * My Metrics screen
 * Competitions screen
 * Rewards Screen
 * Settings
 * Login
 * Registration
-## Completed
+## Completed:
 * Bottom navigation bar
 * Fragments for each screen
-* Radar chart for my health screen (needs tweaking)
+* Radar chart for my health screen
