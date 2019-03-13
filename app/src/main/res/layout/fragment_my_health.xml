@@ -11,4 +11,11 @@
         android:layout_height="match_parent"
         android:text="@string/my_health_title" />
 
+    <com.github.mikephil.charting.charts.RadarChart
+        android:id="@+id/health_radar_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.github.mikephil.charting.charts.RadarChart>
+
 </FrameLayout>
