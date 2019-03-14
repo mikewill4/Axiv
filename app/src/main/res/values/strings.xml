@@ -5,8 +5,6 @@
     <string name="compete">Compete</string>
     <string name="rewards">Rewards</string>
     <string name="settings">Settings</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="compete_title">Compete</string>
     <string name="metrics_title">Metrics</string>
@@ -15,4 +13,9 @@
     <string name="settings_title">Settings</string>
     <string name="refresh_chart">Refresh Chart</string>
     <string name="toggle_chart_values">Toggle Values</string>
+    <string name="overall_score">Your score:</string>
+    <string name="health_suggestions">Health suggestions</string>
+    <string name="daily_targets">Daily targets</string>
+    <string name="score_breakdown">Score breakdown:</string>
+    <string name="test_score">152.86</string>
 </resources>

@@ -3,13 +3,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyHealthFragment">
+    tools:context=".MyHealthFragment"
+    android:background="@color/colorWhite">
 
-    <com.github.mikephil.charting.charts.RadarChart
-        android:id="@+id/health_radar_chart"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="@string/overall_score"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="4dp" />
 
-    </com.github.mikephil.charting.charts.RadarChart>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/test_score"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="@string/score_breakdown"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="4dp"/>
 
+            <com.github.mikephil.charting.charts.RadarChart
+                android:id="@+id/health_radar_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.github.mikephil.charting.charts.RadarChart>
+
+            <Button
+                android:id="@+id/health_suggestions_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/health_suggestions"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"/>
+            <Button
+                android:id="@+id/daily_targets_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/daily_targets"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

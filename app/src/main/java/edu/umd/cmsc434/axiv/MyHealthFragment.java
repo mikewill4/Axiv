@@ -62,6 +62,8 @@ public class MyHealthFragment extends Fragment {
         chart.setWebColorInner(Color.GRAY);
         chart.setWebAlpha(100);
         chart.setRotationEnabled(false);
+        chart.setMinimumHeight(1500);
+        chart.setMinimumWidth(1500);
         setData();
 
         // Animate the chart

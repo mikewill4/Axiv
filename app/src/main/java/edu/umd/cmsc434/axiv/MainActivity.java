@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         settingsFragment = new SettingsFragment();
 
         setFragment(myHealthFragment);
+        getSupportActionBar().setTitle(R.string.my_health_title);
 
         mainNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
