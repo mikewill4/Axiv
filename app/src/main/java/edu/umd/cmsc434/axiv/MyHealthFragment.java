@@ -40,6 +40,7 @@ public class MyHealthFragment extends Fragment {
 
     private RadarChart chart;
 
+
     public MyHealthFragment() {
         // Required empty public constructor
     }

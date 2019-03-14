@@ -42,18 +42,23 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.navigation_my_health:
                         setFragment(myHealthFragment);
+                        getSupportActionBar().setTitle(R.string.my_health_title);
                         return true;
                     case R.id.navigation_metrics:
                         setFragment(metricsFragment);
+                        getSupportActionBar().setTitle(R.string.metrics_title);
                         return true;
                     case R.id.navigation_compete:
                         setFragment(competeFragment);
+                        getSupportActionBar().setTitle(R.string.compete_title);
                         return true;
                     case R.id.navigation_rewards:
                         setFragment(rewardsFragment);
+                        getSupportActionBar().setTitle(R.string.rewards_title);
                         return true;
                     case R.id.navigation_settings:
                         setFragment(settingsFragment);
+                        getSupportActionBar().setTitle(R.string.settings_title);
                         return true;
                     default:
                         return true;
