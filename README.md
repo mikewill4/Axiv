@@ -8,11 +8,10 @@ diet improvements. Users can compete with their friends and earn rewards.
 * dstevens-dev
 ## To-do:
 * My Health screen
-    * Tweak radar chart colors
-    * Change title
-    * Nest radar chart in listview
-    * Add daily targets button
-    * Add suggestions button 
+    * Add onclick for buttons
+    * Create suggestions screen
+    * Create daily targets screen
+    * Add click toggle for radar chart
 * My Metrics screen
 * Competitions screen
 * Rewards Screen
@@ -22,4 +21,8 @@ diet improvements. Users can compete with their friends and earn rewards.
 ## Completed:
 * Bottom navigation bar
 * Fragments for each screen
-* Radar chart for my health screen
+* My Health screen
+    * Changed title
+    * Created radar chart
+    * Created buttons for Health suggestions and Daily targets
+    * Added scrolling
