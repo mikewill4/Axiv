@@ -18,7 +18,7 @@
                 android:layout_height="20dp"
                 android:text="@string/overall_score"
                 android:textColor="@android:color/white"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryDark"
                 android:layout_marginTop="4dp" />
 
             <TextView
@@ -33,7 +33,7 @@
                 android:layout_height="20dp"
                 android:text="@string/score_breakdown"
                 android:textColor="@android:color/white"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryDark"
                 android:layout_marginTop="4dp"/>
 
             <com.github.mikephil.charting.charts.RadarChart
@@ -48,14 +48,22 @@
                 android:layout_height="match_parent"
                 android:text="@string/health_suggestions"
                 android:textColor="@android:color/white"
-                android:background="@color/colorPrimary"/>
+                android:background="@color/colorPrimaryDark"/>
             <Button
                 android:id="@+id/daily_targets_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/daily_targets"
                 android:textColor="@android:color/white"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="4dp"/>
+            <Button
+                android:id="@+id/track_progress_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/track_progress"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
                 android:layout_marginTop="4dp"/>
         </LinearLayout>
     </ScrollView>
