@@ -1,6 +1,7 @@
 package edu.umd.cmsc434.axiv;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.RadarChart;
@@ -105,6 +107,33 @@ public class MyHealthFragment extends Fragment {
 //        legend.setXEntrySpace(7f);
 //        legend.setYEntrySpace(5f);
 //        legend.setTextColor(Color.WHITE);
+
+        // Health suggestions button
+        Button healthSuggestions = (Button) rootView.findViewById(R.id.health_suggestions_button);
+        healthSuggestions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), HealthSuggestionsActivity.class));
+            }
+        });
+
+        // Daily targets button
+        Button dailyTargets = (Button) rootView.findViewById(R.id.daily_targets_button);
+        dailyTargets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), DailyTargetsActivity.class));
+            }
+        });
+
+        // Track progress button
+        Button trackProgress = (Button) rootView.findViewById(R.id.track_progress_button);
+        trackProgress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), TrackProgressActivity.class));
+            }
+        });
 
         return rootView;
     }
