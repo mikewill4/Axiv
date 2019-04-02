@@ -6,23 +6,25 @@ diet improvements. Users can compete with their friends and earn rewards.
 * dfox-dev
 * fwiltman-dev
 * dstevens-dev
-## To-do:
-* My Health screen
-    * Add onclick for buttons
-    * Create suggestions screen
-    * Create daily targets screen
-    * Add click toggle for radar chart
-* My Metrics screen
-* Competitions screen
-* Rewards Screen
-* Settings
-* Login
-* Registration
-## Completed:
-* Bottom navigation bar
-* Fragments for each screen
-* My Health screen
-    * Changed title
-    * Created radar chart
-    * Created buttons for Health suggestions and Daily targets
-    * Added scrolling
+## Task list:
+### Bottom navigation bar
+- [x] Appropriate icons
+- [x] Fragments for each screen
+### My Health screen
+- [x] Create radar chart for metrics
+- [x] Create buttons (Health suggestions, Daily targets, Track progress)
+- [x] Add scrolling
+- [x] Add onclick to buttons -> open new activities
+- [ ] Add click toggle for radar chart
+### My Metrics screen
+- [ ] TBD
+### Competitions screen
+- [ ] TBD
+### Rewards Screen
+- [ ] TBD
+### Settings
+- [ ] TBD
+### Login
+- [ ] TBD
+### Registration
+- [ ] TBD

@@ -12,6 +12,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -40,5 +41,18 @@
             android:name=".TrackHydrationActivity"
             android:label="@string/app_name">
         </activity>
+
+        <activity android:name=".HealthSuggestionsActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/health_suggestions"/>
+
+        <activity android:name=".DailyTargetsActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/daily_targets"/>
+
+        <activity android:name=".TrackProgressActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/track_progress"></activity>
     </application>
+
 </manifest>

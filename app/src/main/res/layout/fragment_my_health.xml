@@ -46,9 +46,9 @@
                 android:id="@+id/health_suggestions_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
                 android:text="@string/health_suggestions"
-                android:textColor="@android:color/white"
-                android:background="@color/colorPrimaryDark"/>
+                android:textColor="@android:color/white" />
             <Button
                 android:id="@+id/daily_targets_button"
                 android:layout_width="match_parent"
