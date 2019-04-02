@@ -15,5 +15,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MealSelectionActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".TrackSleepActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".TrackExerciseActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".TrackStepsActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".TrackWeightActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".TrackHydrationActivity"
+            android:label="@string/app_name">
+        </activity>
     </application>
 </manifest>

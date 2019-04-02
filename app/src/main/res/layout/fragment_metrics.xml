@@ -5,10 +5,94 @@
     android:layout_height="match_parent"
     tools:context=".MetricsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/metrics_title" />
+        android:paddingTop="20dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:textSize="40dp"
+            android:text="Track Metrics" />
+
+
+        <Button
+            android:id="@+id/track_meals"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="56dp"
+            android:text="@string/track_meals"
+            android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
+            android:drawablePadding="-15dp"
+            android:paddingBottom="30dp"
+            android:background="@color/colorWhiteTransparent" />
+
+        <Button
+            android:id="@+id/track_sleep"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_alignTop="@+id/track_meals"
+            android:layout_toEndOf="@+id/track_meals"
+            android:text="@string/track_sleep"
+            android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
+            android:drawablePadding="-15dp"
+            android:paddingBottom="30dp"
+            android:background="@color/colorWhiteTransparent"/>
+
+        <Button
+            android:id="@+id/track_steps"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_alignStart="@+id/track_meals"
+            android:layout_below="@+id/track_meals"
+            android:text="@string/track_steps"
+            android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
+            android:drawablePadding="-15dp"
+            android:paddingBottom="30dp"
+            android:background="@color/colorWhiteTransparent"/>
+
+        <Button
+            android:id="@+id/track_hydration"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_alignStart="@+id/track_sleep"
+            android:layout_below="@+id/track_sleep"
+            android:text="@string/track_hydration"
+            android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
+            android:drawablePadding="-15dp"
+            android:paddingBottom="30dp"
+            android:background="@color/colorWhiteTransparent"/>
+
+        <Button
+            android:id="@+id/track_exercise"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_alignStart="@+id/track_steps"
+            android:layout_below="@+id/track_steps"
+            android:text="@string/track_exercise"
+            android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
+            android:drawablePadding="-15dp"
+            android:paddingBottom="30dp"
+            android:background="@color/colorWhiteTransparent"/>
+
+        <Button
+            android:id="@+id/track_weight"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_alignStart="@+id/track_hydration"
+            android:layout_below="@+id/track_hydration"
+            android:text="@string/track_weight"
+            android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
+            android:drawablePadding="-15dp"
+            android:paddingBottom="30dp"
+            android:background="@color/colorWhiteTransparent"/>
+    </RelativeLayout>
 
 </FrameLayout>

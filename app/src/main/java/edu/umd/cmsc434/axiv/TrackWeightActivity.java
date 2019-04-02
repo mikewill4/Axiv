@@ -1,4 +1,17 @@
 package edu.umd.cmsc434.axiv;
 
-public class TrackWeightActivity {
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
+import android.widget.FrameLayout;
+
+public class TrackWeightActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_track_weight);
+    }
 }
