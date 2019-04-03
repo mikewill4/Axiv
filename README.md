@@ -6,6 +6,8 @@ diet improvements. Users can compete with their friends and earn rewards.
 * dfox-dev
 * fwiltman-dev
 * dstevens-dev
+## Icons:
+Icons obtained from [Material Design](https://material.io/tools/icons/)
 ## Task list:
 ### Bottom navigation bar
 - [x] Appropriate icons
