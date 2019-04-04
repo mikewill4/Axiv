@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.umd.cmsc434.axiv">
+    package="edu.umd.cmsc434.axiv"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
 
     <application
         android:allowBackup="true"
@@ -8,7 +17,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:node="replace"
+        >
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,27 +30,27 @@
 
         <activity
             android:name=".MealSelectionActivity"
-            android:label="@string/app_name">
+            android:label="Select Meal Input Method">
         </activity>
         <activity
             android:name=".TrackSleepActivity"
-            android:label="@string/app_name">
+            android:label="Track Sleep">
         </activity>
         <activity
             android:name=".TrackExerciseActivity"
-            android:label="@string/app_name">
+            android:label="Track Exercise">
         </activity>
         <activity
             android:name=".TrackStepsActivity"
-            android:label="@string/app_name">
+            android:label="Track Steps">
         </activity>
         <activity
             android:name=".TrackWeightActivity"
-            android:label="@string/app_name">
+            android:label="Track Weight">
         </activity>
         <activity
             android:name=".TrackHydrationActivity"
-            android:label="@string/app_name">
+            android:label="Track Hydration">
         </activity>
 
         <activity android:name=".HealthSuggestionsActivity"
@@ -53,6 +64,16 @@
         <activity android:name=".TrackProgressActivity"
             android:parentActivityName=".MainActivity"
             android:label="@string/track_progress"></activity>
+
+        <activity android:name=".MealCameraPictureActivity"
+            android:parentActivityName=".MealSelectionActivity"
+            android:label="Meal Picture"></activity>
+
     </application>
+
+
+
+
+
 
 </manifest>

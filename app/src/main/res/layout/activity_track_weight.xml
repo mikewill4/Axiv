@@ -22,7 +22,7 @@
             android:textColor="@android:color/black"/>
 
         <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/input_unit_spinner"
+            android:id="@+id/input_weight_unit_spinner"
             android:layout_width="50pt"
             android:layout_height="20pt"
             android:layout_toEndOf="@id/weight_input">

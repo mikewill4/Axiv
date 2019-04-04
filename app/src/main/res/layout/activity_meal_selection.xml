@@ -22,6 +22,7 @@
                 android:background="@color/colorPrimaryDark" />
 
             <Button
+                android:id="@+id/meal_picture_button"
                 android:layout_width="match_parent"
                 android:layout_height="30pt"
                 android:layout_marginTop="10dp"

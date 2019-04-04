@@ -3,4 +3,44 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:textAlignment="center"
+        android:textSize="13pt"
+        android:text="Enter Water Consumption" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/water_input"
+            android:layout_width="70pt"
+            android:layout_height="20pt"
+            android:textColor="@android:color/black"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/input_water_unit_spinner"
+            android:layout_width="50pt"
+            android:layout_height="20pt"
+            android:layout_toEndOf="@id/water_input">
+
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:background="@color/colorPrimaryDark"
+        android:text="Submit"
+        android:textColor="@color/colorWhite"/>
+
+
+    </LinearLayout>

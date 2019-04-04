@@ -17,7 +17,7 @@ public class TrackWeightActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_weight);
 
-        Spinner unitSpinner = (Spinner) findViewById(R.id.input_unit_spinner);
+        Spinner unitSpinner = (Spinner) findViewById(R.id.input_weight_unit_spinner);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.weight_units ,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
