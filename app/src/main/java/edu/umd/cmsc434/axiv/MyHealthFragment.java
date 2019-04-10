@@ -3,8 +3,10 @@ package edu.umd.cmsc434.axiv;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -54,6 +56,11 @@ public class MyHealthFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_my_health, container, false);
 
+        // Get display width
+        Display display = getActivity().getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+
         // Configure radar chart
         chart = rootView.findViewById(R.id.health_radar_chart);
         chart.setBackgroundColor(Color.WHITE);
@@ -63,8 +70,8 @@ public class MyHealthFragment extends Fragment {
         chart.setWebColorInner(Color.GRAY);
         chart.setWebAlpha(100);
         chart.setRotationEnabled(false);
-        chart.setMinimumHeight(1500);
-        chart.setMinimumWidth(1500);
+        chart.setMinimumHeight(size.x);
+        chart.setMinimumWidth(size.x);
         setData();
 
         // Animate the chart
