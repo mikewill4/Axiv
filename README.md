@@ -21,8 +21,8 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [ ] Move toggle values out of menu bar
 - [ ] Fix scaling issues for radar chart on different screen sizes
 ### Health Suggestions screen
-- [ ] Create listview for displaying various health suggestions
-- [ ] Each item opens up a dialog box for more information
+- [x] Create listview for displaying various health suggestions
+- [x] Each item opens up a dialog box for more information
 - [ ] Suggestions are styled towards improving a specific metric
 ### Daily Targets screen
 - [ ] Create progress bars for each daily target
