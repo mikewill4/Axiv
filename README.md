@@ -33,26 +33,43 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [ ] Add functionality for switching time period displayed
 - [ ] Show history of metric entries below graph
 ### My Metrics screen
-- [ ] TBD
+- [ ] Meals
+- [ ] Sleep
+- [ ] Steps
+- [ ] Hydration
+- [ ] Exercise
+- [ ] Weight
+- [ ] Blood pressure?
 ### Competitions screen
 - [ ] Add featured competitions
 - [ ] Add private competitions
 ### Rewards Screen
-- [ ] TBD
-### Settings
+- [ ] Show current points accumulated
+- [ ] Rewards sorted into categories
+- [ ] Ability to filter by rewards you can actually afford
+### Settings screen
 - [ ] Add functionality to toggle public visibility of score
 - [ ] Show connected devices
 - [ ] Buttons for adding or selecting devices
 - [ ] Switch to metric units
 - [ ] Turn off notifications
-### Login
-- [ ] TBD
-### Registration
-- [ ] TBD
+### Start screen
+- [x] Option to login
+- [x] Option to register
+- [x] Logo
+### Login screen
+- [x] Text entry for username and password
+- [x] Forgot password button 
+### Registration screen
+- [ ] Full name
+- [x] Email and password
+- [ ] Age, height, weight, gender
+- [ ] Personalized fitness and diet questions
 ### Notifications
-- [ ] TBD
+- [ ] Reminders to hit daily targets
+- [ ] Health suggestion of the day
 ### Style
 - [ ] Pick primary colors for app
 - [ ] Standardize button style
 - [ ] Standardize font type and sizes
-- [ ] Create a logo?
+- [x] Create a logo
