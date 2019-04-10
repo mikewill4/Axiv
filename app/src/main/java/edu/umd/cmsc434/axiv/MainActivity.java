@@ -7,7 +7,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
     private CompeteFragment competeFragment;
     private RewardsFragment rewardsFragment;
     private SettingsFragment settingsFragment;
+
+    private EditText Name;
+    private EditText Password;
+    private TextView Info;
+    private Button Login;
+    private int counter = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
