@@ -69,11 +69,15 @@
             android:parentActivityName=".MealSelectionActivity"
             android:label="Meal Picture"></activity>
 
+        <activity android:name=".MealConfirmationActivity"
+            android:parentActivityName=".MealSelectionActivity"
+            android:label="Picture Confirmation"></activity>
+
+        <activity android:name=".IndividualCompetition"
+            android:parentActivityName=".MainActivity"
+            android:label="Competition"></activity>
+
+
     </application>
-
-
-
-
-
 
 </manifest>

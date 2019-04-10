@@ -15,10 +15,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Track Metrics"
             android:textAlignment="center"
-            android:textSize="40dp"
-            android:text="Track Metrics" />
+            android:textSize="40dp" />
 
 
         <Button
@@ -41,11 +42,11 @@
             android:layout_height="140dp"
             android:layout_alignTop="@+id/track_meals"
             android:layout_toEndOf="@+id/track_meals"
-            android:text="@string/track_sleep"
+            android:background="@color/colorWhiteTransparent"
             android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
             android:drawablePadding="-15dp"
             android:paddingBottom="30dp"
-            android:background="@color/colorWhiteTransparent"/>
+            android:text="@string/track_sleep" />
 
         <Button
             android:id="@+id/track_steps"

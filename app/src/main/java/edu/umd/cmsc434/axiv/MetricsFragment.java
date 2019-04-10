@@ -67,15 +67,12 @@ public class MetricsFragment extends Fragment {
             }
         });
 
-        trackSleepButton.setOnClickListener(new View.OnClickListener() {
+        trackStepsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                startActivity(new Intent(getActivity(),TrackSleepActivity.class));
+                startActivity(new Intent(getActivity(),TrackStepsActivity.class));
             }
         });
-
-
-
 
         return metricView;
     }

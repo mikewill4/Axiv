@@ -3,4 +3,72 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110pt"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:text="Chef Boyardee"
+                android:textAlignment="center"
+                android:textSize="20pt" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:gravity="center"
+                android:layout_marginTop="10pt"
+                >
+
+                <TextView
+                    android:id="@+id/meal_confirm_serving_text"
+                    android:layout_width="130pt"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:text="Number of Servings"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="30dp"
+                    />
+
+
+                <EditText
+                    android:id="@+id/meal_confirm_input_servings"
+                    android:layout_width="70pt"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/meal_confirm_serving_text"
+
+                    android:textColor="@android:color/black" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/meal_confirm_submit"
+                android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:layout_marginTop="10pt"
+                android:background="@color/colorPrimaryDark"
+                android:text="Submit"
+                android:textColor="@color/colorWhite"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
 </android.support.constraint.ConstraintLayout>
