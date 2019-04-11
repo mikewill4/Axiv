@@ -68,6 +68,8 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 ### Notifications
 - [ ] Reminders to hit daily targets
 - [ ] Health suggestion of the day
+### Data
+- [ ] Create singleton class to hold data across app
 ### Style
 - [ ] Pick primary colors for app
 - [ ] Standardize button style
