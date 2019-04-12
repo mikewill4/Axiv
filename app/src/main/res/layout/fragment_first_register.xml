@@ -13,8 +13,27 @@
         <!-- TODO: Update blank fragment layout -->
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Add register stuff here" />
+            android:layout_height="wrap_content"
+            android:text="Add register stuff here"
+            android:gravity="center"
+            android:textSize="36sp"
+            android:layout_marginTop="32dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/accountText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/have_account"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:background="@drawable/topborder"/>
+        </RelativeLayout>
+
+
 
     </LinearLayout>
 

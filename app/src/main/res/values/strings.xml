@@ -27,6 +27,7 @@
     <string name="track_weight">Track Weight</string>
     <string name="more_information">More information</string>
     <string name="close">Close</string>
+    <string name="have_account">Already have an account? Sign in.</string>
 
 
 </resources>
