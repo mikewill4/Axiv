@@ -27,22 +27,28 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".MealSelectionActivity"
-            android:label="Select Meal Input Method" />
+            android:label="Select Meal Input Method"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".TrackSleepActivity"
-            android:label="Track Sleep" />
+            android:label="Track Sleep"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".TrackExerciseActivity"
-            android:label="Track Exercise" />
+            android:label="Track Exercise"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".TrackStepsActivity"
-            android:label="Track Steps" />
+            android:label="Track Steps"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".TrackWeightActivity"
-            android:label="Track Weight" />
+            android:label="Track Weight"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".TrackHydrationActivity"
-            android:label="Track Hydration"></activity>
+            android:label="Track Hydration"
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".HealthSuggestionsActivity"
             android:label="@string/health_suggestions"
