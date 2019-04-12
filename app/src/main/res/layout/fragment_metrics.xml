@@ -11,17 +11,6 @@
         android:paddingTop="20dp"
         android:gravity="center_horizontal">
 
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:text="Track Metrics"
-            android:textAlignment="center"
-            android:textSize="40dp" />
-
-
         <Button
             android:id="@+id/track_meals"
             android:layout_width="170dp"
