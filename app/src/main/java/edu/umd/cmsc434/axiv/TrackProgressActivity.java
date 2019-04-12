@@ -1,5 +1,6 @@
 package edu.umd.cmsc434.axiv;
 
+import android.graphics.Color;
 import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -41,12 +42,15 @@ public class TrackProgressActivity extends AppCompatActivity  {
         ArrayList<Entry> yValues = new ArrayList<>();
 
         for (int i = 0; i <= 100; i += 10) {
-            yValues.add(new Entry(0, i));
+            yValues.add(new Entry(0, (float)(i * Math.random())));
         }
 
         LineDataSet set1 = new LineDataSet(yValues, "Data Set 1");
 
         set1.setFillAlpha(110);
+        set1.setColor(Color.RED);
+        set1.setLineWidth(3f);
+        set1.setValueTextSize(16);
 
         ArrayList<ILineDataSet> dataSets = new ArrayList<>();
         dataSets.add(set1);
