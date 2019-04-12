@@ -16,6 +16,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText Password;
     private TextView Info;
     private Button Login;
+    private Button Register;
     private TextView InvalidCreds;
     private TextView ForgotPassword;
     private int counter = 5;
@@ -30,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         Password = (EditText) findViewById(R.id.etPassword);
         Info = (TextView) findViewById(R.id.tvInfo);
         Login = (Button) findViewById(R.id.btnLogin);
+        Register = (Button) findViewById(R.id.btnRegister);
         InvalidCreds = (TextView) findViewById(R.id.tvInvalidCreds);
         ForgotPassword = (TextView) findViewById(R.id.btnForgotPassword);
 
@@ -39,6 +41,13 @@ public class LoginActivity extends AppCompatActivity {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                validate(Name.getText().toString(), Password.getText().toString());
+            }
+        });
+
+        Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 validate(Name.getText().toString(), Password.getText().toString());
