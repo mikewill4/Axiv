@@ -12,6 +12,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 ### Bottom navigation bar
 - [x] Appropriate icons
 - [x] Fragments for each screen
+- [ ] Adding swiping between screens
 ### My Health screen
 - [x] Create radar chart for metrics
 - [x] Create buttons (Health suggestions, Daily targets, Track progress)
