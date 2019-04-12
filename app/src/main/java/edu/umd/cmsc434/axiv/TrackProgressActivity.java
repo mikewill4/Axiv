@@ -87,7 +87,7 @@ public class TrackProgressActivity extends AppCompatActivity  {
 
         chart.setData(data);
 
-        String[] values = new String[] {"Jan", "Feb", "Mar", "Apr", "May", "Jun"};
+        String[] values = new String[] {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"};
 
         XAxis xAxis = chart.getXAxis();
         xAxis.setValueFormatter(new XAxisValueFormatter(values));

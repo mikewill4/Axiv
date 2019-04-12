@@ -141,6 +141,15 @@ public class MyHealthFragment extends Fragment {
             }
         });
 
+        // Reminders
+        Button reminders = (Button) rootView.findViewById(R.id.reminders_button);
+        reminders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), RemindersActivity.class));
+            }
+        });
+
         return rootView;
     }
 

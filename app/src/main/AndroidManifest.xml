@@ -67,6 +67,10 @@
             android:name=".IndividualCompetition"
             android:label="Competition"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RemindersActivity"
+            android:label="Reminders"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
