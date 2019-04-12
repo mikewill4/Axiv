@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.navigation_metrics:
                         setFragment(metricsFragment);
-                        getSupportActionBar().setTitle(R.string.metrics_title);
+                        getSupportActionBar().setTitle(R.string.track_metrics);
                         return true;
                     case R.id.navigation_compete:
                         setFragment(competeFragment);

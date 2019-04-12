@@ -2,6 +2,7 @@
     <string name="app_name">Axiv</string>
     <string name="my_health">My Health</string>
     <string name="metrics">Metrics</string>
+    <string name="track_metrics">Track Metrics</string>
     <string name="compete">Compete</string>
     <string name="rewards">Rewards</string>
     <string name="settings">Settings</string>
