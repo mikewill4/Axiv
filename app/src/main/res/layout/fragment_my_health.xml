@@ -18,8 +18,7 @@
                 android:layout_height="20dp"
                 android:text="@string/overall_score"
                 android:textColor="@android:color/white"
-                android:background="@color/colorPrimaryDark"
-                android:layout_marginTop="4dp" />
+                android:background="@color/colorPrimaryDark"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -48,7 +47,9 @@
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimaryDark"
                 android:text="@string/health_suggestions"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
             <Button
                 android:id="@+id/daily_targets_button"
                 android:layout_width="match_parent"
@@ -56,7 +57,9 @@
                 android:text="@string/daily_targets"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
-                android:layout_marginTop="4dp"/>
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" />
             <Button
                 android:id="@+id/track_progress_button"
                 android:layout_width="match_parent"
@@ -64,7 +67,10 @@
                 android:text="@string/track_progress"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
-                android:layout_marginTop="4dp"/>
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"/>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
