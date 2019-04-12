@@ -15,10 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:node="replace">
-        <activity android:name=".LoginActivity" android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
@@ -39,32 +42,31 @@
             android:label="Track Weight" />
         <activity
             android:name=".TrackHydrationActivity"
-            android:label="Track Hydration">
-        </activity>
-
-        <activity android:name=".HealthSuggestionsActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/health_suggestions"/>
-
-        <activity android:name=".DailyTargetsActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/daily_targets"/>
-
-        <activity android:name=".TrackProgressActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/track_progress"/>
-
-        <activity android:name=".MealCameraPictureActivity"
-            android:parentActivityName=".MealSelectionActivity"
-            android:label="Meal Picture"/>
-
-        <activity android:name=".MealConfirmationActivity"
-            android:parentActivityName=".MealSelectionActivity"
-            android:label="Picture Confirmation"/>
-
-        <activity android:name=".IndividualCompetition"
-            android:parentActivityName=".MainActivity"
-            android:label="Competition"/>
+            android:label="Track Hydration"></activity>
+        <activity
+            android:name=".HealthSuggestionsActivity"
+            android:label="@string/health_suggestions"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DailyTargetsActivity"
+            android:label="@string/daily_targets"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".TrackProgressActivity"
+            android:label="@string/track_progress"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MealCameraPictureActivity"
+            android:label="Meal Picture"
+            android:parentActivityName=".MealSelectionActivity" />
+        <activity
+            android:name=".MealConfirmationActivity"
+            android:label="Picture Confirmation"
+            android:parentActivityName=".MealSelectionActivity" />
+        <activity
+            android:name=".IndividualCompetition"
+            android:label="Competition"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
