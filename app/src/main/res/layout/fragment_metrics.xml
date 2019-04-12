@@ -8,8 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="20dp"
-        android:gravity="center_horizontal">
+        android:gravity="center">
 
         <Button
             android:id="@+id/track_meals"
@@ -17,13 +16,14 @@
             android:layout_height="140dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="56dp"
             android:text="@string/track_meals"
+            android:textColor="@color/colorWhite"
             android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
             android:drawablePadding="-15dp"
             android:paddingBottom="30dp"
-            android:background="@color/colorWhiteTransparent" />
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/colorPrimaryDark" />
 
         <Button
             android:id="@+id/track_sleep"
@@ -31,11 +31,14 @@
             android:layout_height="140dp"
             android:layout_alignTop="@+id/track_meals"
             android:layout_toEndOf="@+id/track_meals"
-            android:background="@color/colorWhiteTransparent"
+            android:background="@color/colorPrimaryDark"
             android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
             android:drawablePadding="-15dp"
             android:paddingBottom="30dp"
-            android:text="@string/track_sleep" />
+            android:text="@string/track_sleep"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/colorWhite"/>
 
         <Button
             android:id="@+id/track_steps"
@@ -44,10 +47,14 @@
             android:layout_alignStart="@+id/track_meals"
             android:layout_below="@+id/track_meals"
             android:text="@string/track_steps"
+            android:textColor="@color/colorWhite"
             android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
             android:drawablePadding="-15dp"
             android:paddingBottom="30dp"
-            android:background="@color/colorWhiteTransparent"/>
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/colorPrimaryDark"/>
 
         <Button
             android:id="@+id/track_hydration"
@@ -56,10 +63,13 @@
             android:layout_alignStart="@+id/track_sleep"
             android:layout_below="@+id/track_sleep"
             android:text="@string/track_hydration"
+            android:textColor="@color/colorWhite"
             android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
             android:drawablePadding="-15dp"
             android:paddingBottom="30dp"
-            android:background="@color/colorWhiteTransparent"/>
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/colorPrimaryDark"/>
 
         <Button
             android:id="@+id/track_exercise"
@@ -68,10 +78,13 @@
             android:layout_alignStart="@+id/track_steps"
             android:layout_below="@+id/track_steps"
             android:text="@string/track_exercise"
+            android:textColor="@color/colorWhite"
             android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
             android:drawablePadding="-15dp"
             android:paddingBottom="30dp"
-            android:background="@color/colorWhiteTransparent"/>
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/colorPrimaryDark"/>
 
         <Button
             android:id="@+id/track_weight"
@@ -80,10 +93,12 @@
             android:layout_alignStart="@+id/track_hydration"
             android:layout_below="@+id/track_hydration"
             android:text="@string/track_weight"
+            android:textColor="@color/colorWhite"
             android:drawableBottom="@drawable/baseline_fitness_center_black_24dp"
             android:drawablePadding="-15dp"
             android:paddingBottom="30dp"
-            android:background="@color/colorWhiteTransparent"/>
+            android:layout_marginTop="4dp"
+            android:background="@color/colorPrimaryDark"/>
     </RelativeLayout>
 
 </FrameLayout>
