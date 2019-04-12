@@ -31,8 +31,6 @@ public class LoginActivity extends AppCompatActivity {
 
         InvalidCreds.setText("");
         Info.setText("No. of attempts remaining: 5");
-        getSupportActionBar().setTitle("Log In");
-
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override

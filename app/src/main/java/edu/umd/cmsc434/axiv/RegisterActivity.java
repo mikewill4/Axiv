@@ -31,9 +31,9 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         getSupportActionBar().setTitle("Register");
 
-        DetailsButton = findViewById(R.id.btnDetails);
-        GoalsButton = findViewById(R.id.btnGoals);
-        SpecsButton = findViewById(R.id.btnSpecs);
+        //DetailsButton = findViewById(R.id.btnDetails);
+        //GoalsButton = findViewById(R.id.btnGoals);
+        //SpecsButton = findViewById(R.id.btnSpecs);
 
         DetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
