@@ -12,8 +12,7 @@
     <string name="my_health_title">My Health</string>
     <string name="rewards_title">Rewards</string>
     <string name="settings_title">Settings</string>
-    <string name="refresh_chart">Refresh Chart</string>
-    <string name="toggle_chart_values">Toggle Values</string>
+    <string name="refresh_values">Refresh values</string>
     <string name="overall_score">Your score:</string>
     <string name="health_suggestions">Health suggestions</string>
     <string name="daily_targets">Daily targets</string>
