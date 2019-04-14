@@ -162,16 +162,16 @@ public class MyHealthFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
-            case R.id.refreshChart:
+            case R.id.refreshValues:
                 setData();
                 chart.invalidate();
                 break;
-            case R.id.toggleValues:
-                for (IDataSet<?> set : chart.getData().getDataSets()) {
-                    set.setDrawValues(!set.isDrawValuesEnabled());
-                }
-                chart.invalidate();
-                break;
+//            case R.id.toggleValues:
+//                for (IDataSet<?> set : chart.getData().getDataSets()) {
+//                    set.setDrawValues(!set.isDrawValuesEnabled());
+//                }
+//                chart.invalidate();
+//                break;
         }
         return super.onOptionsItemSelected(item);
     }
