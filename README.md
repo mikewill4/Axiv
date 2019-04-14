@@ -1,4 +1,4 @@
-# Axiv
+#Axiv
 Axiv is an integrated health app that allows users to track their fitness and
 diet improvements. Users can compete with their friends and earn rewards.
 ## Development Branches:
@@ -12,7 +12,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 ### Bottom navigation bar
 - [x] Appropriate icons
 - [x] Fragments for each screen
-- [ ] Adding swiping between screens
+- [x] Adding swiping between screens
 ### My Health screen
 - [x] Create radar chart for metrics
 - [x] Create buttons (Health suggestions, Daily targets, Track progress)
