@@ -7,16 +7,21 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import edu.umd.cmsc434.axiv.AppData.PrivateCompetitionInfo;
+import edu.umd.cmsc434.axiv.AppData.User;
 
 
 /**
@@ -28,8 +33,6 @@ public class CompeteFragment extends Fragment {
     private ListView privatelistView;
     private ListView invites;
 
-    private ArrayList<FeaturedCompetitionInfo> featuredInfoList;
-    private ArrayList<PrivateCompetitionInfo> privateInfoList;
 
 
 
@@ -40,33 +43,33 @@ public class CompeteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+
+
         View competeView = inflater.inflate(R.layout.fragment_compete, container, false);
 
-        featuredInfoList = new ArrayList<FeaturedCompetitionInfo>();
-        featuredInfoList.add(new FeaturedCompetitionInfo("Nandos Peri Peri","50% off Chicken","steps",55));
-        featuredInfoList.add(new FeaturedCompetitionInfo("Maryland Dairy","2 Free Scoop","nutrition",25));
-
-        privateInfoList = new ArrayList<PrivateCompetitionInfo>();
-        privateInfoList.add(new PrivateCompetitionInfo("Workplace Step Challenge","UMD CS Department",15));
-        privateInfoList.add(new PrivateCompetitionInfo("Friend Workouts","Dylan's Friends",4));
-        privateInfoList.add(new PrivateCompetitionInfo("Nutrition Activity","KNES240",120));
-
-        MyPrivateListAdapter privateListAdapter = new MyPrivateListAdapter(this.getActivity(),privateInfoList);
+        MyPrivateListAdapter privateListAdapter = new MyPrivateListAdapter(this.getActivity(),AppData.userPrivateCompetitions);
         privatelistView = (ListView) competeView.findViewById(R.id.compete_private_listview);
         privatelistView.setAdapter(privateListAdapter);
         UIUtils.setListViewHeightBasedOnItems(privatelistView);
 
-        MyFeaturedListAdapter featuredListAdapter = new MyFeaturedListAdapter(this.getActivity(),featuredInfoList);
+        MyFeaturedListAdapter featuredListAdapter = new MyFeaturedListAdapter(this.getActivity(),AppData.userFeaturedCompetitions);
         featuredListView = (ListView) competeView.findViewById(R.id.compete_featured_listview);
         featuredListView.setAdapter(featuredListAdapter);
         UIUtils.setListViewHeightBasedOnItems(featuredListView);
+
+        MyInvitesListAdapter invitesListAdapter = new MyInvitesListAdapter(this.getActivity(),AppData.userCompetitionInvites, privateListAdapter);
+        invites = (ListView) competeView.findViewById(R.id.compete_invites_listview);
+        invites.setAdapter(invitesListAdapter);
+        UIUtils.setListViewHeightBasedOnItems(invites);
 
 
         privatelistView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent indvComp = new Intent(getActivity(),IndividualCompetition.class);
+                indvComp.putExtra("userList", position);
 
-                startActivity(new Intent(getActivity(),IndividualCompetition.class));
+                startActivity(indvComp);
             }
         });
 
@@ -79,46 +82,12 @@ public class CompeteFragment extends Fragment {
 }
 
 
-class FeaturedCompetitionInfo{
-
-    public String sponsorName;
-    public String deal;
-    public String compType;
-    public int progressPercentage;
-
-    public FeaturedCompetitionInfo(String sponsorName, String deal, String compType, int progressPercentage){
-        this.sponsorName = sponsorName;
-        this.deal = deal;
-        this.compType = compType;
-        this.progressPercentage = progressPercentage;
-    }
-
-
-
-}
-
-class PrivateCompetitionInfo{
-
-    public String competitionName;
-    public String orgName;
-    public int numMembers;
-
-    public PrivateCompetitionInfo(String competitionName, String orgName, int numMembers){
-        this.competitionName = competitionName;
-        this.orgName = orgName;
-        this.numMembers = numMembers;
-    }
-
-
-
-}
-
 class MyFeaturedListAdapter extends ArrayAdapter<String> {
 
     private final Activity context;
-    private final ArrayList<FeaturedCompetitionInfo> featuredList;
+    private final ArrayList<AppData.FeaturedCompetitionInfo> featuredList;
 
-    public MyFeaturedListAdapter(Activity context, ArrayList<FeaturedCompetitionInfo> featuredList) {
+    public MyFeaturedListAdapter(Activity context, ArrayList<AppData.FeaturedCompetitionInfo> featuredList) {
         super(context, R.layout.listitem_featured_competition);
 
         this.context = context;
@@ -163,9 +132,9 @@ class MyFeaturedListAdapter extends ArrayAdapter<String> {
 class MyPrivateListAdapter extends ArrayAdapter<String> {
 
         private final Activity context;
-        private final ArrayList<PrivateCompetitionInfo> privateList;
+        private final ArrayList<AppData.PrivateCompetitionInfo> privateList;
 
-        public MyPrivateListAdapter(Activity context, ArrayList<PrivateCompetitionInfo> privateList) {
+        public MyPrivateListAdapter(Activity context, ArrayList<AppData.PrivateCompetitionInfo> privateList) {
             super(context, R.layout.listitem_private_competition);
 
             this.context=context;
@@ -204,6 +173,97 @@ class MyPrivateListAdapter extends ArrayAdapter<String> {
 
         };
     }
+
+
+
+class MyInvitesListAdapter extends ArrayAdapter<String> {
+
+    private final Activity context;
+    private final ArrayList<AppData.InvitesInfo> inviteList;
+    private MyPrivateListAdapter privateListAdapter;
+    private ListView privateListView;
+
+    public MyInvitesListAdapter(Activity context, ArrayList<AppData.InvitesInfo> inviteList, MyPrivateListAdapter privateListAdapter) {
+        super(context, R.layout.listitem_compete_invite);
+
+        this.context=context;
+        this.inviteList = inviteList;
+        this.privateListAdapter = privateListAdapter;
+        this.privateListView = privateListView;
+    }
+
+    @Override
+    public int getCount() {
+        // TODO Auto-generated method stub
+        return inviteList.size();
+    }
+
+
+    @Override
+    public long getItemId(int arg0) {
+        // TODO Auto-generated method stub
+        return arg0;
+    }
+
+
+    public View getView(final int position, View view, ViewGroup parent) {
+
+
+        LayoutInflater inflater=LayoutInflater.from(context);
+        View rowView=inflater.inflate(R.layout.listitem_compete_invite, null,true);
+
+        TextView compName = (TextView) rowView.findViewById(R.id.invites_listitem_competition_name);
+        TextView orgName = (TextView) rowView.findViewById(R.id.invites_listitem_org_name);
+
+        compName.setText(inviteList.get(position).competitionName);
+        orgName.setText(inviteList.get(position).orgName);
+
+        ImageButton accept = (ImageButton) rowView.findViewById(R.id.accept_invite_compete);
+        ImageButton reject = (ImageButton) rowView.findViewById(R.id.reject_invite_compete);
+
+        accept.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ArrayList<AppData.User> emptyUserList = new ArrayList<User>();
+                emptyUserList.add(AppData.appUser);
+
+                AppData.userPrivateCompetitions.add(new PrivateCompetitionInfo(
+                        inviteList.get(position).competitionName,
+                        inviteList.get(position).orgName,
+                        emptyUserList.size(),
+                        emptyUserList
+                        ));
+
+                privateListAdapter.notifyDataSetChanged();
+
+                inviteList.remove(position);
+                notifyDataSetChanged();
+
+            }
+        });
+
+        reject.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Rejecting Invite");
+                inviteList.remove(position);
+                notifyDataSetChanged();
+
+
+            }
+        });
+
+
+
+
+
+
+
+        return rowView;
+
+    };
+}
 
 class UIUtils {
 

@@ -17,7 +17,6 @@ public class IndividualCompetition extends AppCompatActivity {
 
     ListView competitionListView;
 
-    private ArrayList<CompetitionUser> userList;
 
 
     @Override
@@ -25,10 +24,8 @@ public class IndividualCompetition extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_individual_competition);
 
-        userList = new ArrayList<CompetitionUser>();
-        userList.add(new CompetitionUser("Jeff Bezos",234));
-        userList.add(new CompetitionUser("Elon Musk",124));
-        userList.add(new CompetitionUser("Brendan Iribe",438));
+        ArrayList<AppData.User> userList = AppData.userPrivateCompetitions.get(getIntent().getIntExtra("userList",0)).participants;
+
         Collections.sort(userList);
         Collections.reverse(userList);
 
@@ -41,34 +38,12 @@ public class IndividualCompetition extends AppCompatActivity {
 
 }
 
-class CompetitionUser implements Comparable<CompetitionUser> {
-
-    public String userName;
-    public double score;
-
-    public CompetitionUser(String userName, double score){
-        this.userName = userName;
-        this.score = score;
-    }
-
-    public int compareTo(CompetitionUser other){
-        if(this.score<other.score){
-            return -1;
-        }else if(this.score > other.score){
-            return 1;
-        } else return 0;
-    }
-
-
-
-}
-
 class MyIndividualCompetitorAdapter extends ArrayAdapter<String> {
 
     private final Activity context;
-    private final ArrayList<CompetitionUser> userList;
+    private final ArrayList<AppData.User> userList;
 
-    public MyIndividualCompetitorAdapter(Activity context, ArrayList<CompetitionUser> userList) {
+    public MyIndividualCompetitorAdapter(Activity context, ArrayList<AppData.User> userList) {
         super(context, R.layout.listitem_individual_comp_users);
 
         this.context = context;

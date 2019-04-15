@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30pt"
+    android:orientation="horizontal"
+    android:background="@drawable/border"
+    >
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="245dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/invites_listitem_competition_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="0dp"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#4d4d4d"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/invites_listitem_org_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/accept_invite_compete"
+        android:layout_width="wrap_content"
+        android:paddingHorizontal="10pt"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_green_light"
+        android:src="@drawable/baseline_people_black_24dp"/>
+
+    <ImageButton
+        android:id="@+id/reject_invite_compete"
+        android:layout_width="wrap_content"
+        android:paddingHorizontal="10pt"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_red_dark"
+        android:src="@drawable/baseline_people_black_24dp"/>
+
+</LinearLayout>
