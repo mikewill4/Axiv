@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -107,6 +108,12 @@ public class TrackWeightActivity extends AppCompatActivity {
         submitWeight.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(weight_input.getText().toString().equals("")){
+                    Toast error_popup = Toast.makeText(TrackWeightActivity.this, "Invalid Value for Weight", Toast.LENGTH_SHORT);
+                    error_popup.show();
+                    return;
+                }
 
                 double weight_value = Double.parseDouble(weight_input.getText().toString());
 

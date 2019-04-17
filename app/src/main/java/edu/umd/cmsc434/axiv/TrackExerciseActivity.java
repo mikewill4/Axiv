@@ -2,7 +2,6 @@ package edu.umd.cmsc434.axiv;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,17 +9,20 @@ import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CalendarView;
-import android.widget.CalendarView.OnDateChangeListener;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.TimePicker.OnTimeChangedListener;
+import android.widget.Toast;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import edu.umd.cmsc434.axiv.Metric.ExerciseMetric;
 
 public class TrackExerciseActivity extends AppCompatActivity {
 
     Button dateButton;
-    Button timeButton;
     CalendarView calendar;
     TimePicker timePicker;
     TextView dateTimeDisplay;
@@ -31,14 +33,18 @@ public class TrackExerciseActivity extends AppCompatActivity {
     Button setDate;
     Button setTime;
 
-    String time = "";
-    String date = "";
+    Date eventOccurance;
+    Calendar cal = Calendar.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_exercise);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+        submitLog = (Button) findViewById(R.id.track_exercise_submit_log);
+        submitLog.setVisibility(View.GONE);
+
 
         exerciseSpinner = (Spinner) findViewById(R.id.track_exercise_activity_spinner);
 
@@ -48,10 +54,9 @@ public class TrackExerciseActivity extends AppCompatActivity {
 
 
         dateTimeDisplay = (TextView) findViewById(R.id.track_exercise_date_time_display);
-        dateTimeDisplay.setText(date + " - " + time);
+        dateTimeDisplay.setVisibility(View.GONE);
 
         dateButton = (Button) findViewById(R.id.track_exercise_date_button);
-        timeButton = (Button) findViewById(R.id.track_exercise_time_button);
 
         calendar = (CalendarView) findViewById(R.id.track_exercise_calandar);
         timePicker = (TimePicker) findViewById(R.id.track_exercise_time_picker);
@@ -72,47 +77,36 @@ public class TrackExerciseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 calendar.setVisibility(View.VISIBLE);
                 setDate.setVisibility(View.VISIBLE);
-            }
-        });
-
-        timeButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                timePicker.setVisibility(View.VISIBLE);
-                setTime.setVisibility(View.VISIBLE);
-            }
-        });
-
-        calendar.setOnDateChangeListener(new OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                date = month + "/" + dayOfMonth + "/" + year;
-                dateTimeDisplay.setText(date + " - " + time);
-            }
-        });
-
-        timePicker.setOnTimeChangedListener(new OnTimeChangedListener() {
-            @Override
-            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
-
-                time = hourOfDay + ":" + (minute < 10 ? "0" + minute : minute) ;
-                dateTimeDisplay.setText(date + " - " + time);
+                dateButton.setVisibility(View.GONE);
             }
         });
 
         setDate.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                cal.setTimeInMillis(calendar.getDate());
+
+
                 calendar.setVisibility(View.GONE);
                 setDate.setVisibility(View.GONE);
+                timePicker.setVisibility(View.VISIBLE);
+                setTime.setVisibility(View.VISIBLE);
             }
         });
 
         setTime.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                cal.set(Calendar.HOUR,timePicker.getCurrentHour());
+                cal.set(Calendar.MINUTE, timePicker.getCurrentMinute());
                 timePicker.setVisibility(View.GONE);
                 setTime.setVisibility(View.GONE);
+                submitLog.setVisibility(View.VISIBLE);
+                dateButton.setVisibility(View.VISIBLE);
+                eventOccurance = cal.getTime();
+                dateTimeDisplay.setText(AppData.standardDateFormat.format(eventOccurance));
+                dateTimeDisplay.setVisibility(View.VISIBLE);
             }
         });
 
@@ -120,11 +114,21 @@ public class TrackExerciseActivity extends AppCompatActivity {
         enterCalories = (EditText) findViewById(R.id.track_exercise_enter_calories);
 
 
-        submitLog = (Button) findViewById(R.id.track_exercise_submit_log);
-
         submitLog.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(enterCalories.getText().toString().equals("") || enterTimeDuration.getText().toString().equals("")){
+                    Toast error_popup = Toast.makeText(TrackExerciseActivity.this,"Invalid Values for Calories or Duration", Toast.LENGTH_SHORT);
+                    error_popup.show();
+                    return;
+                }
+
+                AppData.userMetricHistory.add(new ExerciseMetric(eventOccurance,exerciseSpinner.getSelectedItem().toString(),
+                        Integer.parseInt(enterCalories.getText().toString()), Integer.parseInt(enterTimeDuration.getText().toString())));
+
+                System.out.println(AppData.userMetricHistory);
+
                 startActivity(new Intent(TrackExerciseActivity.this,MainActivity.class));
 
 

@@ -25,6 +25,10 @@ public interface Metric{
         public MetricType getMetricType() {
             return MetricType.EXERCISE;
         }
+
+        public String toString(){
+            return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + exerciseType + " - " + caloriesBurned + " - " + durationMinutes;
+        }
     }
 
     static class WeightMetric implements Metric{
