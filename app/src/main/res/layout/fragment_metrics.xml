@@ -5,9 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".MetricsFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:gravity="center">
 
         <Button
@@ -84,6 +89,7 @@
             android:paddingBottom="30dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
             android:background="@color/colorPrimaryDark"/>
 
         <Button
@@ -98,7 +104,20 @@
             android:drawablePadding="-15dp"
             android:paddingBottom="30dp"
             android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
             android:background="@color/colorPrimaryDark"/>
+
+        <Button
+            android:layout_width="348dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/track_exercise"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="View Metrics History"
+            android:textColor="@color/colorWhite"
+/>
     </RelativeLayout>
+
+    </ScrollView>
 
 </FrameLayout>

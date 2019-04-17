@@ -1,8 +1,11 @@
 package edu.umd.cmsc434.axiv;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class AppData {
+
+    static SimpleDateFormat standardDateFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm");
 
     static int userScore = 100;
     static User appUser = new User("My Username", userScore);
@@ -10,6 +13,7 @@ public class AppData {
     static ArrayList<FeaturedCompetitionInfo> userFeaturedCompetitions = new ArrayList<FeaturedCompetitionInfo>();
     static ArrayList<PrivateCompetitionInfo> userPrivateCompetitions = new ArrayList<PrivateCompetitionInfo>();
     static ArrayList<InvitesInfo> userCompetitionInvites = new ArrayList<InvitesInfo>();
+    static ArrayList<Metric> userMetricHistory = new ArrayList<Metric>();
 
 
 
