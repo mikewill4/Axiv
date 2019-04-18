@@ -5,6 +5,8 @@ import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -71,7 +73,7 @@ public class TrackProgressActivity extends AppCompatActivity  {
         chart.getAxisRight().setEnabled(false);
 
         // Remove description
-        Description description = new Description();
+        final Description description = new Description();
         description.setText("");
         chart.setDescription(description);
 
@@ -254,6 +256,36 @@ public class TrackProgressActivity extends AppCompatActivity  {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.metrics ,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metricSpinner.setAdapter(adapter);
+        metricSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View v, int position, long l) {
+                switch (position) {
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     public class XAxisValueFormatter implements IAxisValueFormatter {
