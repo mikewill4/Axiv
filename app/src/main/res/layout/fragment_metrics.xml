@@ -7,13 +7,14 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center">
+        android:gravity="center"
+        android:paddingTop="128dp">
 
         <Button
             android:id="@+id/track_meals"
@@ -21,6 +22,7 @@
             android:layout_height="140dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_marginTop="64dp"
             android:text="@string/track_meals"
             android:textColor="@color/colorWhite"
             android:drawableBottom="@drawable/baseline_local_dining_white_24dp"
@@ -108,14 +110,44 @@
             android:background="@color/colorPrimaryDark"/>
 
         <Button
+            android:id="@+id/track_heart_rate"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_alignStart="@+id/track_exercise"
+            android:layout_below="@+id/track_exercise"
+            android:text="@string/track_heart_rate"
+            android:textColor="@color/colorWhite"
+            android:drawableBottom="@drawable/baseline_favorite_white_24dp"
+            android:drawablePadding="-15dp"
+            android:paddingBottom="30dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <Button
+            android:id="@+id/track_blood_pressure"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_alignStart="@+id/track_weight"
+            android:layout_below="@+id/track_weight"
+            android:text="@string/track_blood_pressure"
+            android:textColor="@color/colorWhite"
+            android:drawableBottom="@drawable/baseline_timeline_white_24dp"
+            android:drawablePadding="-15dp"
+            android:paddingBottom="30dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <Button
             android:layout_width="348dp"
             android:layout_height="70dp"
-            android:layout_below="@+id/track_exercise"
+            android:layout_below="@+id/track_heart_rate"
             android:layout_marginTop="4dp"
             android:background="@color/colorPrimaryDark"
             android:text="View Metrics History"
-            android:textColor="@color/colorWhite"
-/>
+            android:textColor="@color/colorWhite" />
     </RelativeLayout>
 
     </ScrollView>

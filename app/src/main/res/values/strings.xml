@@ -29,6 +29,8 @@
     <string name="close">Close</string>
     <string name="have_account">Already have an account? Sign in.</string>
     <string name="set_reminders">Set reminders</string>
+    <string name="track_heart_rate">Heart rate</string>
+    <string name="track_blood_pressure">Blood pressure</string>
 
 
 </resources>
