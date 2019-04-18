@@ -14,4 +14,14 @@
         android:padding="64dp">
     </com.github.mikephil.charting.charts.LineChart>
 
+    <Spinner
+        android:id="@+id/track_progress_metric_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:scrollbarStyle="outsideInset">
+    </Spinner>
+
 </LinearLayout>

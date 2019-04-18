@@ -5,6 +5,8 @@ import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Display;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
@@ -246,6 +248,12 @@ public class TrackProgressActivity extends AppCompatActivity  {
         xAxis.setValueFormatter(new XAxisValueFormatter(months));
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
 
+        // Spinner for toggling line graph
+        Spinner metricSpinner = (Spinner) findViewById(R.id.track_progress_metric_spinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.metrics ,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        metricSpinner.setAdapter(adapter);
     }
 
     public class XAxisValueFormatter implements IAxisValueFormatter {
