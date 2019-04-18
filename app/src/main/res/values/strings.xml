@@ -31,6 +31,8 @@
     <string name="set_reminders">Set reminders</string>
     <string name="track_heart_rate">Heart rate</string>
     <string name="track_blood_pressure">Blood pressure</string>
+    <string name="current_metric">Currently displaying: </string>
+    <string name="track_progress_description">This is a sample description. This section will include a description for the currently displayed metric.</string>
 
 
 </resources>
