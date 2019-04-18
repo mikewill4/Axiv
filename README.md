@@ -32,7 +32,6 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Line graph showing progress over a time period for a single metric 
 - [ ] Add functionality for switching which metric is displayed
 - [ ] Add functionality for switching time period displayed
-- [ ] Show history of metric entries below graph
 ### My Metrics screen
 - [ ] Meals - manual entry
 - [ ] Meals - search for previous meals
@@ -77,7 +76,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [ ] Reminders to hit daily targets
 - [ ] Health suggestion of the day
 ### Data
-- [ ] Create singleton class to hold data across app
+- [x] Create singleton class to hold data across app
 ### Style
 - [ ] Pick primary colors for app
 - [ ] Standardize button style
