@@ -82,3 +82,5 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [ ] Standardize button style
 - [ ] Standardize font type and sizes
 - [x] Create a logo
+### Bugs
+- [x] Main screens now cut off by nav bar
