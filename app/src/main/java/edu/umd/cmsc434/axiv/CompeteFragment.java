@@ -227,6 +227,7 @@ class MyInvitesListAdapter extends ArrayAdapter<String> {
 
                 ArrayList<AppData.User> emptyUserList = new ArrayList<User>();
                 emptyUserList.add(AppData.appUser);
+                emptyUserList.add(new AppData.User("Becky Invites", 75.4));
 
                 AppData.userPrivateCompetitions.add(new PrivateCompetitionInfo(
                         inviteList.get(position).competitionName,
@@ -239,6 +240,13 @@ class MyInvitesListAdapter extends ArrayAdapter<String> {
 
                 inviteList.remove(position);
                 notifyDataSetChanged();
+
+                Intent indvComp = new Intent(getContext(),IndividualCompetition.class);
+                indvComp.putExtra("userList", position);
+
+                getContext().startActivity(indvComp);
+
+
 
             }
         });
