@@ -89,5 +89,5 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Create a logo
 ### Bugs
 - [x] Main screens now cut off by nav bar
-- [ ] Compete pages back button goes back to My Health
-- [ ] Enter sleep end date cut off
+- [x] Compete pages back button goes back to My Health
+- [x] Enter sleep end date cut off

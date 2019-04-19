@@ -3,6 +3,7 @@ package edu.umd.cmsc434.axiv;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -183,13 +184,31 @@ public class TrackSleepActivity extends AppCompatActivity {
 
                 AppData.userMetricHistory.add(new Metric.SleepMetric(eventOccurance,sleepTimeStart,sleepTimeEnd));
                 System.out.println(AppData.userMetricHistory);
-                startActivity(new Intent(TrackSleepActivity.this,MainActivity.class));
 
-
+            onBackPressed();
             }
         });
 
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
+            default:
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent newIntent = new Intent("android.intent.action.HOMEPAGE");
+        newIntent.putExtra("currId", 1);
+        startActivity(newIntent);
     }
 }

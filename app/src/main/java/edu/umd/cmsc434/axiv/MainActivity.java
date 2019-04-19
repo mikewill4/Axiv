@@ -1,5 +1,7 @@
 package edu.umd.cmsc434.axiv;
 
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -43,18 +45,18 @@ public class MainActivity extends AppCompatActivity {
     private ViewPagerAdapter pagerAdapter;
     private MenuItem prevMenuItem;
 
+    // Saving state
+    private int currId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         if(!prefs.getBoolean("firstTime", false)) {
-
-
-
-
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean("firstTime", true);
             editor.commit();
@@ -128,6 +130,25 @@ public class MainActivity extends AppCompatActivity {
                 }
                 mainNavigation.getMenu().getItem(position).setChecked(true);
                 prevMenuItem = mainNavigation.getMenu().getItem(position);
+                switch (position) {
+                    case 0:
+                        getSupportActionBar().setTitle(R.string.my_health_title);
+                        break;
+                    case 1:
+                        getSupportActionBar().setTitle(R.string.track_metrics);
+                        break;
+                    case 2:
+                        getSupportActionBar().setTitle(R.string.compete_title);
+                        break;
+                    case 3:
+                        getSupportActionBar().setTitle(R.string.rewards_title);
+                        break;
+                    case 4:
+                        getSupportActionBar().setTitle(R.string.settings_title);
+                        break;
+                    default:
+                        break;
+                }
             }
 
             @Override
@@ -141,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
         pagerAdapter.addFragment(rewardsFragment);
         pagerAdapter.addFragment(settingsFragment);
         pager.setAdapter(pagerAdapter);
+
     }
 
 //    private void setFragment(Fragment fragment) {
@@ -179,6 +201,40 @@ public class MainActivity extends AppCompatActivity {
 
         public void addFragment(Fragment fragment) {
             fragmentList.add(fragment);
+        }
+    }
+
+    @Override
+    public void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getIntent() != null && getIntent().getExtras() != null) {
+            currId = getIntent().getExtras().getInt("currId");
+            pager.setCurrentItem(currId);
+            switch (currId) {
+                case 0:
+                    getSupportActionBar().setTitle(R.string.my_health_title);
+                    break;
+                case 1:
+                    getSupportActionBar().setTitle(R.string.track_metrics);
+                    break;
+                case 2:
+                    getSupportActionBar().setTitle(R.string.compete_title);
+                    break;
+                case 3:
+                    getSupportActionBar().setTitle(R.string.rewards_title);
+                    break;
+                case 4:
+                    getSupportActionBar().setTitle(R.string.settings_title);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

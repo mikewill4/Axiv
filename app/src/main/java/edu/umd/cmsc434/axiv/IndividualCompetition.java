@@ -1,9 +1,11 @@
 package edu.umd.cmsc434.axiv;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -33,6 +35,25 @@ public class IndividualCompetition extends AppCompatActivity {
         MyIndividualCompetitorAdapter adapter = new MyIndividualCompetitorAdapter(this,userList);
         competitionListView = (ListView) findViewById(R.id.individual_competition_user_listview);
         competitionListView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
+            default:
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent newIntent = new Intent("android.intent.action.HOMEPAGE");
+        newIntent.putExtra("currId", 2);
+        startActivity(newIntent);
     }
 
 
