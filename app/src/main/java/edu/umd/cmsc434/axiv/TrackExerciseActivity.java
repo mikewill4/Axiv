@@ -142,4 +142,12 @@ public class TrackExerciseActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent newIntent = new Intent("android.intent.action.HOMEPAGE");
+        newIntent.putExtra("currId", 1);
+        startActivity(newIntent);
+    }
+
 }

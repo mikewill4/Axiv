@@ -1,5 +1,7 @@
 package edu.umd.cmsc434.axiv;
 
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -43,18 +45,18 @@ public class MainActivity extends AppCompatActivity {
     private ViewPagerAdapter pagerAdapter;
     private MenuItem prevMenuItem;
 
+    // Saving state
+    private int currId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         if(!prefs.getBoolean("firstTime", false)) {
-
-
-
-
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean("firstTime", true);
             editor.commit();
@@ -141,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
         pagerAdapter.addFragment(rewardsFragment);
         pagerAdapter.addFragment(settingsFragment);
         pager.setAdapter(pagerAdapter);
+
     }
 
 //    private void setFragment(Fragment fragment) {
@@ -179,6 +182,21 @@ public class MainActivity extends AppCompatActivity {
 
         public void addFragment(Fragment fragment) {
             fragmentList.add(fragment);
+        }
+    }
+
+    @Override
+    public void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getIntent() != null && getIntent().getExtras() != null) {
+            currId = getIntent().getExtras().getInt("currId");
+            pager.setCurrentItem(currId);
         }
     }
 }
