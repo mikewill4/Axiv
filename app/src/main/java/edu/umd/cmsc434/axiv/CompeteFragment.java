@@ -242,7 +242,7 @@ class MyInvitesListAdapter extends ArrayAdapter<String> {
                 notifyDataSetChanged();
 
                 Intent indvComp = new Intent(getContext(),IndividualCompetition.class);
-                indvComp.putExtra("userList", position);
+                indvComp.putExtra("userList", AppData.userPrivateCompetitions.size()-1);
 
                 getContext().startActivity(indvComp);
 
