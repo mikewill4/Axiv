@@ -144,6 +144,11 @@ public interface Metric{
             return MetricType.MEAL;
         }
 
+        public String toString(){
+            return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + foodType + " " + servings + " " + numCaloriesPerServing + " " +totalCalories;
+
+        }
+
 
 
 

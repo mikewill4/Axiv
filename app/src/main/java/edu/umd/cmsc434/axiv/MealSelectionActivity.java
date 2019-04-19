@@ -27,6 +27,7 @@ public class MealSelectionActivity extends AppCompatActivity {
 
         Button mealPictureButton = (Button) findViewById(R.id.meal_picture_button);
         Button mealBarcodeButton = (Button) findViewById(R.id.meal_barcode_button);
+        Button mealManualInputButton = (Button) findViewById(R.id.meal_manual_input_button);
 
         mealBarcodeButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -42,6 +43,13 @@ public class MealSelectionActivity extends AppCompatActivity {
             public void onClick(View view){
                 intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent, 7);
+            }
+        });
+
+        mealManualInputButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MealSelectionActivity.this, MealManualInputActivity.class));
             }
         });
 
