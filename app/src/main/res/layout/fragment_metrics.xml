@@ -141,6 +141,7 @@
             android:background="@color/colorPrimaryDark"/>
 
         <Button
+            android:id="@+id/metrics_history_button"
             android:layout_width="348dp"
             android:layout_height="60dp"
             android:layout_below="@+id/track_heart_rate"

@@ -5,6 +5,7 @@ import java.util.Date;
 public interface Metric{
 
     public MetricType getMetricType();
+    public Date getEventOccuranceDate();
 
     static class ExerciseMetric implements Metric{
 
@@ -26,6 +27,10 @@ public interface Metric{
             return MetricType.EXERCISE;
         }
 
+        public Date getEventOccuranceDate(){
+            return eventOccurance;
+        }
+
         public String toString(){
             return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + exerciseType + " - " + caloriesBurned + " - " + durationMinutes;
         }
@@ -45,6 +50,10 @@ public interface Metric{
         @Override
         public MetricType getMetricType() {
             return MetricType.WEIGHT;
+        }
+
+        public Date getEventOccuranceDate(){
+            return eventOccurance;
         }
 
         public String toString(){
@@ -71,6 +80,10 @@ public interface Metric{
             return MetricType.SLEEP;
         }
 
+        public Date getEventOccuranceDate(){
+            return eventOccurance;
+        }
+
         public String toString(){
             return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " +
                     AppData.standardDateFormat.format(sleepDurationStart) + " - " + AppData.standardDateFormat.format(sleepDurationEnd);
@@ -93,6 +106,10 @@ public interface Metric{
             return MetricType.STEPS;
         }
 
+        public Date getEventOccuranceDate(){
+            return eventOccurance;
+        }
+
         public String toString(){
             return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + numSteps;
         }
@@ -112,6 +129,10 @@ public interface Metric{
         @Override
         public MetricType getMetricType() {
             return MetricType.HYDRATION;
+        }
+
+        public Date getEventOccuranceDate(){
+            return eventOccurance;
         }
 
         public String toString(){
@@ -144,6 +165,10 @@ public interface Metric{
             return MetricType.MEAL;
         }
 
+        public Date getEventOccuranceDate(){
+            return eventOccurance;
+        }
+
         public String toString(){
             return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + foodType + " " + servings + " " + numCaloriesPerServing + " " +totalCalories;
 
@@ -170,6 +195,10 @@ public interface Metric{
             return MetricType.HEART_RATE;
         }
 
+        public Date getEventOccuranceDate(){
+            return eventOccurance;
+        }
+
         public String toString(){
             return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + heartRate;
         }
@@ -192,6 +221,10 @@ public interface Metric{
         @Override
         public MetricType getMetricType() {
             return MetricType.BLOOD_PRESSURE;
+        }
+
+        public Date getEventOccuranceDate(){
+            return eventOccurance;
         }
 
         public String toString(){

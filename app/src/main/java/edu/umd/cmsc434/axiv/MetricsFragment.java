@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
@@ -37,6 +38,7 @@ public class MetricsFragment extends Fragment {
         Button trackWeightButton = (Button) metricView.findViewById(R.id.track_weight);
         Button trackHRButton = (Button) metricView.findViewById(R.id.track_heart_rate);
         Button trackBPButton = (Button) metricView.findViewById(R.id.track_blood_pressure);
+        Button metricsHistory = (Button) metricView.findViewById(R.id.metrics_history_button);
 
         trackMealsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +92,13 @@ public class MetricsFragment extends Fragment {
             @Override
             public void onClick(View view){
                 startActivity(new Intent(getActivity(),TrackStepsActivity.class));
+            }
+        });
+
+        metricsHistory.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),MetricHistoryActivity.class));
             }
         });
 

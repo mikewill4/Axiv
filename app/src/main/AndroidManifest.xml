@@ -58,6 +58,10 @@
             android:label="Track Blood Pressure"
             android:parentActivityName=".MainActivity"></activity>
         <activity
+            android:name=".MetricHistoryActivity"
+            android:label="Metrics History"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
             android:name=".HealthSuggestionsActivity"
             android:label="@string/health_suggestions"
             android:parentActivityName=".MainActivity" />
