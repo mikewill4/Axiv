@@ -70,6 +70,11 @@ public interface Metric{
         public MetricType getMetricType() {
             return MetricType.SLEEP;
         }
+
+        public String toString(){
+            return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " +
+                    AppData.standardDateFormat.format(sleepDurationStart) + " - " + AppData.standardDateFormat.format(sleepDurationEnd);
+        }
     }
 
     static class StepsMetric implements Metric{
@@ -127,6 +132,52 @@ public interface Metric{
             return MetricType.MEAL;
         }
     }
+
+    static class HeartRateMetric implements Metric{
+
+        public Date eventOccurance;
+        public double heartRate;
+
+
+        public HeartRateMetric(Date eventOccurance, double heartRate){
+            this.eventOccurance = eventOccurance;
+            this.heartRate = heartRate;
+        }
+
+        @Override
+        public MetricType getMetricType() {
+            return MetricType.HEART_RATE;
+        }
+
+        public String toString(){
+            return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + heartRate;
+        }
+
+    }
+
+    static class BloodPressureMetric implements Metric{
+
+        public Date eventOccurance;
+        public double bloodPressure;
+
+
+        public BloodPressureMetric(Date eventOccurance, double bloodPressure){
+            this.eventOccurance = eventOccurance;
+            this.bloodPressure = bloodPressure;
+        }
+
+        @Override
+        public MetricType getMetricType() {
+            return MetricType.BLOOD_PRESSURE;
+        }
+
+        public String toString(){
+            return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + bloodPressure;
+        }
+
+    }
+
+
 
 
 

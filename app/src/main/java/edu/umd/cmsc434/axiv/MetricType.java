@@ -8,5 +8,6 @@ public enum MetricType {
     HYDRATION,
     STEPS,
     MEAL,
-    HEART_RATE
+    HEART_RATE,
+    BLOOD_PRESSURE
 }

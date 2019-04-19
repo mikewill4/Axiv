@@ -7,11 +7,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.DatePicker;
 import android.widget.Toast;
 
 import java.util.Calendar;
@@ -24,7 +24,7 @@ public class TrackWeightActivity extends AppCompatActivity {
     Date eventOccurance;
     EditText weight_input;
     Calendar cal = Calendar.getInstance();
-    CalendarView calendar;
+    DatePicker calendar;
     TimePicker timePicker;
     TextView displayDateTime;
     Button dateButton;
@@ -56,7 +56,7 @@ public class TrackWeightActivity extends AppCompatActivity {
         displayDateTime =(TextView) findViewById(R.id.track_weight_date_time_display);
         displayDateTime.setVisibility(View.GONE);
 
-        calendar = (CalendarView) findViewById(R.id.track_weight_calandar);
+        calendar = (DatePicker) findViewById(R.id.track_weight_calandar);
         timePicker = (TimePicker) findViewById(R.id.track_weight_time_picker);
         calendar.setVisibility(View.GONE);
         timePicker.setVisibility(View.GONE);
@@ -82,7 +82,9 @@ public class TrackWeightActivity extends AppCompatActivity {
         setDate.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                cal.setTimeInMillis(calendar.getDate());
+                cal.set(Calendar.YEAR,calendar.getYear());
+                cal.set(Calendar.MONTH,calendar.getMonth());
+                cal.set(Calendar.DATE, calendar.getDayOfMonth());
                 calendar.setVisibility(View.GONE);
                 setDate.setVisibility(View.GONE);
                 timePicker.setVisibility(View.VISIBLE);

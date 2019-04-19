@@ -12,6 +12,7 @@ import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -23,7 +24,7 @@ import edu.umd.cmsc434.axiv.Metric.ExerciseMetric;
 public class TrackExerciseActivity extends AppCompatActivity {
 
     Button dateButton;
-    CalendarView calendar;
+    DatePicker calendar;
     TimePicker timePicker;
     TextView dateTimeDisplay;
     Spinner exerciseSpinner;
@@ -58,7 +59,7 @@ public class TrackExerciseActivity extends AppCompatActivity {
 
         dateButton = (Button) findViewById(R.id.track_exercise_date_button);
 
-        calendar = (CalendarView) findViewById(R.id.track_exercise_calandar);
+        calendar = (DatePicker) findViewById(R.id.track_exercise_calandar);
         timePicker = (TimePicker) findViewById(R.id.track_exercise_time_picker);
         timePicker.setIs24HourView(false);
         calendar.setVisibility(View.GONE);
@@ -85,7 +86,9 @@ public class TrackExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                cal.setTimeInMillis(calendar.getDate());
+                cal.set(Calendar.YEAR,calendar.getYear());
+                cal.set(Calendar.MONTH,calendar.getMonth());
+                cal.set(Calendar.DATE, calendar.getDayOfMonth());
 
 
                 calendar.setVisibility(View.GONE);

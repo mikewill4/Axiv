@@ -60,12 +60,14 @@
         android:text="Select Date"
 />
 
+      <DatePicker
+          android:id="@+id/track_exercise_calandar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:descendantFocusability="blocksDescendants">
 
-    <CalendarView
-        android:id="@+id/track_exercise_calandar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </CalendarView>
+      </DatePicker>
 
 
     <Button
