@@ -1,12 +1,15 @@
 package edu.umd.cmsc434.axiv;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -134,6 +137,29 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
                 System.out.println("Deleting Metric");
                 userHistory.remove(position);
                 notifyDataSetChanged();
+            }
+        });
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
+        deleteButton.setOnClickListener(new AdapterView.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                builder.setTitle(userHistory.get(position).getMetricType().toString().replace("_"," "));
+                builder.setMessage("Are you sure you want to delete this metric?");
+                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int id) {
+                        System.out.println("Deleting Metric");
+                        userHistory.remove(position);
+                        notifyDataSetChanged();
+                    }
+                });
+                builder.setNegativeButton(R.string.close, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Dialog will be dismissed when clicked
+                    }
+                });
+                builder.show();
             }
         });
 
