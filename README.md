@@ -21,6 +21,8 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Remove radar chart show values
 - [x] Change menu item icon to refresh symbol for refreshing chart
 - [x] Fix scaling issues for radar chart on different screen sizes
+- [x] Add new metrics
+- [ ] Link with static AppData class
 ### Health Suggestions screen
 - [x] Create listview for displaying various health suggestions
 - [x] Each item opens up a dialog box for more information
