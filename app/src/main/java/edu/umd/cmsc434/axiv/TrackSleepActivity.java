@@ -2,18 +2,11 @@ package edu.umd.cmsc434.axiv;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -52,6 +45,8 @@ public class TrackSleepActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_sleep);
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
 
         submitSleep = (Button) findViewById(R.id.track_sleep_submit_sleep);
         submitSleep.setVisibility(View.GONE);

@@ -73,7 +73,7 @@
                     android:id="@+id/meal_confirm_serving_text"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Servings"
+                    android:text="servings"
                     android:textAlignment="center"
                     android:gravity="center"
                     android:textSize="20dp"

@@ -6,11 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -18,55 +16,47 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.Date;
 
-import edu.umd.cmsc434.axiv.Metric.WeightMetric;
-
-public class TrackWeightActivity extends AppCompatActivity {
+public class MealManualInputActivity extends AppCompatActivity {
 
     Date eventOccurance;
-    EditText weight_input;
-    Calendar cal = Calendar.getInstance();
+    Button submitMeal;
+    EditText foodTypeInput;
+    EditText calPerServingInput;
+    EditText servingsInput;
+    TextView displayDateTime;
     DatePicker calendar;
     TimePicker timePicker;
-    TextView displayDateTime;
     Button dateButton;
     Button setDate;
     Button setTime;
-    Button submitWeight;
-    Spinner unitSpinner;
+    Calendar cal = Calendar.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_track_weight);
+        setContentView(R.layout.activity_meal_manual_input);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
 
-        submitWeight = (Button) findViewById(R.id.track_weight_submit_weight);
-        submitWeight.setVisibility(View.GONE);
 
-        //EDIT_TEXT
-        weight_input = (EditText) findViewById(R.id.weight_input);
+        submitMeal = (Button) findViewById(R.id.track_meals_submit_meal);
+        submitMeal.setVisibility(View.GONE);
 
-        //SPINNER CODE
-        unitSpinner = (Spinner) findViewById(R.id.input_weight_unit_spinner);
+        foodTypeInput = (EditText) findViewById(R.id.meal_manual_input_food_type);
+        calPerServingInput = (EditText) findViewById(R.id.meal_manual_input_calories);
+        servingsInput = (EditText) findViewById(R.id.meal_manual_input_servings);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.weight_units ,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        unitSpinner.setAdapter(adapter);
-
-        //TIME SELECTION CODE
-
-        displayDateTime =(TextView) findViewById(R.id.track_weight_date_time_display);
+        displayDateTime =(TextView) findViewById(R.id.track_meals_date_time_display);
         displayDateTime.setVisibility(View.GONE);
 
-        calendar = (DatePicker) findViewById(R.id.track_weight_calandar);
-        timePicker = (TimePicker) findViewById(R.id.track_weight_time_picker);
+        calendar = (DatePicker) findViewById(R.id.track_meals_calandar);
+        timePicker = (TimePicker) findViewById(R.id.track_meals_time_picker);
         calendar.setVisibility(View.GONE);
         timePicker.setVisibility(View.GONE);
 
-        dateButton = (Button) findViewById(R.id.track_weight_date_button);
-        setDate = (Button) findViewById(R.id.track_weight_set_date_button);
-        setTime = (Button) findViewById(R.id.track_weight_set_time_button);
+        dateButton = (Button) findViewById(R.id.track_meals_date_button);
+        setDate = (Button) findViewById(R.id.track_meals_set_date_button);
+        setTime = (Button) findViewById(R.id.track_meals_set_time_button);
 
         setDate.setVisibility(View.GONE);
         setTime.setVisibility(View.GONE);
@@ -102,7 +92,7 @@ public class TrackWeightActivity extends AppCompatActivity {
                 cal.set(Calendar.MINUTE, timePicker.getCurrentMinute());
                 timePicker.setVisibility(View.GONE);
                 setTime.setVisibility(View.GONE);
-                submitWeight.setVisibility(View.VISIBLE);
+                submitMeal.setVisibility(View.VISIBLE);
                 dateButton.setVisibility(View.VISIBLE);
                 eventOccurance = cal.getTime();
                 displayDateTime.setText(AppData.standardDateFormat.format(eventOccurance));
@@ -110,36 +100,41 @@ public class TrackWeightActivity extends AppCompatActivity {
             }
         });
 
-        submitWeight.setOnClickListener(new OnClickListener() {
+        submitMeal.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(weight_input.getText().toString().equals("")){
-                    Toast error_popup = Toast.makeText(TrackWeightActivity.this, "Invalid Value for Weight", Toast.LENGTH_SHORT);
+
+                if(foodTypeInput.getText().toString().replace("\n","").replace(" ", "").equals("")){
+                    Toast error_popup = Toast.makeText(MealManualInputActivity.this, "Invalid Value for Food Type", Toast.LENGTH_SHORT);
                     error_popup.show();
                     return;
                 }
 
-                double weight_value = Double.parseDouble(weight_input.getText().toString());
 
-
-                if(unitSpinner.getSelectedItem().toString().equals("kg")){
-                    weight_value *= 2.2;
+                if(servingsInput.getText().toString().equals("")){
+                    Toast error_popup = Toast.makeText(MealManualInputActivity.this, "Invalid Value for Servings", Toast.LENGTH_SHORT);
+                    error_popup.show();
+                    return;
                 }
 
 
-                AppData.userMetricHistory.add(new WeightMetric(eventOccurance,weight_value));
+                if(calPerServingInput.getText().toString().equals("")){
+                    Toast error_popup = Toast.makeText(MealManualInputActivity.this, "Invalid Value for Number of Calories", Toast.LENGTH_SHORT);
+                    error_popup.show();
+                    return;
+                }
+
+                String foodType = foodTypeInput.getText().toString();
+                int numServings = Integer.parseInt(servingsInput.getText().toString());
+                int numCalPerServing = Integer.parseInt(calPerServingInput.getText().toString());
+
+
+                AppData.userMetricHistory.add(new Metric.MealMetric(eventOccurance, foodType ,numServings,numCalPerServing));
                 System.out.println(AppData.userMetricHistory);
-                startActivity(new Intent(TrackWeightActivity.this,MainActivity.class));
+                startActivity(new Intent(MealManualInputActivity.this,MainActivity.class));
             }
         });
-
-
     }
-
-
-
-
-
 
 }

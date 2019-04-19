@@ -78,6 +78,10 @@
             android:label="Picture Confirmation"
             android:parentActivityName=".MealSelectionActivity" />
         <activity
+            android:name=".MealManualInputActivity"
+            android:label="Meal Manual Input"
+            android:parentActivityName=".MealSelectionActivity" />
+        <activity
             android:name=".IndividualCompetition"
             android:label="Competition"
             android:parentActivityName=".MainActivity" />
