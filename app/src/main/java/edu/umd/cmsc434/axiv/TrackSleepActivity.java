@@ -184,9 +184,8 @@ public class TrackSleepActivity extends AppCompatActivity {
 
                 AppData.userMetricHistory.add(new Metric.SleepMetric(eventOccurance,sleepTimeStart,sleepTimeEnd));
                 System.out.println(AppData.userMetricHistory);
-                startActivity(new Intent(TrackSleepActivity.this,MainActivity.class));
 
-
+            onBackPressed();
             }
         });
 

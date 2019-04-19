@@ -117,7 +117,7 @@ public class TrackHRActivity extends AppCompatActivity {
 
                 AppData.userMetricHistory.add(new HeartRateMetric(eventOccurance, HRValue));
                 System.out.println(AppData.userMetricHistory);
-                startActivity(new Intent(TrackHRActivity.this,MainActivity.class));
+                onBackPressed();
             }
         });
 

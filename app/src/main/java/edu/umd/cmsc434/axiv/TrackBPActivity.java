@@ -118,7 +118,8 @@ public class TrackBPActivity extends AppCompatActivity {
 
                 AppData.userMetricHistory.add(new BloodPressureMetric(eventOccurance, systolicValue, diastolicValue));
                 System.out.println(AppData.userMetricHistory);
-                startActivity(new Intent(TrackBPActivity.this,MainActivity.class));
+
+                onBackPressed();
             }
         });
 

@@ -133,8 +133,7 @@ public class TrackExerciseActivity extends AppCompatActivity {
 
                 System.out.println(AppData.userMetricHistory);
 
-                startActivity(new Intent(TrackExerciseActivity.this,MainActivity.class));
-
+                onBackPressed();
 
             }
         });

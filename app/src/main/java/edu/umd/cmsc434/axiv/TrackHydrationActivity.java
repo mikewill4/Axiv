@@ -135,7 +135,7 @@ public class TrackHydrationActivity extends AppCompatActivity {
 
                 AppData.userMetricHistory.add(new HydrationMetric(eventOccurance, (int) waterValue));
                 System.out.println(AppData.userMetricHistory);
-                startActivity(new Intent(TrackHydrationActivity.this,MainActivity.class));
+                onBackPressed();
             }
         });
 

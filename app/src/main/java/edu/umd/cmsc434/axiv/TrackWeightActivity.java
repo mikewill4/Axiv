@@ -131,7 +131,7 @@ public class TrackWeightActivity extends AppCompatActivity {
 
                 AppData.userMetricHistory.add(new WeightMetric(eventOccurance,weight_value));
                 System.out.println(AppData.userMetricHistory);
-                startActivity(new Intent(TrackWeightActivity.this,MainActivity.class));
+                onBackPressed();
             }
         });
 

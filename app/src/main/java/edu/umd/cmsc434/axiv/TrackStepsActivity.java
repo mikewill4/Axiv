@@ -97,7 +97,7 @@ public class TrackStepsActivity extends AppCompatActivity {
 
                 AppData.userMetricHistory.add(new Metric.StepsMetric(eventOccurance, stepValue));
                 System.out.println(AppData.userMetricHistory);
-                startActivity(new Intent(TrackStepsActivity.this,MainActivity.class));
+                onBackPressed();
             }
         });
 
