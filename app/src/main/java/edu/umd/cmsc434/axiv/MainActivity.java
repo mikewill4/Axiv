@@ -130,6 +130,25 @@ public class MainActivity extends AppCompatActivity {
                 }
                 mainNavigation.getMenu().getItem(position).setChecked(true);
                 prevMenuItem = mainNavigation.getMenu().getItem(position);
+                switch (position) {
+                    case 0:
+                        getSupportActionBar().setTitle(R.string.my_health_title);
+                        break;
+                    case 1:
+                        getSupportActionBar().setTitle(R.string.track_metrics);
+                        break;
+                    case 2:
+                        getSupportActionBar().setTitle(R.string.compete_title);
+                        break;
+                    case 3:
+                        getSupportActionBar().setTitle(R.string.rewards_title);
+                        break;
+                    case 4:
+                        getSupportActionBar().setTitle(R.string.settings_title);
+                        break;
+                    default:
+                        break;
+                }
             }
 
             @Override
@@ -197,6 +216,25 @@ public class MainActivity extends AppCompatActivity {
         if (getIntent() != null && getIntent().getExtras() != null) {
             currId = getIntent().getExtras().getInt("currId");
             pager.setCurrentItem(currId);
+            switch (currId) {
+                case 0:
+                    getSupportActionBar().setTitle(R.string.my_health_title);
+                    break;
+                case 1:
+                    getSupportActionBar().setTitle(R.string.track_metrics);
+                    break;
+                case 2:
+                    getSupportActionBar().setTitle(R.string.compete_title);
+                    break;
+                case 3:
+                    getSupportActionBar().setTitle(R.string.rewards_title);
+                    break;
+                case 4:
+                    getSupportActionBar().setTitle(R.string.settings_title);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
