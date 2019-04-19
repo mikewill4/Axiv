@@ -61,6 +61,7 @@ public class MetricsFragment extends Fragment {
                 startActivity(new Intent(getActivity(),TrackExerciseActivity.class));
             }
         });
+
         trackWeightButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
