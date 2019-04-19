@@ -93,7 +93,7 @@
         android:paddingHorizontal="10dp"
         android:layout_height="match_parent"
         android:background="@android:color/holo_red_dark"
-        android:src="@drawable/baseline_people_black_24dp" />
+        android:src="@drawable/baseline_clear_white_24dp" />
 
     </LinearLayout>
 
