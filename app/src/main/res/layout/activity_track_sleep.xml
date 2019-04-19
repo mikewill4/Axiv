@@ -3,17 +3,22 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_centerInParent="true">
+            android:layout_gravity="center_vertical">
+
+
 
 
             <TextView
@@ -150,10 +155,11 @@
                 android:textColor="@color/colorWhite"
                 android:layout_margin="10dp"/>
 
+
+
         </LinearLayout>
-
+    </ScrollView>
     </RelativeLayout>
-
 
 
 

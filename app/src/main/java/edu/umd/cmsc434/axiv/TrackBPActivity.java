@@ -111,7 +111,7 @@ public class TrackBPActivity extends AppCompatActivity {
 
                 int systolicValue = Integer.parseInt(SystolicInput.getText().toString());
                 int diastolicValue = Integer.parseInt(DiastolicInput.getText().toString());
-                
+
                 AppData.userMetricHistory.add(new BloodPressureMetric(eventOccurance, systolicValue, diastolicValue));
                 System.out.println(AppData.userMetricHistory);
                 startActivity(new Intent(TrackBPActivity.this,MainActivity.class));

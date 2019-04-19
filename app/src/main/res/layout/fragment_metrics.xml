@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:paddingTop="20dp"
-        android:paddingBottom="100dp">
+        android:paddingTop="120dp"
+        android:paddingBottom="70dp">
 
         <Button
             android:id="@+id/track_meals"
