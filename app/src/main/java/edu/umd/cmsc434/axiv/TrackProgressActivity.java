@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.components.LegendEntry;
 import com.github.mikephil.charting.components.LimitLine;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -77,6 +78,10 @@ public class TrackProgressActivity extends AppCompatActivity  {
         final Description description = new Description();
         description.setText("");
         chart.setDescription(description);
+        chart.setClickable(false);
+
+        // Disable legend
+        chart.getLegend().setEnabled(false);
 
         // Heart rate data
         ArrayList<Entry> heartRateValues = new ArrayList<>();
