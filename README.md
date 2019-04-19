@@ -31,9 +31,9 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 ### Track Progress screen
 - [x] Line graph showing progress over a time period for a single metric 
 - [x] Improve style of graph
-- [ ] Remove items from legend that aren't being displayed
-- [ ] Update graph based on spinner selection
-- [ ] Add functionality for switching which metric is displayed
+- [x] Remove items from legend that aren't being displayed
+- [x] Update graph based on spinner selection
+- [x] Add functionality for switching which metric is displayed
 - [ ] Add functionality for switching time period displayed
 ### My Metrics screen
 - [ ] Meals - manual entry
@@ -87,3 +87,5 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Create a logo
 ### Bugs
 - [x] Main screens now cut off by nav bar
+- [ ] Compete pages back button goes back to My Health
+- [ ] Enter sleep end date cut off
