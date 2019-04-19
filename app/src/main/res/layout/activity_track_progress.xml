@@ -14,4 +14,32 @@
         android:padding="64dp">
     </com.github.mikephil.charting.charts.LineChart>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="32dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_metric"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/track_progress_metric_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:scrollbarStyle="outsideInset">
+        </Spinner>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/track_progress_description"
+        android:layout_margin="16dp"/>
+
 </LinearLayout>

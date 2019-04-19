@@ -39,7 +39,7 @@ public class MyHealthFragment extends Fragment {
     public static final float MAX = 12f, MIN = 1f;
 
     // Number of metrics measured in Radar Chart
-    public static final int NUM_METRICS = 5;
+    public static final int NUM_METRICS = 8;
 
     private RadarChart chart;
 
@@ -84,7 +84,7 @@ public class MyHealthFragment extends Fragment {
         x.setXOffset(0);
         x.setValueFormatter(new IAxisValueFormatter() {
 
-            private String[] metrics = new String[] {"Heart Rate", "Sleep", "Diet", "Steps", "Workouts"};
+            private String[] metrics = new String[] {"Heart rate", "Hydration", "Steps", "Calories", "Blood pressure", "Exercise", "Sleep", "Weight" };
 
             @Override
             public String getFormattedValue(float value, AxisBase axis) {

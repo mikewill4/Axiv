@@ -30,6 +30,9 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [ ] Provide ability to create new daily targets
 ### Track Progress screen
 - [x] Line graph showing progress over a time period for a single metric 
+- [x] Improve style of graph
+- [ ] Remove items from legend that aren't being displayed
+- [ ] Update graph based on spinner selection
 - [ ] Add functionality for switching which metric is displayed
 - [ ] Add functionality for switching time period displayed
 ### My Metrics screen

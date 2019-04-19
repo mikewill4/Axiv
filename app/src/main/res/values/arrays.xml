@@ -26,6 +26,17 @@
         <item>Cycling</item>
         <item>Skipping Rope</item>
     </string-array>
+
+    <string-array name="metrics">
+        <item>Heart rate</item>
+        <item>Sleep</item>
+        <item>Steps</item>
+        <item>Weight</item>
+        <item>Calories</item>
+        <item>Blood pressure</item>
+        <item>Hydration</item>
+        <item>Exercise</item>
+    </string-array>
 </resources>
 
 

@@ -5,9 +5,14 @@ import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.LimitLine;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -67,10 +72,15 @@ public class TrackProgressActivity extends AppCompatActivity  {
 
         chart.getAxisRight().setEnabled(false);
 
+        // Remove description
+        final Description description = new Description();
+        description.setText("");
+        chart.setDescription(description);
+
         // Heart rate data
         ArrayList<Entry> heartRateValues = new ArrayList<>();
 
-        for (int i = 0; i <= 50; i += 10) {
+        for (int i = 0; i <= 110; i += 10) {
             heartRateValues.add(new Entry(i / 10, (float)(100 * Math.random())));
         }
 
@@ -80,104 +90,144 @@ public class TrackProgressActivity extends AppCompatActivity  {
         heartRateSet.setColor(Color.RED);
         heartRateSet.setLineWidth(3f);
         heartRateSet.setValueTextSize(16);
+        heartRateSet.setCircleColor(Color.RED);
+        heartRateSet.setCircleRadius(8f);
+        heartRateSet.setCircleHoleRadius(4f);
+        heartRateSet.setVisible(true);
+        heartRateSet.setDrawValues(false);
 
         // Hydration
         ArrayList<Entry> hydrationValues = new ArrayList<>();
 
-        for (int i = 0; i <= 50; i += 10) {
+        for (int i = 0; i <= 110; i += 10) {
             hydrationValues.add(new Entry(i / 10, (float)(100 * Math.random())));
         }
 
         LineDataSet hydrationSet = new LineDataSet(hydrationValues, "Hydration");
 
         hydrationSet.setFillAlpha(110);
-        hydrationSet.setColor(Color.BLUE);
+        hydrationSet.setColor(Color.RED);
         hydrationSet.setLineWidth(3f);
         hydrationSet.setValueTextSize(16);
+        hydrationSet.setCircleColor(Color.RED);
+        hydrationSet.setCircleRadius(8f);
+        hydrationSet.setCircleHoleRadius(4f);
+        hydrationSet.setVisible(false);
+        hydrationSet.setDrawValues(false);
 
         // Sleep
         ArrayList<Entry> sleepValues = new ArrayList<>();
 
-        for (int i = 0; i <= 50; i += 10) {
+        for (int i = 0; i <= 110; i += 10) {
             sleepValues.add(new Entry(i / 10, (float)(100 * Math.random())));
         }
 
         LineDataSet sleepSet = new LineDataSet(sleepValues, "Sleep");
 
         sleepSet.setFillAlpha(110);
-        sleepSet.setColor(Color.GREEN);
+        sleepSet.setColor(Color.RED);
         sleepSet.setLineWidth(3f);
         sleepSet.setValueTextSize(16);
+        sleepSet.setCircleColor(Color.RED);
+        sleepSet.setCircleRadius(8f);
+        sleepSet.setCircleHoleRadius(4f);
+        sleepSet.setVisible(false);
+        sleepSet.setDrawValues(false);
 
         // Calories
         ArrayList<Entry> caloriesValues = new ArrayList<>();
 
-        for (int i = 0; i <= 50; i += 10) {
+        for (int i = 0; i <= 110; i += 10) {
             caloriesValues.add(new Entry(i / 10, (float)(100 * Math.random())));
         }
 
         LineDataSet caloriesSet = new LineDataSet(caloriesValues, "Calories");
 
         caloriesSet.setFillAlpha(110);
-        caloriesSet.setColor(Color.MAGENTA);
+        caloriesSet.setColor(Color.RED);
         caloriesSet.setLineWidth(3f);
         caloriesSet.setValueTextSize(16);
+        caloriesSet.setCircleColor(Color.RED);
+        caloriesSet.setCircleRadius(8f);
+        caloriesSet.setCircleHoleRadius(4f);
+        caloriesSet.setVisible(false);
+        caloriesSet.setDrawValues(false);
 
         // Exercise
         ArrayList<Entry> exerciseValues = new ArrayList<>();
 
-        for (int i = 0; i <= 50; i += 10) {
+        for (int i = 0; i <= 110; i += 10) {
             exerciseValues.add(new Entry(i / 10, (float)(100 * Math.random())));
         }
 
         LineDataSet exerciseSet = new LineDataSet(exerciseValues, "Exercise");
 
         exerciseSet.setFillAlpha(110);
-        exerciseSet.setColor(Color.CYAN);
+        exerciseSet.setColor(Color.RED);
         exerciseSet.setLineWidth(3f);
         exerciseSet.setValueTextSize(16);
+        exerciseSet.setCircleColor(Color.RED);
+        exerciseSet.setCircleRadius(8f);
+        exerciseSet.setCircleHoleRadius(4f);
+        exerciseSet.setVisible(false);
+        exerciseSet.setDrawValues(false);
 
         // Blood pressure
         ArrayList<Entry> bloodPressureValues = new ArrayList<>();
 
-        for (int i = 0; i <= 50; i += 10) {
+        for (int i = 0; i <= 110; i += 10) {
             bloodPressureValues.add(new Entry(i / 10, (float)(100 * Math.random())));
         }
 
         LineDataSet bloodPressureSet = new LineDataSet(bloodPressureValues, "Blood Pressure");
 
         bloodPressureSet.setFillAlpha(110);
-        bloodPressureSet.setColor(Color.YELLOW);
+        bloodPressureSet.setColor(Color.RED);
         bloodPressureSet.setLineWidth(3f);
         bloodPressureSet.setValueTextSize(16);
+        bloodPressureSet.setCircleColor(Color.RED);
+        bloodPressureSet.setCircleRadius(8f);
+        bloodPressureSet.setCircleHoleRadius(4f);
+        bloodPressureSet.setVisible(false);
+        bloodPressureSet.setDrawValues(false);
 
         // Weight
         ArrayList<Entry> weightValues = new ArrayList<>();
 
-        for (int i = 0; i <= 50; i += 10) {
+        for (int i = 0; i <= 110; i += 10) {
             weightValues.add(new Entry(i / 10, (float)(100 * Math.random())));
         }
 
         LineDataSet weightSet = new LineDataSet(weightValues, "Weight");
 
         weightSet.setFillAlpha(110);
-        weightSet.setColor(Color.BLACK);
+        weightSet.setColor(Color.RED);
         weightSet.setLineWidth(3f);
         weightSet.setValueTextSize(16);
+        weightSet.setCircleColor(Color.RED);
+        weightSet.setCircleRadius(8f);
+        weightSet.setCircleHoleRadius(4f);
+        weightSet.setVisible(false);
+        weightSet.setDrawValues(false);
 
         // Steps
         ArrayList<Entry> stepsValues = new ArrayList<>();
 
-        for (int i = 0; i <= 50; i += 10) {
+        for (int i = 0; i <= 110; i += 10) {
             stepsValues.add(new Entry(i / 10, (float)(100 * Math.random())));
         }
 
         LineDataSet stepsSet = new LineDataSet(stepsValues, "Steps");
 
         stepsSet.setFillAlpha(110);
-        stepsSet.setColor(Color.DKGRAY);
+        stepsSet.setColor(Color.RED);
         stepsSet.setLineWidth(3f);
         stepsSet.setValueTextSize(16);
+        stepsSet.setCircleColor(Color.RED);
+        stepsSet.setCircleRadius(8f);
+        stepsSet.setCircleHoleRadius(4f);
+        stepsSet.setVisible(false);
+        stepsSet.setDrawValues(false);
 
         // Set data
         ArrayList<ILineDataSet> dataSets = new ArrayList<>();
@@ -192,13 +242,50 @@ public class TrackProgressActivity extends AppCompatActivity  {
         LineData data = new LineData(dataSets);
         chart.setData(data);
 
-        String[] values = new String[] {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"};
+        // Set date correctly
+        // Current month in the middle
+        String[] months = new String[] {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
         XAxis xAxis = chart.getXAxis();
-        xAxis.setValueFormatter(new XAxisValueFormatter(values));
-        //xAxis.setGranularity(1);
+        xAxis.setValueFormatter(new XAxisValueFormatter(months));
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
 
+        // Spinner for toggling line graph
+        Spinner metricSpinner = (Spinner) findViewById(R.id.track_progress_metric_spinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.metrics ,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        metricSpinner.setAdapter(adapter);
+        metricSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View v, int position, long l) {
+                switch (position) {
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     public class XAxisValueFormatter implements IAxisValueFormatter {
