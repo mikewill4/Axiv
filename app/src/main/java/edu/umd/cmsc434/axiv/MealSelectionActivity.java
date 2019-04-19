@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -25,6 +26,15 @@ public class MealSelectionActivity extends AppCompatActivity {
         EnableRuntimePermission();
 
         Button mealPictureButton = (Button) findViewById(R.id.meal_picture_button);
+        Button mealBarcodeButton = (Button) findViewById(R.id.meal_barcode_button);
+
+        mealBarcodeButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast featureNotFinished = Toast.makeText(MealSelectionActivity.this,"This Feature Is Not Completed Yet. Try The Buttons Below!", Toast.LENGTH_LONG);
+                featureNotFinished.show();
+            }
+        });
 
 
         mealPictureButton.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +73,7 @@ public class MealSelectionActivity extends AppCompatActivity {
 
                 if (PResult.length > 0 && PResult[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    Toast.makeText(this,"Permission Granted, Now your application can access CAMERA.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this,"Permission Granted, Now your application can access CAMERA.", Toast.LENGTH_SHORT).show();
 
                 } else {
 

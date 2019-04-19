@@ -35,6 +35,8 @@ public class MetricsFragment extends Fragment {
         Button trackStepsButton = (Button) metricView.findViewById(R.id.track_steps);
         Button trackExerciseButton = (Button) metricView.findViewById(R.id.track_exercise);
         Button trackWeightButton = (Button) metricView.findViewById(R.id.track_weight);
+        Button trackHRButton = (Button) metricView.findViewById(R.id.track_heart_rate);
+        Button trackBPButton = (Button) metricView.findViewById(R.id.track_blood_pressure);
 
         trackMealsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +70,21 @@ public class MetricsFragment extends Fragment {
                 startActivity(new Intent(getActivity(),TrackWeightActivity.class));
             }
         });
+
+        trackHRButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity(new Intent(getActivity(),TrackHRActivity.class));
+            }
+        });
+
+        trackBPButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                startActivity(new Intent(getActivity(),TrackBPActivity.class));
+            }
+        });
+
 
         trackStepsButton.setOnClickListener(new View.OnClickListener() {
             @Override

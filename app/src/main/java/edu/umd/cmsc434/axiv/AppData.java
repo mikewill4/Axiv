@@ -6,6 +6,8 @@ import java.util.ArrayList;
 public class AppData {
 
     static SimpleDateFormat standardDateFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm");
+    static SimpleDateFormat standardDateFormatNoTime = new SimpleDateFormat("MM/dd/yyyy");
+
 
     static int userScore = 100;
     static User appUser = new User("My Username", userScore);

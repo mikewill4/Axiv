@@ -50,6 +50,14 @@
             android:label="Track Hydration"
             android:parentActivityName=".MainActivity"></activity>
         <activity
+            android:name=".TrackHRActivity"
+            android:label="Track Heart Rate"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".TrackBPActivity"
+            android:label="Track Blood Pressure"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
             android:name=".HealthSuggestionsActivity"
             android:label="@string/health_suggestions"
             android:parentActivityName=".MainActivity" />

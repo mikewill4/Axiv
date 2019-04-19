@@ -92,6 +92,10 @@ public interface Metric{
         public MetricType getMetricType() {
             return MetricType.STEPS;
         }
+
+        public String toString(){
+            return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + numSteps;
+        }
     }
 
     static class HydrationMetric implements Metric{
@@ -109,6 +113,14 @@ public interface Metric{
         public MetricType getMetricType() {
             return MetricType.HYDRATION;
         }
+
+        public String toString(){
+            return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + waterIntakeML;
+        }
+
+
+
+
     }
 
     static class MealMetric implements Metric{
@@ -131,6 +143,10 @@ public interface Metric{
         public MetricType getMetricType() {
             return MetricType.MEAL;
         }
+
+
+
+
     }
 
     static class HeartRateMetric implements Metric{
@@ -158,12 +174,14 @@ public interface Metric{
     static class BloodPressureMetric implements Metric{
 
         public Date eventOccurance;
-        public double bloodPressure;
+        public int systolicBP;
+        public int diastolicBP;
 
 
-        public BloodPressureMetric(Date eventOccurance, double bloodPressure){
+        public BloodPressureMetric(Date eventOccurance, int systolicBP, int diastolicBP){
             this.eventOccurance = eventOccurance;
-            this.bloodPressure = bloodPressure;
+            this.systolicBP = systolicBP;
+            this.diastolicBP = diastolicBP;
         }
 
         @Override
@@ -172,7 +190,7 @@ public interface Metric{
         }
 
         public String toString(){
-            return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + bloodPressure;
+            return "Type: " + getMetricType() + " - " + AppData.standardDateFormat.format(eventOccurance) + " - " + systolicBP + " " + diastolicBP;
         }
 
     }

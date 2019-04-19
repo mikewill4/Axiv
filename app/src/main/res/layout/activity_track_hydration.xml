@@ -3,44 +3,130 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="20pt"
-        android:textAlignment="center"
-        android:textSize="13pt"
-        android:text="Enter Water Consumption" />
-
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="20pt"
-        android:gravity="center">
-
-        <EditText
-            android:id="@+id/water_input"
-            android:layout_width="70pt"
-            android:layout_height="20pt"
-            android:textColor="@android:color/black"/>
-
-        <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/input_water_unit_spinner"
-            android:layout_width="50pt"
-            android:layout_height="20pt"
-            android:layout_toEndOf="@id/water_input">
+        android:layout_height="match_parent">
 
 
-        </android.support.v7.widget.AppCompatSpinner>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
 
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:text="Enter Water Consumption"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:gravity="center"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/water_input"
+                    android:layout_width="70pt"
+                    android:layout_height="20pt"
+                    android:textColor="@android:color/black"
+                    android:inputType="number"/>
+
+                <Spinner
+                    android:id="@+id/input_water_unit_spinner"
+                    android:layout_width="50pt"
+                    android:layout_height="20pt"
+                    android:layout_toEndOf="@id/water_input">
+
+
+                </Spinner>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Date and Time:"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/track_water_date_time_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:layout_margin="10dp"/>
+
+            <Button
+                android:id="@+id/track_water_date_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:text="Select Date" />
+
+
+            <DatePicker
+                android:id="@+id/track_water_calandar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:descendantFocusability="blocksDescendants">
+
+
+            </DatePicker>
+
+
+            <Button
+                android:id="@+id/track_water_set_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Set Date"/>
+
+
+            <TimePicker
+                android:id="@+id/track_water_time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner">
+
+
+            </TimePicker>
+
+            <Button
+                android:id="@+id/track_water_set_time_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Set Time"/>
+
+
+            <Button
+                android:id="@+id/track_water_submit_water"
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:background="@color/colorPrimaryDark"
+                android:text="Submit Water Log"
+                android:textColor="@color/colorWhite"
+                android:layout_margin="10dp"/>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="20pt"
-        android:background="@color/colorPrimaryDark"
-        android:text="Submit"
-        android:textColor="@color/colorWhite"/>
 
 
-    </LinearLayout>
+</LinearLayout>

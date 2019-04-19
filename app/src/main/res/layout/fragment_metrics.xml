@@ -14,12 +14,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:paddingTop="128dp">
+        android:paddingTop="20dp"
+        android:paddingBottom="100dp">
 
         <Button
             android:id="@+id/track_meals"
             android:layout_width="170dp"
-            android:layout_height="140dp"
+            android:layout_height="120dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="64dp"
@@ -35,7 +36,7 @@
         <Button
             android:id="@+id/track_sleep"
             android:layout_width="170dp"
-            android:layout_height="140dp"
+            android:layout_height="120dp"
             android:layout_alignTop="@+id/track_meals"
             android:layout_toEndOf="@+id/track_meals"
             android:background="@color/colorPrimaryDark"
@@ -50,7 +51,7 @@
         <Button
             android:id="@+id/track_steps"
             android:layout_width="170dp"
-            android:layout_height="140dp"
+            android:layout_height="120dp"
             android:layout_alignStart="@+id/track_meals"
             android:layout_below="@+id/track_meals"
             android:text="@string/track_steps"
@@ -66,7 +67,7 @@
         <Button
             android:id="@+id/track_hydration"
             android:layout_width="170dp"
-            android:layout_height="140dp"
+            android:layout_height="120dp"
             android:layout_alignStart="@+id/track_sleep"
             android:layout_below="@+id/track_sleep"
             android:text="@string/track_hydration"
@@ -81,7 +82,7 @@
         <Button
             android:id="@+id/track_exercise"
             android:layout_width="170dp"
-            android:layout_height="140dp"
+            android:layout_height="120dp"
             android:layout_alignStart="@+id/track_steps"
             android:layout_below="@+id/track_steps"
             android:text="@string/track_exercise"
@@ -97,7 +98,7 @@
         <Button
             android:id="@+id/track_weight"
             android:layout_width="170dp"
-            android:layout_height="140dp"
+            android:layout_height="120dp"
             android:layout_alignStart="@+id/track_hydration"
             android:layout_below="@+id/track_hydration"
             android:text="@string/track_weight"
@@ -112,7 +113,7 @@
         <Button
             android:id="@+id/track_heart_rate"
             android:layout_width="170dp"
-            android:layout_height="140dp"
+            android:layout_height="120dp"
             android:layout_alignStart="@+id/track_exercise"
             android:layout_below="@+id/track_exercise"
             android:text="@string/track_heart_rate"
@@ -128,7 +129,7 @@
         <Button
             android:id="@+id/track_blood_pressure"
             android:layout_width="170dp"
-            android:layout_height="140dp"
+            android:layout_height="120dp"
             android:layout_alignStart="@+id/track_weight"
             android:layout_below="@+id/track_weight"
             android:text="@string/track_blood_pressure"
@@ -142,7 +143,7 @@
 
         <Button
             android:layout_width="348dp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_below="@+id/track_heart_rate"
             android:layout_marginTop="4dp"
             android:background="@color/colorPrimaryDark"

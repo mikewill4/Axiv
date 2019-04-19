@@ -1,6 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:text="Enter Blood Pressure Reading:"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:gravity="center"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/systolic_BP_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20pt"
+                    android:textColor="@android:color/black"
+                    android:inputType="number"
+                    android:hint="Systolic"/>
+
+                <TextView
+                    android:id="@+id/slash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20pt"
+                    android:layout_toEndOf="@id/systolic_BP_input"
+                    android:text="/"
+                    android:gravity="center"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/diastolic_BP_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20pt"
+                    android:textColor="@android:color/black"
+                    android:layout_toEndOf="@id/slash"
+                    android:inputType="number"
+                    android:hint="Diastolic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20pt"
+                    android:layout_toEndOf="@id/diastolic_BP_input"
+                    android:text="mmHg"
+                    android:gravity="center"
+                    android:textSize="20dp">
+
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Date and Time:"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/track_BP_date_time_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:layout_margin="10dp"/>
+
+            <Button
+                android:id="@+id/track_BP_date_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:text="Select Date" />
+
+
+            <DatePicker
+                android:id="@+id/track_BP_calandar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:descendantFocusability="blocksDescendants">
+
+
+            </DatePicker>
+
+
+            <Button
+                android:id="@+id/track_BP_set_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Set Date"/>
+
+
+            <TimePicker
+                android:id="@+id/track_BP_time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner">
+
+
+            </TimePicker>
+
+            <Button
+                android:id="@+id/track_BP_set_time_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Set Time"/>
+
+
+            <Button
+                android:id="@+id/track_BP_submit_BP"
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:background="@color/colorPrimaryDark"
+                android:text="Submit Blood Pressure Reading"
+                android:textColor="@color/colorWhite"
+                android:layout_margin="10dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
