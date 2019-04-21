@@ -37,24 +37,29 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Update graph based on spinner selection
 - [x] Add functionality for switching which metric is displayed
 - [ ] Add functionality for switching time period displayed
+### Set Reminders screen
+- [ ] Create new reminders
+- [ ] View existing reminders
+- [ ] Edit existing reminders
+- [ ] Notifications for reminders
 ### My Metrics screen
-- [ ] Meals - manual entry
-- [ ] Meals - search for previous meals
+- [x] Meals - manual entry
+- [x] Meals - search for previous meals
 - [x] Meals - take picture
 - [x] Meals - scan barcode
-- [ ] Sleep - manual entry
-- [ ] Steps - manual entry
+- [x] Sleep - manual entry
+- [x] Steps - manual entry
 - [x] Hydration - manual entry
-- [ ] Exercise - manual entry
-- [ ] Exercise - search for previous exercises
-- [ ] Weight - manual entry
-- [ ] Blood pressure - manual entry
+- [x] Exercise - manual entry
+- [x] Exercise - search for previous exercises
+- [x] Weight - manual entry
+- [x] Blood pressure - manual entry
 ### Competitions screen
 - [x] Add featured competitions
 - [x] Add private competitions
-- [ ] Invites
-- [ ] Add new users
-- [ ] Create new competitions
+- [x] Invites
+- [x] Add new users
+- [x] Create new competitions
 ### Rewards Screen
 - [ ] Show current points accumulated
 - [ ] Rewards sorted into categories
@@ -83,8 +88,8 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 ### Data
 - [x] Create singleton class to hold data across app
 ### Style
-- [ ] Pick primary colors for app
-- [ ] Standardize button style
+- [x] Pick primary colors for app
+- [x] Standardize button style
 - [ ] Standardize font type and sizes
 - [x] Create a logo
 ### Bugs
