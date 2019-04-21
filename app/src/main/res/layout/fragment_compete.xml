@@ -15,39 +15,35 @@
             android:orientation="vertical"
             android:paddingBottom="128dp">
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text = "Featured"
-                android:gravity="center"
-                android:textSize="30dp"
-                android:textColor="@color/colorWhite"
+                android:layout_height="40dp"
+                android:text="Featured"
+                android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
-                android:layout_marginVertical="10dp"/>
+                android:clickable="false"/>
 
             <ListView
                 android:id="@+id/compete_featured_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:dividerHeight="-2dp"/>
+                android:layout_margin="6dp"
+                android:dividerHeight="-2dp" />
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text = "Private"
-                android:gravity="center"
-                android:textSize="30dp"
-                android:textColor="@color/colorWhite"
+                android:layout_height="40dp"
+                android:text="Private"
+                android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
-                android:layout_marginVertical="10dp"/>
+                android:clickable="false"/>
 
 
             <ListView
                 android:id="@+id/compete_private_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
+                android:layout_margin="6dp"
                 android:dividerHeight="-2dp">
             </ListView>
 
@@ -56,26 +52,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Create new Competition"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="10dp"/>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text = "Invites"
-                android:gravity="center"
-                android:textSize="30dp"
-                android:textColor="@color/colorWhite"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
-                android:layout_marginVertical="10dp"/>
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Invites"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:clickable="false"/>
 
             <ListView
                 android:id="@+id/compete_invites_listview"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
+                android:layout_margin="6dp"
                 android:dividerHeight="-2dp">
             </ListView>
         </LinearLayout>
