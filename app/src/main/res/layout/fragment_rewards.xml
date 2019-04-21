@@ -18,6 +18,22 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:text="Your points"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:clickable="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="210"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:text="Recently Added"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
