@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -32,6 +33,8 @@ public class CompeteFragment extends Fragment {
     private ListView featuredListView;
     private ListView privatelistView;
     private ListView invites;
+
+    private Button createNewCompetition;
 
 
 
@@ -61,6 +64,15 @@ public class CompeteFragment extends Fragment {
         invites = (ListView) competeView.findViewById(R.id.compete_invites_listview);
         invites.setAdapter(invitesListAdapter);
         UIUtils.setListViewHeightBasedOnItems(invites);
+
+        createNewCompetition = (Button) competeView.findViewById(R.id.compete_create_new_button);
+
+        createNewCompetition.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),CreateNewCompetitionActivity.class));
+            }
+        });
 
 
         privatelistView.setOnItemClickListener(new OnItemClickListener() {

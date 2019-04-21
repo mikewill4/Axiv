@@ -96,6 +96,10 @@
             android:label="Competition"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".CreateNewCompetitionActivity"
+            android:label="Create New Competition"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".RemindersActivity"
             android:label="Reminders"
             android:parentActivityName=".MainActivity" />

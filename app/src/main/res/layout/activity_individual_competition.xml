@@ -17,6 +17,7 @@
             android:dividerHeight="-2dp"></ListView>
 
         <Button
+            android:id="@+id/add_new_user_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add New User"
