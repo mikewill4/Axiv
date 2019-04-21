@@ -65,6 +65,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [ ] Rewards sorted into categories
 - [ ] Ability to filter by rewards you can actually afford
 ### Settings screen
+- [ ] Ability to log out
 - [ ] Add functionality to toggle public visibility of score
 - [ ] Show connected devices
 - [ ] Buttons for adding or selecting devices
