@@ -78,13 +78,6 @@
                 android:layout_marginHorizontal="10dp"
                 android:dividerHeight="-2dp">
             </ListView>
-
-
-
-
-
-
-
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

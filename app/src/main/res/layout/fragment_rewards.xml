@@ -5,10 +5,97 @@
     android:layout_height="match_parent"
     tools:context=".RewardsFragment">
 
-    <ListView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-    </ListView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="128dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Recently Added"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:clickable="false"/>
+
+            <ListView
+                android:id="@+id/rewards_recently_added_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:dividerHeight="-2dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Trending"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:clickable="false"/>
+
+
+            <ListView
+                android:id="@+id/rewards_trending_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:dividerHeight="-2dp">
+            </ListView>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Food"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:clickable="false"/>
+
+            <ListView
+                android:id="@+id/rewards_food_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:dividerHeight="-2dp">
+            </ListView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Clothing"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:clickable="false"/>
+
+            <ListView
+                android:id="@+id/rewards_clothing_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:dividerHeight="-2dp">
+            </ListView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Accessories"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:clickable="false"/>
+
+            <ListView
+                android:id="@+id/rewards_accessories_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:dividerHeight="-2dp">
+            </ListView>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
