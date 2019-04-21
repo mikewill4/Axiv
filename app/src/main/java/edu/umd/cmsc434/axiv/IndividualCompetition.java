@@ -7,10 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,6 +21,7 @@ import java.util.Collections;
 public class IndividualCompetition extends AppCompatActivity {
 
     ListView competitionListView;
+    Button addNewUser;
 
 
 
@@ -30,6 +34,15 @@ public class IndividualCompetition extends AppCompatActivity {
 
         Collections.sort(userList);
         Collections.reverse(userList);
+
+        addNewUser = (Button) findViewById(R.id.add_new_user_button);
+
+        addNewUser.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(IndividualCompetition.this, "This Feature Has Yet to be Implemented.  Sorry!", Toast.LENGTH_LONG).show();
+            }
+        });
 
 
         MyIndividualCompetitorAdapter adapter = new MyIndividualCompetitorAdapter(this,userList);
