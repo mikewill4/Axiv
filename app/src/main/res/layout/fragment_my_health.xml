@@ -22,6 +22,7 @@
                 android:clickable="false"/>
 
             <TextView
+                android:id="@+id/user_score"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/test_score"

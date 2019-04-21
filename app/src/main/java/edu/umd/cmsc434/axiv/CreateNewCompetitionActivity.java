@@ -61,7 +61,7 @@ public class CreateNewCompetitionActivity extends AppCompatActivity {
                 String organizationName = orgName.getText().toString();
 
                 ArrayList<AppData.User> users = new ArrayList<AppData.User>();
-                users.add(new AppData.User("My Username", 100.0));
+                users.add(new AppData.User("My Username", 100.0, null));
 
 
 

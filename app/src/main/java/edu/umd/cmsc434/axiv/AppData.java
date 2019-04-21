@@ -2,6 +2,10 @@ package edu.umd.cmsc434.axiv;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class AppData {
 
@@ -10,7 +14,7 @@ public class AppData {
 
 
     static int userScore = 100;
-    static User appUser = new User("My Username", userScore);
+    static User appUser;
 
     static ArrayList<FeaturedCompetitionInfo> userFeaturedCompetitions = new ArrayList<FeaturedCompetitionInfo>();
     static ArrayList<PrivateCompetitionInfo> userPrivateCompetitions = new ArrayList<PrivateCompetitionInfo>();
@@ -23,19 +27,31 @@ public class AppData {
 
     public AppData(){
 
+        // CREATE CURRENT USER
+        Map<String, Float> userMetrics = new TreeMap<>();
+        userMetrics.put("Heart rate", 5.0f);
+        userMetrics.put("Hydration", 5.0f);
+        userMetrics.put("Steps", 1.0f);
+        userMetrics.put("Calories", 3.0f);
+        userMetrics.put("Blood pressure", 2.0f);
+        userMetrics.put("Exercise", 8.0f);
+        userMetrics.put("Sleep", 9.0f);
+        userMetrics.put("Weight", 4.0f);
+        appUser = new User("My Username", userScore, userMetrics);
+
         //CREATE PRIVATE COMPETITIONS
         ArrayList<User> participantListOne = new ArrayList<User>();
         participantListOne.add(appUser);
-        participantListOne.add(new User("John Doe1", 100));
-        participantListOne.add(new User("John Doe2", 47));
-        participantListOne.add(new User("John Doe3", 140));
-        participantListOne.add(new User("John Doe4", 500));
+        participantListOne.add(new User("John Doe1", 100, null));
+        participantListOne.add(new User("John Doe2", 47, null));
+        participantListOne.add(new User("John Doe3", 140, null));
+        participantListOne.add(new User("John Doe4", 500, null));
 
         ArrayList<User> participantListTwo = new ArrayList<User>();
         participantListTwo.add(appUser);
-        participantListTwo.add(new User("Jane Deer1", 100));
-        participantListTwo.add(new User("Jane Deer2", 47));
-        participantListTwo.add(new User("Jane Deer3", 140));
+        participantListTwo.add(new User("Jane Deer1", 100, null));
+        participantListTwo.add(new User("Jane Deer2", 47, null));
+        participantListTwo.add(new User("Jane Deer3", 140, null));
 
         userPrivateCompetitions.add(new AppData.PrivateCompetitionInfo("Workplace Step Challenge","UMD CS Department",participantListOne.size(),participantListOne));
         userPrivateCompetitions.add(new AppData.PrivateCompetitionInfo("Friend Workouts","Dylan's Friends",participantListTwo.size(),participantListTwo));
@@ -57,10 +73,26 @@ public class AppData {
 
         public String userName;
         public double score;
+        public Map<String, Float> metrics;
+        public int points;
 
-        public User(String userName, double score){
+        public User(String userName, double score, Map<String, Float> metrics){
             this.userName = userName;
             this.score = score;
+            this.metrics = metrics;
+            this.points = 0;
+        }
+
+        public void updateScore(double scoreDelta) {
+            score += scoreDelta;
+        }
+
+        public void updateMetricScore(String metric, float scoreDelta) {
+            metrics.put(metric, metrics.get(metric) + scoreDelta);
+        }
+
+        public void updatePoints(int pointsDelta) {
+            points += pointsDelta;
         }
 
         public int compareTo(User other){
