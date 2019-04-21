@@ -45,6 +45,7 @@ public class AppData {
         //CREATE FEATURED COMPETITIONS
         userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("Nandos Peri Peri","50% off Chicken","steps",55));
         userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("Maryland Dairy","2 Free Scoop","nutrition",25));
+        userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("Patagonia","Free Water Bottle","heart rate",100));
 
         //CREATE INVITES
 

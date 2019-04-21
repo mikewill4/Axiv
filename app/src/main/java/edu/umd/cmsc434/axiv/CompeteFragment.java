@@ -2,9 +2,11 @@ package edu.umd.cmsc434.axiv;
 
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -82,6 +84,34 @@ public class CompeteFragment extends Fragment {
                 indvComp.putExtra("userList", position);
 
                 startActivity(indvComp);
+            }
+        });
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        featuredListView.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(AppData.userFeaturedCompetitions.get(position).progressPercentage >= 100){
+                    builder.setTitle("CONGRATS");
+                    builder.setMessage("Go into any " + AppData.userFeaturedCompetitions.get(position).sponsorName + " store and show them this app to claim your prize!");
+                    builder.setNegativeButton(R.string.close, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // Dialog will be dismissed when clicked
+                        }
+                    });
+                    builder.show();
+
+                } else {
+                    builder.setTitle("ALMOST THERE");
+                    builder.setMessage("So close to the goal, you can almost taste it!");
+                    builder.setNegativeButton(R.string.close, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // Dialog will be dismissed when clicked
+                        }
+                    });
+                    builder.show();
+                }
             }
         });
 
