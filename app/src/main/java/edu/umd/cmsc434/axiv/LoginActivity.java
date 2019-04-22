@@ -8,8 +8,11 @@ import android.widget.FrameLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
+    static{
+        AppData applicationData = new AppData();
+    }
+
     private FrameLayout mainFrame;
-    AppData applicationData = new AppData();
 
     private LoginFragment loginFragment;
 
