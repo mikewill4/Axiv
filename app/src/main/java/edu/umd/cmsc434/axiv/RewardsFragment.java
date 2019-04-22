@@ -18,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,11 +83,15 @@ public class RewardsFragment extends Fragment {
                 builder.setNegativeButton(R.string.close, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Dialog will be dismissed when clicked
+                        Toast.makeText(getActivity(), "This feature has yet to be implemented. Sorry!", Toast.LENGTH_LONG).show();
+
                     }
                 });
                 builder.setPositiveButton("Purchase", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Dialog will be dismissed when clicked
+                        Toast.makeText(getActivity(), "This feature has yet to be implemented. Sorry!", Toast.LENGTH_LONG).show();
+
                     }
                 });
                 builder.show();
@@ -106,6 +111,8 @@ public class RewardsFragment extends Fragment {
                 builder.setPositiveButton("Purchase", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Dialog will be dismissed when clicked
+                        Toast.makeText(getActivity(), "This feature has yet to be implemented. Sorry!", Toast.LENGTH_LONG).show();
+
                     }
                 });
                 builder.show();
@@ -125,6 +132,8 @@ public class RewardsFragment extends Fragment {
                 builder.setPositiveButton("Purchase", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Dialog will be dismissed when clicked
+                        Toast.makeText(getActivity(), "This feature has yet to be implemented. Sorry!", Toast.LENGTH_LONG).show();
+
                     }
                 });
                 builder.show();
@@ -144,6 +153,8 @@ public class RewardsFragment extends Fragment {
                 builder.setPositiveButton("Purchase", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Dialog will be dismissed when clicked
+                        Toast.makeText(getActivity(), "This feature has yet to be implemented. Sorry!", Toast.LENGTH_LONG).show();
+
                     }
                 });
                 builder.show();
@@ -163,6 +174,8 @@ public class RewardsFragment extends Fragment {
                 builder.setPositiveButton("Purchase", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Dialog will be dismissed when clicked
+                        Toast.makeText(getActivity(), "This feature has yet to be implemented. Sorry!", Toast.LENGTH_LONG).show();
+
                     }
                 });
                 builder.show();
