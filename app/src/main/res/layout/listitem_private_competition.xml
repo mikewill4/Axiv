@@ -42,8 +42,7 @@
         android:background="@drawable/border"
         android:text="Members:"
         android:textAlignment="center"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-
+        android:gravity="center"
         />
 
 </LinearLayout>

@@ -23,7 +23,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Fix scaling issues for radar chart on different screen sizes
 - [x] Add new metrics
 - [x] Link with static AppData class
-- [ ] Add button with description for chart
+- [x] Add button with description for chart
 ### Health Suggestions screen
 - [x] Create listview for displaying various health suggestions
 - [x] Each item opens up a dialog box for more information
@@ -37,7 +37,6 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Remove items from legend that aren't being displayed
 - [x] Update graph based on spinner selection
 - [x] Add functionality for switching which metric is displayed
-- [ ] Make description dynamic
 ### Set Reminders screen
 - [ ] Create new reminders
 - [ ] View existing reminders
@@ -99,7 +98,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [ ] Make settings style consistent with other screens
 - [ ] Standardize font type and sizes
 - [x] Create a logo
-- [ ] Use meaningful text throughout app
+- [x] Use meaningful text throughout app
 ### Bugs
 - [x] Main screens now cut off by nav bar
 - [x] Compete pages back button goes back to My Health
