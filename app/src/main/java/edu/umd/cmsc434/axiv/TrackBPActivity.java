@@ -117,8 +117,8 @@ public class TrackBPActivity extends AppCompatActivity {
                 int diastolicValue = Integer.parseInt(DiastolicInput.getText().toString());
 
                 AppData.userMetricHistory.add(new BloodPressureMetric(eventOccurance, systolicValue, diastolicValue));
-                AppData.appUser.updateScore(systolicValue/10);
-                AppData.appUser.updateMetricScore("Blood pressure", systolicValue/10);
+                AppData.appUser.updateScore(systolicValue/10 * -1);
+                AppData.appUser.updateMetricScore("Blood pressure", systolicValue/10 * -1);
 
                 System.out.println(AppData.userMetricHistory);
 
