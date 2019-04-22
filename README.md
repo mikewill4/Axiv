@@ -26,7 +26,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 ### Health Suggestions screen
 - [x] Create listview for displaying various health suggestions
 - [x] Each item opens up a dialog box for more information
-- [ ] Suggestions are styled towards improving a specific metric
+- [ ] Style suggestions
 ### Daily Targets screen
 - [x] Create progress bars for each daily target
 - [ ] Provide ability to create new daily targets
@@ -94,7 +94,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Pick primary colors for app
 - [ ] Standardize button style
 - [ ] Standardize padding/margins
-- [ ] Make titles in action bar and bottom nav bar consistent
+- [x] Make titles in action bar and bottom nav bar consistent
 - [ ] Make settings style consistent with other screens
 - [ ] Standardize font type and sizes
 - [x] Create a logo
