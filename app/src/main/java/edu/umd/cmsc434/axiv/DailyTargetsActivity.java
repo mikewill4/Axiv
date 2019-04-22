@@ -33,16 +33,34 @@ public class DailyTargetsActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.daily_targets_list);
 
         ArrayList<String> dailyTargets = new ArrayList<>();
-        dailyTargets.add("10000 steps");
-        dailyTargets.add("Eat less than 2500 calories.");
-        dailyTargets.add("Exercise for 60 minutes.");
-        dailyTargets.add("Drink 24 ounces of water.");
+        dailyTargets.add("Hit 300,000 steps this month.");
+        dailyTargets.add("Eat less than 2500 calories per day.");
+        dailyTargets.add("Exercise 4 times this week.");
+        dailyTargets.add("Drink 24 ounces of water per day.");
+        dailyTargets.add("Lose 10 pounds this year.");
 
 
         DailyTargetAdapter adapter = new DailyTargetAdapter(this, dailyTargets);
 
         listView.setAdapter(adapter);
         UIUtils.setListViewHeightBasedOnItems(listView);
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    builder.setTitle("ALMOST THERE");
+                    builder.setMessage("So close to the goal, you can almost taste it!");
+                    builder.setNegativeButton(R.string.close, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // Dialog will be dismissed when clicked
+                        }
+                    });
+                    builder.show();
+            }
+        });
 
         Button createGoal = (Button) findViewById(R.id.add_goal_button);
         createGoal.setOnClickListener(new View.OnClickListener() {
@@ -99,13 +117,13 @@ class DailyTargetAdapter extends ArrayAdapter<String> {
 
 
         LayoutInflater inflater = LayoutInflater.from(context);
-        View rowView = inflater.inflate(R.layout.listitem_daily_target, null, true);
+        View rowView = inflater.inflate(R.layout.listitem_goals, null, true);
 
         TextView dailyTarget = (TextView) rowView.findViewById(R.id.daily_target_text);
         ProgressBar progressBar = (ProgressBar) rowView.findViewById(R.id.daily_target_progressbar);
 
         dailyTarget.setText(targets.get(position));
-        progressBar.setProgress(50);
+        progressBar.setProgress((int)(Math.random() * 100));
 
         return rowView;
 
