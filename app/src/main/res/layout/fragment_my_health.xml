@@ -44,6 +44,14 @@
                 android:layout_height="match_parent">
             </com.github.mikephil.charting.charts.RadarChart>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your personalized health metric chart breaks down your score into each metric. Note that points further away from the center indicate strength in that metric."
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"/>
+
             <Button
                 android:id="@+id/health_suggestions_button"
                 android:layout_width="match_parent"
@@ -52,7 +60,8 @@
                 android:text="@string/health_suggestions"
                 android:textColor="@android:color/white"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"/>
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"/>
             <Button
                 android:id="@+id/daily_targets_button"
                 android:layout_width="match_parent"
