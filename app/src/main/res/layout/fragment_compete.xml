@@ -18,7 +18,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:text="Featured"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="Private"
-                android:textSize="25dp"
+                android:textSize="20dp"
 
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
@@ -57,8 +57,6 @@
                 android:text="Create new Competition"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:textColor="@android:color/white"
-                android:background="@color/colorPrimaryDark"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="24dp"/>
 
@@ -67,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="Invites"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
                 android:clickable="false"/>
