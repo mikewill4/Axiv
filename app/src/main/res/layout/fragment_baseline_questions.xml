@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".BaselineQuestionsFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,21 +62,18 @@
                     android:id="@+id/rbNotHealthy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onDietRadioButtonClicked"
                     android:text="Not very healthy" />
 
                 <RadioButton
                     android:id="@+id/rbSomewhatHealthy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onDietRadioButtonClicked"
                     android:text="Somewhat healthy" />
 
                 <RadioButton
                     android:id="@+id/rbVeryHealthy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onDietRadioButtonClicked"
                     android:text="Very healthy" />
             </RadioGroup>
 
@@ -104,7 +105,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onBPRadioButtonClicked"
                     android:text="Yes" />
 
                 <RadioButton
@@ -112,14 +112,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onBPRadioButtonClicked"
                     android:text="No" />
 
                 <RadioButton
                     android:id="@+id/rbUnknownBP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="onBPRadioButtonClicked"
                     android:text="I don't know" />
             </RadioGroup>
 
@@ -189,5 +187,7 @@
 
 
     </LinearLayout>
+
+</ScrollView>
 
 </FrameLayout>

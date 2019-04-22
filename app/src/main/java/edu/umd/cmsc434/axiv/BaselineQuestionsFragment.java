@@ -48,6 +48,7 @@ public class BaselineQuestionsFragment extends Fragment {
         CompleteRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
             }
