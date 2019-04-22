@@ -3,91 +3,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstRegisterFragment">
+    tools:context=".AccountDetailsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- TODO: Update blank fragment layout -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register with Axiv"
+            android:text="Account Details"
             android:gravity="center"
             android:textSize="36sp"
             android:layout_marginTop="32dp"/>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/accountText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/have_account"
-                android:layout_alignParentBottom="true"
-                android:gravity="center"
-                android:paddingBottom="16dp"
-                android:paddingTop="16dp"
-                android:background="@drawable/topborder"/>
 
-            <Button
-                android:id="@+id/btnAccountDetails"
+            <EditText
+                android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Account Details"
-                android:gravity="center"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="180dp"
+                android:layout_marginTop="100dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimary"
-                android:textColor="@color/colorWhite" />
+                android:ems="10"
+                android:hint="Email Address"
+                android:inputType="textPersonName" />
 
-            <Button
-                android:id="@+id/btnSpecs"
+            <EditText
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Personal Measurements"
-                android:gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="155dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="250dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimary"
-                android:textColor="@color/colorWhite" />
-
-            <Button
-                android:id="@+id/btnBaselineQuestions"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Baseline Questions"
-                android:gravity="center"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="320dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimary"
-                android:textColor="@color/colorWhite" />
+                android:ems="10"
+                android:hint="Create a username"
+                android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/btnCompleteRegistration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Complete Registration"
+                android:text="Confirm"
                 android:gravity="center"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="550dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/colorPrimary"
                 android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tvPasswordReqs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 characters minimum"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="195dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"/>
         </RelativeLayout>
 
 
 
     </LinearLayout>
-
 
 </FrameLayout>
