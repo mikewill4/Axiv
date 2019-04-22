@@ -120,7 +120,7 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
             itemData2.setText("Cal Burned: " + ((ExerciseMetric)m).caloriesBurned);
             itemData3.setText("Score Delta: +" + ((ExerciseMetric)m).caloriesBurned/20);
         } else if(m instanceof WeightMetric){
-            itemData1.setText( "Weight: " + ((WeightMetric)m).updatedWeightLbs + " lbs");
+            itemData1.setText("Weight: " + ((WeightMetric)m).updatedWeightLbs + " lbs");
             itemData2.setText("");
             itemData3.setText("Score Delta: +" + ((WeightMetric)m).updatedWeightLbs/20);
         } else if(m instanceof SleepMetric){
@@ -137,7 +137,7 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
         } else if(m instanceof HydrationMetric){
             itemData1.setText("Water Intake: " + ((HydrationMetric)m).waterIntakeML + "ml");
             itemData2.setText("");
-            itemData3.setText("Score Delta: -" + ((HydrationMetric)m).waterIntakeML/200 );
+            itemData3.setText("Score Delta: -" + ((HydrationMetric)m).waterIntakeML/200);
         } else if(m instanceof MealMetric){
             itemData1.setText(((MealMetric)m).foodType);
             itemData2.setText("Cal Intake: " + ((MealMetric)m).totalCalories);
@@ -156,6 +156,24 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
             @Override
             public void onClick(View v) {
                 System.out.println("Deleting Metric");
+                Metric tmp = userHistory.get(position);
+                if(tmp instanceof ExerciseMetric){
+
+                } else if(tmp instanceof WeightMetric){
+
+                } else if(tmp instanceof SleepMetric){
+
+                } else if(tmp instanceof StepsMetric){
+
+                } else if(tmp instanceof HydrationMetric){
+
+                } else if(tmp instanceof MealMetric){
+
+                } else if(tmp instanceof HeartRateMetric){
+
+                } else if(tmp instanceof BloodPressureMetric){
+
+                }
                 userHistory.remove(position);
                 notifyDataSetChanged();
             }

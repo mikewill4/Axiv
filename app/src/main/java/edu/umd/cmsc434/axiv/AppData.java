@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -28,7 +29,7 @@ public class AppData {
     public AppData(){
 
         // CREATE CURRENT USER
-        Map<String, Float> userMetrics = new TreeMap<>();
+        Map<String, Float> userMetrics = new LinkedHashMap<>();
         userMetrics.put("Heart rate", 5.0f);
         userMetrics.put("Hydration", 5.0f);
         userMetrics.put("Steps", 1.0f);
@@ -88,7 +89,12 @@ public class AppData {
         }
 
         public void updateMetricScore(String metric, float scoreDelta) {
-            metrics.put(metric, metrics.get(metric) + scoreDelta);
+            if (scoreDelta > 2.0) scoreDelta = 2.0f;
+            if (scoreDelta < -2.0) scoreDelta = -2.0f;
+            if (scoreDelta >= 0 && metrics.get(metric) + scoreDelta <= 10)
+                metrics.put(metric, metrics.get(metric) + scoreDelta);
+            else if (scoreDelta < 0 && metrics.get(metric) + scoreDelta >= 0)
+                metrics.put(metric, metrics.get(metric) + scoreDelta);
         }
 
         public void updatePoints(int pointsDelta) {

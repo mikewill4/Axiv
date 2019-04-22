@@ -132,6 +132,9 @@ public class MealManualInputActivity extends AppCompatActivity {
 
 
                 AppData.userMetricHistory.add(new Metric.MealMetric(eventOccurance, foodType ,numServings,numCalPerServing));
+                AppData.appUser.updateScore((numCalPerServing * numServings)/100 * -1);
+                AppData.appUser.updateMetricScore("Calories", (numCalPerServing * numServings)/100 * -1);
+
                 System.out.println(AppData.userMetricHistory);
 
                 onBackPressed();
