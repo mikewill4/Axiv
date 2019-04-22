@@ -88,7 +88,7 @@ public class MyHealthFragment extends Fragment {
 
         // Define x axis
         XAxis x = chart.getXAxis();
-        x.setTextSize(15f);
+        x.setTextSize(16f);
         x.setYOffset(0);
         x.setXOffset(0);
         x.setValueFormatter(new IAxisValueFormatter() {
@@ -106,7 +106,7 @@ public class MyHealthFragment extends Fragment {
         // Define y axis
         YAxis y = chart.getYAxis();
         y.setLabelCount(NUM_METRICS, false);
-        y.setTextSize(15f);
+        y.setTextSize(16f);
         y.setAxisMinimum(MIN);
         y.setAxisMaximum(MAX);
         y.setDrawLabels(false);

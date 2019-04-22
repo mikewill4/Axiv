@@ -19,7 +19,9 @@
                 android:text="@string/overall_score"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
-                android:clickable="false"/>
+                android:clickable="false"
+                android:textSize="20sp"
+                android:textAllCaps="false"/>
 
             <TextView
                 android:id="@+id/user_score"
@@ -36,7 +38,9 @@
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
                 android:clickable="false"
-                android:layout_marginTop="4dp"/>
+                android:layout_marginTop="4dp"
+                android:textSize="20sp"
+                android:textAllCaps="false"/>
 
             <com.github.mikephil.charting.charts.RadarChart
                 android:id="@+id/health_radar_chart"
@@ -61,7 +65,7 @@
                 android:textColor="@android:color/white"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp" />
             <Button
                 android:id="@+id/daily_targets_button"
                 android:layout_width="match_parent"

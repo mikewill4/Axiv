@@ -20,6 +20,7 @@
                 android:layout_height="40dp"
                 android:text="Your points"
                 android:textSize="20sp"
+                android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
                 android:clickable="false"/>
@@ -35,9 +36,26 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:text="Redeemed rewards"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+                android:clickable="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="You have yet to redeem any rewards."
+                android:padding="8dp"
+                android:textAlignment="center" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:text="Recently Added"
                 android:textSize="20sp"
-
+                android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
                 android:clickable="false"/>
@@ -45,9 +63,7 @@
             <ListView
                 android:id="@+id/rewards_recently_added_listview"
                 android:layout_width="match_parent"
-
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10sp"
                 android:dividerHeight="-2dp"/>
 
             <Button
@@ -55,6 +71,7 @@
                 android:layout_height="40dp"
                 android:text="Trending"
                 android:textSize="20sp"
+                android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
                 android:clickable="false"/>
@@ -64,7 +81,6 @@
                 android:id="@+id/rewards_trending_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10sp"
                 android:dividerHeight="-2dp">
             </ListView>
 
@@ -73,8 +89,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="Food"
-                android:textSize="20dp"
-
+                android:textSize="20sp"
+                android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
                 android:clickable="false"/>
@@ -83,15 +99,14 @@
                 android:id="@+id/rewards_food_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
                 android:dividerHeight="-2dp">
             </ListView>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:textSize="20dp"
-
+                android:textSize="20sp"
+                android:textAllCaps="false"
                 android:text="Clothing"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
@@ -101,15 +116,14 @@
                 android:id="@+id/rewards_clothing_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
                 android:dividerHeight="-2dp">
             </ListView>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:textSize="20dp"
-
+                android:textSize="20sp"
+                android:textAllCaps="false"
                 android:text="Accessories"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
@@ -119,7 +133,6 @@
                 android:id="@+id/rewards_accessories_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
                 android:dividerHeight="-2dp">
             </ListView>
         </LinearLayout>
