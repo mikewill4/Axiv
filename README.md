@@ -23,10 +23,11 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Fix scaling issues for radar chart on different screen sizes
 - [x] Add new metrics
 - [x] Link with static AppData class
+- [ ] Add button with description for chart
 ### Health Suggestions screen
 - [x] Create listview for displaying various health suggestions
 - [x] Each item opens up a dialog box for more information
-- [ ] Style suggestions
+- [x] Style suggestions
 ### Daily Targets screen
 - [x] Create progress bars for each daily target
 - [ ] Provide ability to create new daily targets
