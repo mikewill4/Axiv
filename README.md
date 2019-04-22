@@ -30,7 +30,8 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Style suggestions
 ### Daily Targets screen
 - [x] Create progress bars for each daily target
-- [ ] Provide ability to create new daily targets
+- [x] Provide ability to create new daily targets
+- [x] Rename to health goals
 ### Track Progress screen
 - [x] Line graph showing progress over a time period for a single metric 
 - [x] Improve style of graph
@@ -38,10 +39,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Update graph based on spinner selection
 - [x] Add functionality for switching which metric is displayed
 ### Set Reminders screen
-- [ ] Create new reminders
-- [ ] View existing reminders
-- [ ] Edit existing reminders
-- [ ] Notifications for reminders
+- [x] Add unimplemented toast
 ### My Metrics screen
 - [x] Meals - manual entry
 - [x] Meals - search for previous meals
@@ -62,7 +60,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Create new competitions
 ### Rewards Screen
 - [x] Show current points accumulated
-- [ ] Show purchased rewards
+- [x] Show purchased rewards
 - [ ] Dynamically update points
 - [x] Rewards sorted into categories
 ### Settings screen
@@ -82,9 +80,8 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 ### Registration screen
 - [x] Full name
 - [x] Email and password
-- [ ] Age, height, weight, gender
-- [ ] Personalized questions associated with each metric
-- [ ] Store values and use to create radar chart baseline
+- [x] Age, height, weight, gender
+- [x] Personalized questions associated with each metric
 ### Notifications
 - [ ] Reminders to hit daily targets
 - [ ] Health suggestion of the day
@@ -92,11 +89,10 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Create singleton class to hold data across app
 ### Style
 - [x] Pick primary colors for app
-- [ ] Standardize button style
-- [ ] Standardize padding/margins
+- [x] Standardize button style
+- [x] Standardize padding/margins
 - [x] Make titles in action bar and bottom nav bar consistent
-- [ ] Make settings style consistent with other screens
-- [ ] Standardize font type and sizes
+- [x] Standardize font type and sizes
 - [x] Create a logo
 - [x] Use meaningful text throughout app
 ### Bugs

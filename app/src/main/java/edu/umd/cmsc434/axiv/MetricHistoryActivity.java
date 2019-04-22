@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -166,7 +167,7 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
         }
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-
+        final View currView = view;
         deleteButton.setOnClickListener(new AdapterView.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -206,6 +207,8 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
                         }
                         userHistory.remove(position);
                         notifyDataSetChanged();
+                        Toast.makeText(currView.getContext(), "Deleted Log", Toast.LENGTH_LONG).show();
+
                     }
                 });
                 builder.setNegativeButton(R.string.close, new DialogInterface.OnClickListener() {

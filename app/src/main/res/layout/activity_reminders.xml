@@ -7,4 +7,22 @@
     tools:context=".RemindersActivity"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You have not created any reminders yet."
+        android:textAlignment="center"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/add_reminder_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="Create new reminder"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"/>
+
 </LinearLayout>
