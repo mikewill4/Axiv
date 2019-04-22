@@ -11,7 +11,8 @@
         android:id="@+id/progress_line_chart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="64dp">
+        android:padding="64dp"
+        android:layout_marginTop="16dp">
     </com.github.mikephil.charting.charts.LineChart>
 
     <LinearLayout
@@ -35,11 +36,5 @@
             android:scrollbarStyle="outsideInset">
         </Spinner>
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/track_progress_description"
-        android:layout_margin="16dp"/>
 
 </LinearLayout>
