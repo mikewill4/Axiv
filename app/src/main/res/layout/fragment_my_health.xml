@@ -15,12 +15,14 @@
             android:orientation="vertical">
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="40dp"
                 android:text="@string/overall_score"
                 android:textColor="@android:color/white"
-                android:background="@color/colorPrimaryDark"/>
+                android:background="@color/colorPrimaryDark"
+                android:clickable="false"/>
 
             <TextView
+                android:id="@+id/user_score"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/test_score"
@@ -29,10 +31,11 @@
                 android:textSize="30sp" />
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="40dp"
                 android:text="@string/score_breakdown"
                 android:textColor="@android:color/white"
                 android:background="@color/colorPrimaryDark"
+                android:clickable="false"
                 android:layout_marginTop="4dp"/>
 
             <com.github.mikephil.charting.charts.RadarChart

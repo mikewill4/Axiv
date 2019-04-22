@@ -96,6 +96,9 @@ public class TrackStepsActivity extends AppCompatActivity {
 
 
                 AppData.userMetricHistory.add(new Metric.StepsMetric(eventOccurance, stepValue));
+                AppData.appUser.updateScore(stepValue/500);
+                AppData.appUser.updateMetricScore("Steps", stepValue/500);
+
                 System.out.println(AppData.userMetricHistory);
                 onBackPressed();
             }

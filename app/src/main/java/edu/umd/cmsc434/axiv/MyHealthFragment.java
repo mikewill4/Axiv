@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.RadarChart;
 import com.github.mikephil.charting.components.AxisBase;
@@ -28,6 +29,9 @@ import com.github.mikephil.charting.interfaces.datasets.IDataSet;
 import com.github.mikephil.charting.interfaces.datasets.IRadarDataSet;
 
 import java.util.ArrayList;
+import java.util.Map;
+
+import edu.umd.cmsc434.axiv.AppData.User;
 
 
 /**
@@ -36,7 +40,7 @@ import java.util.ArrayList;
 public class MyHealthFragment extends Fragment {
 
     // Min and max values for Radar Chart
-    public static final float MAX = 12f, MIN = 1f;
+    public static final float MAX = 10f, MIN = 0f;
 
     // Number of metrics measured in Radar Chart
     public static final int NUM_METRICS = 8;
@@ -53,8 +57,13 @@ public class MyHealthFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         setHasOptionsMenu(true);
+
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_my_health, container, false);
+
+        // Set user score
+        TextView userScore = (TextView) rootView.findViewById(R.id.user_score);
+        userScore.setText(String.valueOf(AppData.appUser.score));
 
         // Get display width
         Display display = getActivity().getWindowManager().getDefaultDisplay();
@@ -164,7 +173,6 @@ public class MyHealthFragment extends Fragment {
         switch(item.getItemId()) {
             case R.id.refreshValues:
                 setData();
-                chart.invalidate();
                 break;
 //            case R.id.toggleValues:
 //                for (IDataSet<?> set : chart.getData().getDataSets()) {
@@ -179,9 +187,12 @@ public class MyHealthFragment extends Fragment {
     private void setData() {
         // Generate random test data
         ArrayList<RadarEntry> user = new ArrayList<>();
-        for (int i = 0; i < NUM_METRICS; i++) {
-            float val = (int) (Math.random() * MAX) + MIN;
-            user.add(new RadarEntry(val));
+//        for (int i = 0; i < NUM_METRICS; i++) {
+//            float val = (int) (Math.random() * MAX) + MIN;
+//            user.add(new RadarEntry(val));
+//        }
+        for (Map.Entry<String, Float> metricValue : AppData.appUser.metrics.entrySet()) {
+            user.add(new RadarEntry(metricValue.getValue()));
         }
 
         // Create Radar dataset

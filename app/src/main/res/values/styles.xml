@@ -23,6 +23,11 @@
         <item name="android:contentDescription">"Refresh"</item>
     </style>
 
-
+    <!-- Change overflow icon to points for rewards. -->
+    <style name="ActionButtonPoints" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/baseline_refresh_white_24dp</item>
+        <item name="android:background">?android:attr/actionBarItemBackground</item>
+        <item name="android:contentDescription">"Refresh"</item>
+    </style>
 
 </resources>

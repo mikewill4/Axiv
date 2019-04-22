@@ -116,6 +116,9 @@ public class TrackHRActivity extends AppCompatActivity {
 
 
                 AppData.userMetricHistory.add(new HeartRateMetric(eventOccurance, HRValue));
+                AppData.appUser.updateScore(HRValue/20);
+                AppData.appUser.updateMetricScore("Heart rate", HRValue/20);
+
                 System.out.println(AppData.userMetricHistory);
                 onBackPressed();
             }

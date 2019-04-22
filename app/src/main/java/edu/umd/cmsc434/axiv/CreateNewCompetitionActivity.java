@@ -3,6 +3,7 @@ package edu.umd.cmsc434.axiv;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
@@ -61,7 +62,7 @@ public class CreateNewCompetitionActivity extends AppCompatActivity {
                 String organizationName = orgName.getText().toString();
 
                 ArrayList<AppData.User> users = new ArrayList<AppData.User>();
-                users.add(new AppData.User("My Username", 100.0));
+                users.add(new AppData.User("My Username", 100.0, null));
 
 
 
@@ -79,6 +80,25 @@ public class CreateNewCompetitionActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
+            default:
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent newIntent = new Intent("android.intent.action.HOMEPAGE");
+        newIntent.putExtra("currId", 2);
+        startActivity(newIntent);
     }
 
 }

@@ -110,6 +110,9 @@ public class MealConfirmationActivity extends AppCompatActivity {
 
 
                 AppData.userMetricHistory.add(new Metric.MealMetric(eventOccurance, "Chicken Caeser Salad",numServings,500));
+                AppData.appUser.updateScore((500 * numServings)/100 * -1);
+                AppData.appUser.updateMetricScore("Calories", (500 * numServings)/100 * -1);
+
                 System.out.println(AppData.userMetricHistory);
                 onBackPressed();
             }

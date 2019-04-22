@@ -133,6 +133,9 @@ public class TrackExerciseActivity extends AppCompatActivity {
 
                 System.out.println(AppData.userMetricHistory);
 
+                AppData.appUser.updateScore(Integer.parseInt(enterCalories.getText().toString())/20);
+                AppData.appUser.updateMetricScore("Exercise", Integer.parseInt(enterCalories.getText().toString())/20);
+
                 onBackPressed();
 
             }

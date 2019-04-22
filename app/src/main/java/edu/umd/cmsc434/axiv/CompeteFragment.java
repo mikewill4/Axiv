@@ -269,7 +269,7 @@ class MyInvitesListAdapter extends ArrayAdapter<String> {
 
                 ArrayList<AppData.User> emptyUserList = new ArrayList<User>();
                 emptyUserList.add(AppData.appUser);
-                emptyUserList.add(new AppData.User("Becky Invites", 75.4));
+                emptyUserList.add(new AppData.User("Becky Invites", 75.4, null));
 
                 AppData.userPrivateCompetitions.add(new PrivateCompetitionInfo(
                         inviteList.get(position).competitionName,
