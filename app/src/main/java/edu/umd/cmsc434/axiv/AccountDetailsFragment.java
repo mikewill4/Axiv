@@ -12,6 +12,8 @@ public class AccountDetailsFragment extends Fragment {
 
     private Button Confirm;
     private FirstRegisterFragment firstRegisterFragment;
+    private BaselineQuestionsFragment baselineQuestionsFragment;
+    private SpecificationsFragment specsFrag;
 
     public AccountDetailsFragment() {
         // Required empty public constructor
@@ -26,12 +28,15 @@ public class AccountDetailsFragment extends Fragment {
 
 
         firstRegisterFragment = new FirstRegisterFragment();
+        baselineQuestionsFragment = new BaselineQuestionsFragment();
+        specsFrag = new SpecificationsFragment();
+
         Confirm = rootView.findViewById(R.id.btnCompleteRegistration);
 
         Confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((LoginActivity)getActivity()).setFragment(firstRegisterFragment);
+                ((LoginActivity)getActivity()).setFragment(specsFrag);
             }
         });
 

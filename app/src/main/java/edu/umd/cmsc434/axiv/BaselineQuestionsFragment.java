@@ -1,6 +1,5 @@
 package edu.umd.cmsc434.axiv;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -49,8 +48,7 @@ public class BaselineQuestionsFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
+                ((LoginActivity)getActivity()).setFragment(firstRegisterFragment);
             }
         });
 

@@ -1,9 +1,7 @@
 package edu.umd.cmsc434.axiv;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -28,6 +26,7 @@ public class LoginFragment extends Fragment {
     private TextView ForgotPassword;
     private int counter = 5;
     private FirstRegisterFragment firstRegisterFragment;
+    private AccountDetailsFragment adFrag;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -51,6 +50,7 @@ public class LoginFragment extends Fragment {
         Info.setText("No. of attempts remaining: 5");
 
         firstRegisterFragment = new FirstRegisterFragment();
+        adFrag = new AccountDetailsFragment();
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(this.getActivity());
 
@@ -64,7 +64,7 @@ public class LoginFragment extends Fragment {
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((LoginActivity)getActivity()).setFragment(firstRegisterFragment);
+                ((LoginActivity)getActivity()).setFragment(adFrag);
             }
         });
 

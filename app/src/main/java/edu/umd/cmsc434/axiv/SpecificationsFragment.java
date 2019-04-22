@@ -17,6 +17,7 @@ public class SpecificationsFragment extends Fragment {
     private EditText Weight;
     private Button Confirm;
     private FirstRegisterFragment firstRegisterFragment;
+    private BaselineQuestionsFragment blqFrag;
 
 
     public SpecificationsFragment() {
@@ -38,11 +39,12 @@ public class SpecificationsFragment extends Fragment {
 
 
         firstRegisterFragment = new FirstRegisterFragment();
+        blqFrag = new BaselineQuestionsFragment();
 
         Confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((LoginActivity)getActivity()).setFragment(firstRegisterFragment);
+                ((LoginActivity)getActivity()).setFragment(blqFrag);
             }
         });
 
