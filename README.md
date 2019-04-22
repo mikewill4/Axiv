@@ -98,7 +98,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [ ] Make settings style consistent with other screens
 - [ ] Standardize font type and sizes
 - [x] Create a logo
-- [ ] Use meaningful text throughout app
+- [x] Use meaningful text throughout app
 ### Bugs
 - [x] Main screens now cut off by nav bar
 - [x] Compete pages back button goes back to My Health
