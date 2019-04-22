@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name = "units">
+        <item>pounds</item>
+        <item>kilograms</item>
+
+    </string-array>
+
+    <string-array name ="time_zones">
+        <item>UTC-12:00</item>
+        <item>UTC-11:00</item>
+        <item>UTC-10:00</item>
+        <item>UTC-09:30</item>
+        <item>UTC-09:00</item>
+        <item>UTC-08:00</item>
+        <item>UTC-07:00</item>
+        <item>UTC-06:00</item>
+        <item>UTC-05:00</item>
+        <item>UTC-04:00</item>
+        <item>UTC-03:30</item>
+        <item>UTC-03:00</item>
+        <item>UTC-02:00</item>
+        <item>UTC-01:00</item>
+        <item>UTC+-00:00</item>
+        <item>UTC+01:00</item>
+        <item>UTC+02:00</item>
+        <item>UTC+03:00</item>
+        <item>UTC+03:30</item>
+        <item>UTC+04:00</item>
+        <item>UTC+04:30</item>
+        <item>UTC+05:00</item>
+        <item>UTC+05:30</item>
+        <item>UTC+05:45</item>
+        <item>UTC+06:00</item>
+        <item>UTC+06:30</item>
+        <item>UTC+07:00</item>
+        <item>UTC+08:00</item>
+        <item>UTC+08:45</item>
+        <item>UTC+09:00</item>
+        <item>UTC+09:30</item>
+        <item>UTC+10:00</item>
+        <item>UTC+10:30</item>
+        <item>UTC+11:00</item>
+        <item>UTC+12:00</item>
+        <item>UTC+12:45</item>
+        <item>UTC+13:00</item>
+        <item>UTC+14:00</item>
+    </string-array>
+
+</resources>
