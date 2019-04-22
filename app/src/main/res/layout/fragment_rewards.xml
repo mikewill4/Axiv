@@ -18,7 +18,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="Your points"
+                android:text="Rewards Points"
                 android:textSize="20sp"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
@@ -36,7 +36,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="Redeemed rewards"
+                android:text="Redeemed Rewards"
                 android:textSize="20sp"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
