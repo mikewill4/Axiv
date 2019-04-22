@@ -45,17 +45,17 @@ public class TrackWeightActivity extends AppCompatActivity {
         submitWeight = (Button) findViewById(R.id.track_weight_submit_weight);
         submitWeight.setVisibility(View.GONE);
 
-        //EDIT_TEXT
+        // EDIT_TEXT
         weight_input = (EditText) findViewById(R.id.weight_input);
 
-        //SPINNER CODE
+        // SPINNER CODE
         unitSpinner = (Spinner) findViewById(R.id.input_weight_unit_spinner);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.weight_units ,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         unitSpinner.setAdapter(adapter);
 
-        //TIME SELECTION CODE
+        // TIME SELECTION CODE
 
         displayDateTime =(TextView) findViewById(R.id.track_weight_date_time_display);
         displayDateTime.setVisibility(View.GONE);
@@ -130,6 +130,14 @@ public class TrackWeightActivity extends AppCompatActivity {
 
 
                 AppData.userMetricHistory.add(new WeightMetric(eventOccurance,weight_value));
+
+                AppData.appUser.updateScore(weight_value/20);
+                AppData.appUser.updateMetricScore("Weight", (float)weight_value/20);
+
+                Toast.makeText(TrackWeightActivity.this, "Added New Weight Log", Toast.LENGTH_SHORT).show();
+
+
+
                 System.out.println(AppData.userMetricHistory);
                 onBackPressed();
             }

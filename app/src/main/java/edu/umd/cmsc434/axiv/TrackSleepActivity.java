@@ -183,6 +183,15 @@ public class TrackSleepActivity extends AppCompatActivity {
                 }
 
                 AppData.userMetricHistory.add(new Metric.SleepMetric(eventOccurance,sleepTimeStart,sleepTimeEnd));
+                long duration = sleepTimeStart.getTime() - sleepTimeEnd.getTime();
+                int hours= (int) Math.floor(duration/3600000);
+                int minutes = (int) Math.floor((duration - hours*3600000) / 60000);
+                AppData.appUser.updateScore(minutes/3);
+                AppData.appUser.updateMetricScore("Sleep", minutes/3);
+
+                Toast.makeText(TrackSleepActivity.this, "Added New Sleep Log", Toast.LENGTH_SHORT).show();
+
+
                 System.out.println(AppData.userMetricHistory);
 
             onBackPressed();

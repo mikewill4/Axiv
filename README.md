@@ -22,11 +22,12 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Change menu item icon to refresh symbol for refreshing chart
 - [x] Fix scaling issues for radar chart on different screen sizes
 - [x] Add new metrics
-- [ ] Link with static AppData class
+- [x] Link with static AppData class
+- [ ] Add button with description for chart
 ### Health Suggestions screen
 - [x] Create listview for displaying various health suggestions
 - [x] Each item opens up a dialog box for more information
-- [ ] Suggestions are styled towards improving a specific metric
+- [x] Style suggestions
 ### Daily Targets screen
 - [x] Create progress bars for each daily target
 - [ ] Provide ability to create new daily targets
@@ -36,7 +37,7 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Remove items from legend that aren't being displayed
 - [x] Update graph based on spinner selection
 - [x] Add functionality for switching which metric is displayed
-- [ ] Add functionality for switching time period displayed
+- [ ] Make description dynamic
 ### Set Reminders screen
 - [ ] Create new reminders
 - [ ] View existing reminders
@@ -61,15 +62,16 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Add new users
 - [x] Create new competitions
 ### Rewards Screen
-- [ ] Show current points accumulated
-- [ ] Rewards sorted into categories
-- [ ] Ability to filter by rewards you can actually afford
+- [x] Show current points accumulated
+- [ ] Show purchased rewards
+- [ ] Dynamically update points
+- [x] Rewards sorted into categories
 ### Settings screen
 - [ ] Ability to log out
-- [ ] Add functionality to toggle public visibility of score
+- [x] Add functionality to toggle public visibility of score
 - [ ] Show connected devices
 - [ ] Buttons for adding or selecting devices
-- [ ] Switch to metric units
+- [x] Switch to metric units
 - [ ] Turn off notifications
 ### Start screen
 - [x] Option to login
@@ -82,7 +84,8 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Full name
 - [x] Email and password
 - [ ] Age, height, weight, gender
-- [ ] Personalized fitness and diet questions
+- [ ] Personalized questions associated with each metric
+- [ ] Store values and use to create radar chart baseline
 ### Notifications
 - [ ] Reminders to hit daily targets
 - [ ] Health suggestion of the day
@@ -90,9 +93,13 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Create singleton class to hold data across app
 ### Style
 - [x] Pick primary colors for app
-- [x] Standardize button style
+- [ ] Standardize button style
+- [ ] Standardize padding/margins
+- [x] Make titles in action bar and bottom nav bar consistent
+- [ ] Make settings style consistent with other screens
 - [ ] Standardize font type and sizes
 - [x] Create a logo
+- [ ] Use meaningful text throughout app
 ### Bugs
 - [x] Main screens now cut off by nav bar
 - [x] Compete pages back button goes back to My Health

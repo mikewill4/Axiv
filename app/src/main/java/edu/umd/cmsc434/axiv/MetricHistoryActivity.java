@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import edu.umd.cmsc434.axiv.Metric.BloodPressureMetric;
 import edu.umd.cmsc434.axiv.Metric.ExerciseMetric;
@@ -41,11 +42,22 @@ public class MetricHistoryActivity extends AppCompatActivity {
 
         ArrayList<Metric> userHistory = AppData.userMetricHistory;
 
+        TextView noMetrics = (TextView) findViewById(R.id.metric_history_no_metrics);
+        noMetrics.setVisibility(View.GONE);
+
 
 
         MyMetricHistoryAdapter adapter = new MyMetricHistoryAdapter(this,userHistory);
         historyListView = (ListView) findViewById(R.id.metrics_history_listview);
         historyListView.setAdapter(adapter);
+
+        if(userHistory.isEmpty()){
+            historyListView.setVisibility(View.GONE);
+            noMetrics.setVisibility(View.VISIBLE);
+
+        }
+
+
     }
 
     @Override
@@ -80,6 +92,7 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
 
         this.context = context;
         this.userHistory = userHistory;
+        Collections.reverse(this.userHistory);
     }
 
     @Override
@@ -120,7 +133,7 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
             itemData2.setText("Cal Burned: " + ((ExerciseMetric)m).caloriesBurned);
             itemData3.setText("Score Delta: +" + ((ExerciseMetric)m).caloriesBurned/20);
         } else if(m instanceof WeightMetric){
-            itemData1.setText( "Weight: " + ((WeightMetric)m).updatedWeightLbs + " lbs");
+            itemData1.setText("Weight: " + ((WeightMetric)m).updatedWeightLbs + " lbs");
             itemData2.setText("");
             itemData3.setText("Score Delta: +" + ((WeightMetric)m).updatedWeightLbs/20);
         } else if(m instanceof SleepMetric){
@@ -137,7 +150,7 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
         } else if(m instanceof HydrationMetric){
             itemData1.setText("Water Intake: " + ((HydrationMetric)m).waterIntakeML + "ml");
             itemData2.setText("");
-            itemData3.setText("Score Delta: -" + ((HydrationMetric)m).waterIntakeML/200 );
+            itemData3.setText("Score Delta: -" + ((HydrationMetric)m).waterIntakeML/200);
         } else if(m instanceof MealMetric){
             itemData1.setText(((MealMetric)m).foodType);
             itemData2.setText("Cal Intake: " + ((MealMetric)m).totalCalories);
@@ -152,15 +165,6 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
             itemData3.setText("Score Delta: -" + ((BloodPressureMetric)m).systolicBP/10);
         }
 
-        deleteButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("Deleting Metric");
-                userHistory.remove(position);
-                notifyDataSetChanged();
-            }
-        });
-
         final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
         deleteButton.setOnClickListener(new AdapterView.OnClickListener() {
@@ -171,6 +175,35 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
                 builder.setPositiveButton("Delete", new DialogInterface.OnClickListener(){
                     public void onClick(DialogInterface dialog, int id) {
                         System.out.println("Deleting Metric");
+                        Metric tmp = userHistory.get(position);
+                        if(tmp instanceof ExerciseMetric){
+                            AppData.appUser.updateScore(((ExerciseMetric) tmp).caloriesBurned/20 * -1);
+                            AppData.appUser.updateMetricScore("Exercise", ((ExerciseMetric) tmp).caloriesBurned/20 * -1);
+                        } else if(tmp instanceof WeightMetric){
+                            AppData.appUser.updateScore(((WeightMetric) tmp).updatedWeightLbs/20 * -1);
+                            AppData.appUser.updateMetricScore("Weight", (float)((WeightMetric) tmp).updatedWeightLbs/20 * -1);
+                        } else if(tmp instanceof SleepMetric){
+                            long duration = ((SleepMetric)tmp).sleepDurationEnd.getTime() - ((SleepMetric)tmp).sleepDurationEnd.getTime();
+                            int hours= (int) Math.floor(duration/3600000);
+                            int minutes = (int) Math.floor((duration - hours*3600000) / 60000);
+                            AppData.appUser.updateScore(minutes/3 * -1);
+                            AppData.appUser.updateMetricScore("Sleep", minutes/3 * -1);
+                        } else if(tmp instanceof StepsMetric){
+                            AppData.appUser.updateScore(((StepsMetric)tmp).numSteps/500 * -1);
+                            AppData.appUser.updateMetricScore("Steps", ((StepsMetric)tmp).numSteps/500 * -1);
+                        } else if(tmp instanceof HydrationMetric){
+                            AppData.appUser.updateScore(((HydrationMetric)tmp).waterIntakeML/200);
+                            AppData.appUser.updateMetricScore("Hydration", ((HydrationMetric)tmp).waterIntakeML/200);
+                        } else if(tmp instanceof MealMetric){
+                            AppData.appUser.updateScore(((MealMetric)tmp).totalCalories/100);
+                            AppData.appUser.updateMetricScore("Calories", ((MealMetric)tmp).totalCalories/100);
+                        } else if(tmp instanceof HeartRateMetric){
+                            AppData.appUser.updateScore(((HeartRateMetric)tmp).heartRate/20 * -1);
+                            AppData.appUser.updateMetricScore("Heart rate", (float)((HeartRateMetric)tmp).heartRate/20 * -1);
+                        } else if(tmp instanceof BloodPressureMetric){
+                            AppData.appUser.updateScore(((BloodPressureMetric)tmp).systolicBP/10);
+                            AppData.appUser.updateMetricScore("Blood pressure", ((BloodPressureMetric)tmp).systolicBP/10);
+                        }
                         userHistory.remove(position);
                         notifyDataSetChanged();
                     }
