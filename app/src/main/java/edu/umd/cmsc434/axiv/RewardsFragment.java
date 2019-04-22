@@ -84,7 +84,7 @@ public class RewardsFragment extends Fragment {
                         // Dialog will be dismissed when clicked
                     }
                 });
-                builder.setPositiveButton("Purhcase", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Purchase", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Dialog will be dismissed when clicked
                     }
@@ -103,7 +103,7 @@ public class RewardsFragment extends Fragment {
                         // Dialog will be dismissed when clicked
                     }
                 });
-                builder.setPositiveButton("Purhcase", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Purchase", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Dialog will be dismissed when clicked
                     }
@@ -122,7 +122,7 @@ public class RewardsFragment extends Fragment {
                         // Dialog will be dismissed when clicked
                     }
                 });
-                builder.setPositiveButton("Purhcase", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Purchase", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Dialog will be dismissed when clicked
                     }
@@ -141,7 +141,7 @@ public class RewardsFragment extends Fragment {
                         // Dialog will be dismissed when clicked
                     }
                 });
-                builder.setPositiveButton("Purhcase", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Purchase", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Dialog will be dismissed when clicked
                     }
@@ -160,7 +160,7 @@ public class RewardsFragment extends Fragment {
                         // Dialog will be dismissed when clicked
                     }
                 });
-                builder.setPositiveButton("Purhcase", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Purchase", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // Dialog will be dismissed when clicked
                     }
