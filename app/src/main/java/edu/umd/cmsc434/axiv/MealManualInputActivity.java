@@ -135,6 +135,9 @@ public class MealManualInputActivity extends AppCompatActivity {
                 AppData.appUser.updateScore((numCalPerServing * numServings)/100 * -1);
                 AppData.appUser.updateMetricScore("Calories", (numCalPerServing * numServings)/100 * -1);
 
+                Toast.makeText(MealManualInputActivity.this, "Added New Meal Log", Toast.LENGTH_SHORT).show();
+
+
                 System.out.println(AppData.userMetricHistory);
 
                 onBackPressed();

@@ -120,6 +120,9 @@ public class TrackBPActivity extends AppCompatActivity {
                 AppData.appUser.updateScore(systolicValue/10 * -1);
                 AppData.appUser.updateMetricScore("Blood pressure", systolicValue/10 * -1);
 
+                Toast.makeText(TrackBPActivity.this, "Added New Blood Pressure Log", Toast.LENGTH_SHORT).show();
+
+
                 System.out.println(AppData.userMetricHistory);
 
                 onBackPressed();

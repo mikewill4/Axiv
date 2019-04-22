@@ -119,6 +119,9 @@ public class TrackHRActivity extends AppCompatActivity {
                 AppData.appUser.updateScore(HRValue/20);
                 AppData.appUser.updateMetricScore("Heart rate", HRValue/20);
 
+                Toast.makeText(TrackHRActivity.this, "Added New Heart Rate Log", Toast.LENGTH_SHORT).show();
+
+
                 System.out.println(AppData.userMetricHistory);
                 onBackPressed();
             }

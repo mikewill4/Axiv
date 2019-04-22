@@ -143,6 +143,8 @@ public class TrackExerciseActivity extends AppCompatActivity {
                 AppData.appUser.updateScore(calories/20);
                 AppData.appUser.updateMetricScore("Exercise", calories/20);
 
+                Toast.makeText(TrackExerciseActivity.this, "Added New Exercise Log", Toast.LENGTH_SHORT).show();
+
                 onBackPressed();
 
             }

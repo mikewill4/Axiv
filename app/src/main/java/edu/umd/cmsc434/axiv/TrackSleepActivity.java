@@ -189,6 +189,9 @@ public class TrackSleepActivity extends AppCompatActivity {
                 AppData.appUser.updateScore(minutes/3);
                 AppData.appUser.updateMetricScore("Sleep", minutes/3);
 
+                Toast.makeText(TrackSleepActivity.this, "Added New Sleep Log", Toast.LENGTH_SHORT).show();
+
+
                 System.out.println(AppData.userMetricHistory);
 
             onBackPressed();

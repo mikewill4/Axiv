@@ -137,6 +137,9 @@ public class TrackHydrationActivity extends AppCompatActivity {
                 AppData.appUser.updateScore((int)waterValue/200 * -1);
                 AppData.appUser.updateMetricScore("Hydration", (int)waterValue/200 * -1);
 
+                Toast.makeText(TrackHydrationActivity.this, "Added New Hydration Log", Toast.LENGTH_SHORT).show();
+
+
                 System.out.println(AppData.userMetricHistory);
                 onBackPressed();
             }
