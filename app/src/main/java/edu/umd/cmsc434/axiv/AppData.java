@@ -49,8 +49,8 @@ public class AppData {
 
         //CREATE INVITES
 
-        userCompetitionInvites.add(new AppData.InvitesInfo("Competition Invite #1","Too Lazy to Think of text"));
-        userCompetitionInvites.add(new AppData.InvitesInfo("Competition Invite #2","Also Text"));
+        userCompetitionInvites.add(new AppData.InvitesInfo("Becky's Competition","Becky and her Friends"));
+        userCompetitionInvites.add(new AppData.InvitesInfo("Competition Invite #2","Some Filler Text"));
     }
 
     static class User implements Comparable<User> {

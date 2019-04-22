@@ -16,6 +16,14 @@
             android:layout_height="wrap_content"
             android:dividerHeight="-2dp"></ListView>
 
+        <TextView
+            android:id="@+id/metric_history_no_metrics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:text="No Recent Tracked Metrics"/>
+
 
     </LinearLayout>
 
