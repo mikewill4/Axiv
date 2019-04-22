@@ -18,12 +18,14 @@
             android:layout_centerInParent="true"
             android:orientation="vertical">
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="We've Detected:"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:textSize="20dp"
+                android:textAllCaps="false"
+                android:clickable="false"
                 android:background="@color/colorPrimaryDark"
                 android:textColor="@color/colorWhite"/>
 
@@ -44,12 +46,14 @@
                 android:layout_marginTop="-10dp"
                 android:layout_marginBottom="10dp"/>
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enter Number Servings:"
-                android:textAlignment="center"
+                android:text="Number of Servings:"
+                android:gravity="center"
                 android:textSize="20dp"
+                android:textAllCaps="false"
+                android:clickable="false"
                 android:background="@color/colorPrimaryDark"
                 android:textColor="@color/colorWhite"/>
 
@@ -85,12 +89,14 @@
 
             </RelativeLayout>
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enter Date and Time:"
+                android:text="Log Date:"
                 android:gravity="center"
                 android:textSize="20dp"
+                android:textAllCaps="false"
+                android:clickable="false"
                 android:background="@color/colorPrimaryDark"
                 android:textColor="@color/colorWhite"/>
 
