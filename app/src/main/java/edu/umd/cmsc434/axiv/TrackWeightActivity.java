@@ -134,6 +134,9 @@ public class TrackWeightActivity extends AppCompatActivity {
                 AppData.appUser.updateScore(weight_value/20);
                 AppData.appUser.updateMetricScore("Weight", (float)weight_value/20);
 
+                Toast.makeText(TrackWeightActivity.this, "Added New Weight Log", Toast.LENGTH_SHORT).show();
+
+
 
                 System.out.println(AppData.userMetricHistory);
                 onBackPressed();

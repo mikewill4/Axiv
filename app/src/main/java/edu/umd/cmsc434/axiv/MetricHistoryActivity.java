@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import edu.umd.cmsc434.axiv.Metric.BloodPressureMetric;
 import edu.umd.cmsc434.axiv.Metric.ExerciseMetric;
@@ -41,11 +42,22 @@ public class MetricHistoryActivity extends AppCompatActivity {
 
         ArrayList<Metric> userHistory = AppData.userMetricHistory;
 
+        TextView noMetrics = (TextView) findViewById(R.id.metric_history_no_metrics);
+        noMetrics.setVisibility(View.GONE);
+
 
 
         MyMetricHistoryAdapter adapter = new MyMetricHistoryAdapter(this,userHistory);
         historyListView = (ListView) findViewById(R.id.metrics_history_listview);
         historyListView.setAdapter(adapter);
+
+        if(userHistory.isEmpty()){
+            historyListView.setVisibility(View.GONE);
+            noMetrics.setVisibility(View.VISIBLE);
+
+        }
+
+
     }
 
     @Override
@@ -80,6 +92,7 @@ class MyMetricHistoryAdapter extends ArrayAdapter<String> {
 
         this.context = context;
         this.userHistory = userHistory;
+        Collections.reverse(this.userHistory);
     }
 
     @Override

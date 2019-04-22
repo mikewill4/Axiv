@@ -99,6 +99,9 @@ public class TrackStepsActivity extends AppCompatActivity {
                 AppData.appUser.updateScore(stepValue/500);
                 AppData.appUser.updateMetricScore("Steps", stepValue/500);
 
+                Toast.makeText(TrackStepsActivity.this, "Added New Steps Log", Toast.LENGTH_SHORT).show();
+
+
                 System.out.println(AppData.userMetricHistory);
                 onBackPressed();
             }
