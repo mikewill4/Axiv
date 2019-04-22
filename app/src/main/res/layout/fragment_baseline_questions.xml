@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BaselineQuestionsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="Baseline Questions"
+            android:textSize="36sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:text="Answer the following questions to complete your profile."
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/tvDiet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="How healthy do you eat?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <RadioGroup
+                android:id="@+id/rgDiet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="110dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbNotHealthy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onDietRadioButtonClicked"
+                    android:text="Not very healthy" />
+
+                <RadioButton
+                    android:id="@+id/rbSomewhatHealthy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onDietRadioButtonClicked"
+                    android:text="Somewhat healthy" />
+
+                <RadioButton
+                    android:id="@+id/rbVeryHealthy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onDietRadioButtonClicked"
+                    android:text="Very healthy" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/tvBloodPressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="220dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Do you have high blood pressure?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <RadioGroup
+                android:id="@+id/rgBP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbNormalBP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onBPRadioButtonClicked"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/rbHighBP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onBPRadioButtonClicked"
+                    android:text="No" />
+
+                <RadioButton
+                    android:id="@+id/rbUnknownBP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onBPRadioButtonClicked"
+                    android:text="I don't know" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etExercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="How many days a week do you exercise?"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etHydration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="360dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="How much water do you drink daily (ounces)?"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etSleep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="420dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="How many hours of sleep do you get per night?"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etSteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="480dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="How many steps do you take per day?"
+                android:inputType="number" />
+
+
+            <Button
+                android:id="@+id/btnCompleteRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Complete Registration"
+                android:gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="550dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>
