@@ -37,7 +37,7 @@
 
     <TextView
         android:id="@+id/private_listitem_num_members"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
         android:layout_height="30pt"
         android:background="@drawable/border"
         android:text="Members:"

@@ -21,12 +21,14 @@
             android:layout_centerInParent="true">
 
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
+                android:text="Number of Steps:"
+                android:gravity="center"
                 android:textSize="20dp"
-                android:text="Enter Number of Steps to Add:"
+                android:textAllCaps="false"
+                android:clickable="false"
                 android:background="@color/colorPrimaryDark"
                 android:textColor="@color/colorWhite"/>
 
@@ -55,12 +57,14 @@
 
             </RelativeLayout>
 
-            <TextView
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enter Date to Add Steps:"
+                android:text="Date to Add Steps:"
                 android:gravity="center"
                 android:textSize="20dp"
+                android:textAllCaps="false"
+                android:clickable="false"
                 android:background="@color/colorPrimaryDark"
                 android:textColor="@color/colorWhite"/>
 

@@ -20,34 +20,39 @@
             android:orientation="vertical"
             android:layout_centerInParent="true">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter Activity Type:"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorWhite"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activity Type:"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"/>
 
     <Spinner
         android:id="@+id/track_exercise_activity_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
         android:layout_gravity="center"
         android:textAlignment="center"
         android:gravity="center"
-        android:scrollbarStyle="outsideInset">
+        android:scrollbarStyle="outsideInset"
+        android:layout_margin="10dp">
 
     </Spinner>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter Date and Time:"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorWhite"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log Date:"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"/>
 
     <TextView
         android:id="@+id/track_exercise_date_time_display"
@@ -99,14 +104,16 @@
        android:layout_gravity="center"
        android:text="Set Time"/>
 
-     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter Time Duration:"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorWhite"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exercise Duration:"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -129,14 +136,16 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter Calories:"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorWhite"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calories Burned:"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:clickable="false"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"/>
 
     <LinearLayout
         android:layout_width="match_parent"
