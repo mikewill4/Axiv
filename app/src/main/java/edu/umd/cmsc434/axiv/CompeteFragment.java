@@ -168,7 +168,7 @@ class MyFeaturedListAdapter extends ArrayAdapter<String> {
 
         return rowView;
 
-    };
+    }
 }
 
 class MyPrivateListAdapter extends ArrayAdapter<String> {

@@ -64,7 +64,8 @@
                 android:id="@+id/rewards_recently_added_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:dividerHeight="-2dp"/>
+                android:layout_margin="6dp"
+                android:dividerHeight="-2dp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -81,6 +82,7 @@
                 android:id="@+id/rewards_trending_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="6dp"
                 android:dividerHeight="-2dp">
             </ListView>
 
@@ -99,6 +101,7 @@
                 android:id="@+id/rewards_food_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="6dp"
                 android:dividerHeight="-2dp">
             </ListView>
 
@@ -116,6 +119,7 @@
                 android:id="@+id/rewards_clothing_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="6dp"
                 android:dividerHeight="-2dp">
             </ListView>
 
@@ -133,6 +137,7 @@
                 android:id="@+id/rewards_accessories_listview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="6dp"
                 android:dividerHeight="-2dp">
             </ListView>
         </LinearLayout>

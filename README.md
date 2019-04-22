@@ -61,7 +61,6 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 ### Rewards Screen
 - [x] Show current points accumulated
 - [x] Show purchased rewards
-- [ ] Dynamically update points
 - [x] Rewards sorted into categories
 ### Settings screen
 - [ ] Ability to log out

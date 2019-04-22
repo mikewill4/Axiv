@@ -18,10 +18,11 @@ public class AppData {
     static ArrayList<PrivateCompetitionInfo> userPrivateCompetitions = new ArrayList<PrivateCompetitionInfo>();
     static ArrayList<InvitesInfo> userCompetitionInvites = new ArrayList<InvitesInfo>();
     static ArrayList<Metric> userMetricHistory = new ArrayList<Metric>();
-
-
-
-
+    static ArrayList<RewardInfo> recentlyAddedRewards = new ArrayList<>();
+    static ArrayList<RewardInfo> trendingRewards = new ArrayList<>();
+    static ArrayList<RewardInfo> foodRewards = new ArrayList<>();
+    static ArrayList<RewardInfo> clothingRewards = new ArrayList<>();
+    static ArrayList<RewardInfo> accessoriesRewards = new ArrayList<>();
 
     public AppData(){
 
@@ -71,9 +72,28 @@ public class AppData {
         userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("Patagonia","10% off","heart rate",100));
 
         // CREATE INVITES
-
         userCompetitionInvites.add(new AppData.InvitesInfo("Fitness Challenge","UMD Club Soccer"));
         userCompetitionInvites.add(new AppData.InvitesInfo("Workout Buddies","Friends"));
+
+        // CREATE REWARDS
+        recentlyAddedRewards.add(new AppData.RewardInfo("Adidas", "Buy one get one free shorts", 250));
+        recentlyAddedRewards.add(new AppData.RewardInfo("NuVegan Cafe", "$3 off", 80));
+        recentlyAddedRewards.add(new AppData.RewardInfo("Apple", "$5 off iPhone chargers", 100));
+
+        trendingRewards.add(new AppData.RewardInfo("Under Armour", "20% off shirts", 120));
+        trendingRewards.add(new AppData.RewardInfo("Amazon", "15% off electronics", 150));
+
+        foodRewards.add(new AppData.RewardInfo("sweetgreen", "10% off next meal", 60));
+        foodRewards.add(new AppData.RewardInfo("NuVegan Cafe", "$3 off", 80));
+
+        clothingRewards.add(new AppData.RewardInfo("Nike", "10% off apparel", 90));
+        clothingRewards.add(new AppData.RewardInfo("Under Armour", "20% off shirts", 120));
+        clothingRewards.add(new AppData.RewardInfo("Adidas", "Buy one get one free shorts", 250));
+
+        accessoriesRewards.add(new AppData.RewardInfo("Apple", "$5 off iPhone chargers", 100));
+        accessoriesRewards.add(new AppData.RewardInfo("Amazon", "15% off electronics", 150));
+        accessoriesRewards.add(new AppData.RewardInfo("Citizen", "$10 off watches over $100", 170));
+        accessoriesRewards.add(new AppData.RewardInfo("Chaps", "Buy one tie get one 50% off", 110));
     }
 
     static class User implements Comparable<User> {
@@ -131,6 +151,18 @@ public class AppData {
             this.deal = deal;
             this.compType = compType;
             this.progressPercentage = progressPercentage;
+        }
+    }
+
+    static class RewardInfo {
+        public String sponsorName;
+        public String deal;
+        public int pointValue;
+
+        public RewardInfo(String sponsorName, String deal, int pointValue) {
+            this.sponsorName = sponsorName;
+            this.deal = deal;
+            this.pointValue = pointValue;
         }
     }
 
