@@ -38,36 +38,45 @@ public class AppData {
         userMetrics.put("Exercise", 8.0f);
         userMetrics.put("Sleep", 9.0f);
         userMetrics.put("Weight", 4.0f);
-        appUser = new User("My Username", userScore, userMetrics);
+        appUser = new User("You", userScore, userMetrics);
 
-        //CREATE PRIVATE COMPETITIONS
+        // CREATE PRIVATE COMPETITIONS
         ArrayList<User> participantListOne = new ArrayList<User>();
         participantListOne.add(appUser);
-        participantListOne.add(new User("John Doe1", 100, null));
-        participantListOne.add(new User("John Doe2", 47, null));
-        participantListOne.add(new User("John Doe3", 140, null));
-        participantListOne.add(new User("John Doe4", 500, null));
+        participantListOne.add(new User("Sophia Holloway", 100, null));
+        participantListOne.add(new User("Albert May", 47, null));
+        participantListOne.add(new User("Cedric West", 140, null));
+        participantListOne.add(new User("Chelsea Sims", 500, null));
 
         ArrayList<User> participantListTwo = new ArrayList<User>();
         participantListTwo.add(appUser);
-        participantListTwo.add(new User("Jane Deer1", 100, null));
-        participantListTwo.add(new User("Jane Deer2", 47, null));
-        participantListTwo.add(new User("Jane Deer3", 140, null));
+        participantListTwo.add(new User("Tommy Myers", 100, null));
+        participantListTwo.add(new User("Isaac Tran", 47, null));
+        participantListTwo.add(new User("Diane Mitchell", 140, null));
 
-        userPrivateCompetitions.add(new AppData.PrivateCompetitionInfo("Workplace Step Challenge","UMD CS Department",participantListOne.size(),participantListOne));
-        userPrivateCompetitions.add(new AppData.PrivateCompetitionInfo("Friend Workouts","Dylan's Friends",participantListTwo.size(),participantListTwo));
-        userPrivateCompetitions.add(new AppData.PrivateCompetitionInfo("Nutrition Activity","KNES240",participantListTwo.size(),participantListTwo));
+        ArrayList<User> participantListThree = new ArrayList<>();
+        participantListThree.add(appUser);
+        participantListThree.add(new User("Wanda Jones", 390, null));
+        participantListThree.add(new User("Beth Gill", 168, null));
+        participantListThree.add(new User("Henry Hogan", 282, null));
+        participantListThree.add(new User("Josh Clayton", 411, null));
+        participantListThree.add(new User("Johnny Foster", 124, null));
+        participantListThree.add(new User("Jackie Perkins", 96, null));
+
+        userPrivateCompetitions.add(new AppData.PrivateCompetitionInfo("Workplace Step Challenge","Engineering Team",participantListOne.size(),participantListOne));
+        userPrivateCompetitions.add(new AppData.PrivateCompetitionInfo("Friend Workouts","Friends",participantListTwo.size(),participantListTwo));
+        userPrivateCompetitions.add(new AppData.PrivateCompetitionInfo("Nutrition Activity","KNES240",participantListThree.size(),participantListThree));
 
 
-        //CREATE FEATURED COMPETITIONS
-        userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("Nandos Peri Peri","50% off Chicken","steps",55));
-        userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("Maryland Dairy","2 Free Scoop","nutrition",25));
-        userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("Patagonia","Free Water Bottle","heart rate",100));
+        // CREATE FEATURED COMPETITIONS
+        userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("sweetgreen","30% off any salad","steps",55));
+        userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("Amazon","$5 gift card","nutrition",25));
+        userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("Patagonia","10% off","heart rate",100));
 
-        //CREATE INVITES
+        // CREATE INVITES
 
-        userCompetitionInvites.add(new AppData.InvitesInfo("Competition Invite #1","Too Lazy to Think of text"));
-        userCompetitionInvites.add(new AppData.InvitesInfo("Competition Invite #2","Also Text"));
+        userCompetitionInvites.add(new AppData.InvitesInfo("Fitness Challenge","UMD Club Soccer"));
+        userCompetitionInvites.add(new AppData.InvitesInfo("Workout Buddies","Friends"));
     }
 
     static class User implements Comparable<User> {
