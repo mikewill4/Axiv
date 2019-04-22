@@ -40,7 +40,7 @@ public class IndividualCompetition extends AppCompatActivity {
         addNewUser.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(IndividualCompetition.this, "This Feature Has Yet to be Implemented.  Sorry!", Toast.LENGTH_LONG).show();
+                Toast.makeText(IndividualCompetition.this, "This feature has yet to be implemented. Sorry!", Toast.LENGTH_LONG).show();
             }
         });
 

@@ -33,7 +33,7 @@ public class MealSelectionActivity extends AppCompatActivity {
         mealBarcodeButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast featureNotFinished = Toast.makeText(MealSelectionActivity.this,"This Feature Is Not Completed Yet. Try The Buttons Below!", Toast.LENGTH_LONG);
+                Toast featureNotFinished = Toast.makeText(MealSelectionActivity.this,"This feature has yet to be implemented. Sorry!", Toast.LENGTH_LONG);
                 featureNotFinished.show();
             }
         });

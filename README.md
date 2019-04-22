@@ -30,7 +30,8 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Style suggestions
 ### Daily Targets screen
 - [x] Create progress bars for each daily target
-- [ ] Provide ability to create new daily targets
+- [x] Provide ability to create new daily targets
+- [x] Rename to health goals
 ### Track Progress screen
 - [x] Line graph showing progress over a time period for a single metric 
 - [x] Improve style of graph
