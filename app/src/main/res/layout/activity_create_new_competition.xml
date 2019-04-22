@@ -20,14 +20,17 @@
                 android:orientation="vertical"
                 android:layout_centerInParent="true">
 
-                <TextView
+                <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Enter Competition Name:"
+                    android:text="Competition Name:"
                     android:gravity="center"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
+                    android:textAllCaps="false"
+                    android:clickable="false"
                     android:background="@color/colorPrimaryDark"
                     android:textColor="@color/colorWhite"/>
+
 
                 <EditText
                     android:id="@+id/new_competition_name"
@@ -35,12 +38,14 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"/>
 
-                <TextView
+                <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Enter Organization Name:"
+                    android:text="Organization Name:"
                     android:gravity="center"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
+                    android:textAllCaps="false"
+                    android:clickable="false"
                     android:background="@color/colorPrimaryDark"
                     android:textColor="@color/colorWhite"/>
 
@@ -51,12 +56,14 @@
                     android:textAlignment="center"/>
 
 
-                <TextView
+                <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Enter Competition Categories:"
+                    android:text="Competition Focus:"
                     android:gravity="center"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
+                    android:textAllCaps="false"
+                    android:clickable="false"
                     android:background="@color/colorPrimaryDark"
                     android:textColor="@color/colorWhite"/>
 
