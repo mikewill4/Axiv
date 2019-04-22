@@ -9,11 +9,10 @@ import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CalendarView;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -115,26 +114,34 @@ public class TrackExerciseActivity extends AppCompatActivity {
         });
 
         enterTimeDuration = (EditText) findViewById(R.id.track_exercise_enter_duration);
+        enterTimeDuration.setHint("Required");
         enterCalories = (EditText) findViewById(R.id.track_exercise_enter_calories);
+        enterCalories.setHint("Optional");
 
 
         submitLog.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(enterCalories.getText().toString().equals("") || enterTimeDuration.getText().toString().equals("")){
-                    Toast error_popup = Toast.makeText(TrackExerciseActivity.this,"Invalid Values for Calories or Duration", Toast.LENGTH_SHORT);
+                int calories;
+
+                if(enterCalories.getText().toString().equals("")){
+                    calories = 100;
+                } else calories = Integer.parseInt(enterCalories.getText().toString());
+
+                if(enterTimeDuration.getText().toString().equals("")){
+                    Toast error_popup = Toast.makeText(TrackExerciseActivity.this,"Invalid Values for Duration", Toast.LENGTH_SHORT);
                     error_popup.show();
                     return;
                 }
 
                 AppData.userMetricHistory.add(new ExerciseMetric(eventOccurance,exerciseSpinner.getSelectedItem().toString(),
-                        Integer.parseInt(enterCalories.getText().toString()), Integer.parseInt(enterTimeDuration.getText().toString())));
+                        calories, Integer.parseInt(enterTimeDuration.getText().toString())));
 
                 System.out.println(AppData.userMetricHistory);
 
-                AppData.appUser.updateScore(Integer.parseInt(enterCalories.getText().toString())/20);
-                AppData.appUser.updateMetricScore("Exercise", Integer.parseInt(enterCalories.getText().toString())/20);
+                AppData.appUser.updateScore(calories/20);
+                AppData.appUser.updateMetricScore("Exercise", calories/20);
 
                 onBackPressed();
 

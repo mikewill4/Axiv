@@ -2,11 +2,8 @@ package edu.umd.cmsc434.axiv;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class AppData {
 
@@ -72,7 +69,7 @@ public class AppData {
         userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("sweetgreen","30% off any salad","steps",55));
         userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("Amazon","$5 gift card","nutrition",25));
         userFeaturedCompetitions.add(new AppData.FeaturedCompetitionInfo("Patagonia","10% off","heart rate",100));
-        
+
         // CREATE INVITES
 
         userCompetitionInvites.add(new AppData.InvitesInfo("Fitness Challenge","UMD Club Soccer"));
