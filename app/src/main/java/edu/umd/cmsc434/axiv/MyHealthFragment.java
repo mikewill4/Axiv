@@ -197,8 +197,8 @@ public class MyHealthFragment extends Fragment {
 
         // Create Radar dataset
         RadarDataSet dataset = new RadarDataSet(user, "You");
-        dataset.setColor(Color.RED);
-        dataset.setFillColor(Color.RED);
+        dataset.setColor(Color.BLUE);
+        dataset.setFillColor(Color.BLUE);
         dataset.setDrawFilled(true);
         dataset.setFillAlpha(180);
         dataset.setLineWidth(2f);
