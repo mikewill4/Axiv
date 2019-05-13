@@ -132,7 +132,8 @@ class HealthSuggestionsListAdapter extends ArrayAdapter<String> {
         } else if (position == 5) {
             healthSuggestionIcon.setImageResource(R.drawable.baseline_favorite_white_24dp);
         } else if (position == 6) {
-            healthSuggestionIcon.setImageResource(R.drawable.baseline_web_asset_white_24dp);
+            healthSuggestionIcon.setImageResource(R.drawable.icons8_weight_60);
+            healthSuggestionIcon.setPadding(0, 0, -16, 0);
         } else {
             healthSuggestionIcon.setImageResource(R.drawable.baseline_local_drink_white_24dp);
         }
