@@ -63,12 +63,9 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Show purchased rewards
 - [x] Rewards sorted into categories
 ### Settings screen
-- [ ] Ability to log out
 - [x] Add functionality to toggle public visibility of score
-- [ ] Show connected devices
-- [ ] Buttons for adding or selecting devices
 - [x] Switch to metric units
-- [ ] Turn off notifications
+- [x] Turn off notifications
 ### Start screen
 - [x] Option to login
 - [x] Option to register
@@ -81,9 +78,6 @@ Icons obtained from [Material Design](https://material.io/tools/icons/)
 - [x] Email and password
 - [x] Age, height, weight, gender
 - [x] Personalized questions associated with each metric
-### Notifications
-- [ ] Reminders to hit daily targets
-- [ ] Health suggestion of the day
 ### Data
 - [x] Create singleton class to hold data across app
 ### Style
