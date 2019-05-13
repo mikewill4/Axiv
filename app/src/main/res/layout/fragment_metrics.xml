@@ -102,7 +102,7 @@
             android:layout_below="@+id/track_hydration"
             android:text="@string/track_weight"
             android:textColor="@color/colorWhite"
-            android:drawableBottom="@drawable/baseline_web_asset_white_24dp"
+            android:drawableBottom="@drawable/icons8_weight_60"
             android:drawablePadding="-15dp"
             android:paddingBottom="30dp"
             android:layout_marginTop="4dp"
