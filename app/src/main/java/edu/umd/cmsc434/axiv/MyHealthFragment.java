@@ -1,11 +1,13 @@
 package edu.umd.cmsc434.axiv;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -13,6 +15,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -60,6 +63,23 @@ public class MyHealthFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_my_health, container, false);
+
+        // Set user score button
+        Button userScoreButton = (Button) rootView.findViewById(R.id.your_score_button);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this.getActivity());
+        userScoreButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                builder.setTitle("Your overall health score");
+                builder.setMessage("Your baseline overall health score is computed by comparing each metric to a healthy level for your personal body type. From there any healthy activity will increase your score and any unhealthy activity will decrease your score. There is no maximum score. You can always improve.");
+                builder.setNegativeButton(R.string.close, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Dialog will be dismissed when clicked
+                    }
+                });
+                builder.show();
+            }
+        });
+
 
         // Set user score
         TextView userScore = (TextView) rootView.findViewById(R.id.user_score);
@@ -217,4 +237,5 @@ public class MyHealthFragment extends Fragment {
         chart.invalidate();
 
     }
+
 }
