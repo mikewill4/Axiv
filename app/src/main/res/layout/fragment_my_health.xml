@@ -51,7 +51,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Your personalized health metric chart breaks down your score into each metric. Note that points further away from the center indicate strength in that metric."
+                android:text="Your personalized health metric chart breaks down your health score by metric. Note that points further away from the center indicate strength in that metric. That is, an optimal chart would be 100% blue."
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_marginEnd="16dp"/>
