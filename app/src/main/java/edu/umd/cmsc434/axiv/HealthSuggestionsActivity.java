@@ -35,7 +35,7 @@ public class HealthSuggestionsActivity extends AppCompatActivity {
         // Diet/calories
         healthSuggestions.add("Drink almond milk rather than cow's milk.");
         // Exercise
-        healthSuggestions.add("Walk 5 miles every week.");
+        healthSuggestions.add("Do 50 bicep curls each day.");
         // Steps
         healthSuggestions.add("Hit 10,000 steps every day.");
         // Blood pressure
@@ -53,7 +53,7 @@ public class HealthSuggestionsActivity extends AppCompatActivity {
         // Diet/calories:
         moreInformation.add("Almond milk is significantly less calories, low in sugar, and high in vitamins.");
         // Exercise:
-        moreInformation.add("Walking is a simple exercise that can help improve cholesterol levels, strengthen bones, and keep blood pressure in check.");
+        moreInformation.add("Bicep curls are an easy exercise that can help build muscle and burn calories. They only require dumbbells and no complex machines.");
         // Steps:
         moreInformation.add("Tracking your steps is an easy way to gauge your overall activity level.");
         // Blood pressure:

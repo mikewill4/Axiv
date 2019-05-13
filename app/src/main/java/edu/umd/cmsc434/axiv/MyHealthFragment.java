@@ -24,12 +24,15 @@ import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.RadarData;
 import com.github.mikephil.charting.data.RadarDataSet;
 import com.github.mikephil.charting.data.RadarEntry;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.IDataSet;
 import com.github.mikephil.charting.interfaces.datasets.IRadarDataSet;
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -142,6 +145,25 @@ public class MyHealthFragment extends Fragment {
 //        legend.setXEntrySpace(7f);
 //        legend.setYEntrySpace(5f);
 //        legend.setTextColor(Color.WHITE);
+
+        chart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
+            @Override
+            public void onValueSelected(Entry e, Highlight h) {
+                builder.setTitle("Your Sleep score: " + e.getY());
+                builder.setMessage("Your Sleep score is healthy. The optimal score is " + MAX);
+                builder.setNegativeButton(R.string.close, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Dialog will be dismissed when clicked
+                    }
+                });
+                builder.show();
+            }
+
+            @Override
+            public void onNothingSelected() {
+
+            }
+        });
 
         // Health suggestions button
         Button healthSuggestions = (Button) rootView.findViewById(R.id.health_suggestions_button);
